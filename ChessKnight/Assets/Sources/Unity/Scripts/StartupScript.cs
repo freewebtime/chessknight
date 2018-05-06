@@ -1,5 +1,5 @@
-﻿using System;
-using ChessKnight.Unity.AssetsManagament;
+﻿using ChessKnight.Unity.AssetsManagament;
+using ChessKnight.View;
 using Entitas;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ namespace ChessKnight.Unity
 
             // create the systems by creating individual features
             systems = new Feature("Systems")
-                //.Add(new DebugSystemsFeature(contexts))
+                .Add(new ViewFeature(contexts))
                 ;
 
             // call Initialize() on all of the IInitializeSystems

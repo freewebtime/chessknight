@@ -11,17 +11,19 @@ public partial class GameEntity {
     public ChessKnight.View.ViewComponent view { get { return (ChessKnight.View.ViewComponent)GetComponent(GameComponentsLookup.View); } }
     public bool hasView { get { return HasComponent(GameComponentsLookup.View); } }
 
-    public void AddView(ChessKnight.Unity.ViewScript newValue) {
+    public void AddView(ChessKnight.Unity.ViewScript newValue, ChessKnight.Unity.ViewScript newPrefab) {
         var index = GameComponentsLookup.View;
         var component = CreateComponent<ChessKnight.View.ViewComponent>(index);
         component.Value = newValue;
+        component.Prefab = newPrefab;
         AddComponent(index, component);
     }
 
-    public void ReplaceView(ChessKnight.Unity.ViewScript newValue) {
+    public void ReplaceView(ChessKnight.Unity.ViewScript newValue, ChessKnight.Unity.ViewScript newPrefab) {
         var index = GameComponentsLookup.View;
         var component = CreateComponent<ChessKnight.View.ViewComponent>(index);
         component.Value = newValue;
+        component.Prefab = newPrefab;
         ReplaceComponent(index, component);
     }
 

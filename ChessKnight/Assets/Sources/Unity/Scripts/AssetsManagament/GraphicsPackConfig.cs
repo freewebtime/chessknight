@@ -7,6 +7,6 @@ namespace ChessKnight.Unity.AssetsManagament
     {
         public ChessFigureConfig[] ChessFigures;
 
-        public Transform[] Backgrounds;
+        public ViewScript[] Backgrounds;
     }
 }

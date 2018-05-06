@@ -7,5 +7,6 @@ namespace ChessKnight.View
     public class ViewComponent: IComponent
     {
         public ViewScript Value;
+        public ViewScript Prefab;
     }
 }
