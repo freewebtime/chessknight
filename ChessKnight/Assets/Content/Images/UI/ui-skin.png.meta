@@ -1,0 +1,322 @@
+fileFormatVersion: 2
+guid: 53a5ccf2c70a9ed40bd52120123949af
+timeCreated: 1499576843
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Big panel
+    21300002: Window Header Big
+    21300004: Panel 2
+    21300006: window header small
+    21300008: Button Orange
+    21300010: Button Green
+    21300012: Button Red
+    21300014: Button Gray
+    21300016: Scores Panel
+    21300018: coin
+    21300020: Star icon flat
+    21300022: round button green
+    21300024: round button yellow
+    21300026: round button red
+    21300028: Progress Bar Bg
+    21300030: Progress Bar Bar
+    21300032: fbblue button
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Big panel
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 838
+        width: 362
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 70, y: 45, z: 45, w: 60}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Window Header Big
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 615
+        width: 426
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Panel 2
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 147
+        width: 204
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 16, z: 15, w: 21}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: window header small
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 77
+        width: 211
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Button Orange
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 536
+        width: 212
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 22, y: 32, z: 38, w: 36}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Button Green
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 536
+        width: 212
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 22, y: 32, z: 38, w: 36}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Button Red
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 536
+        width: 212
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 22, y: 32, z: 38, w: 36}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Button Gray
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 536
+        width: 212
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 22, y: 32, z: 38, w: 36}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Scores Panel
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 465
+        width: 171
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 72, y: 16, z: 20, w: 21}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: coin
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 876
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Star icon flat
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 883
+        width: 51
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round button green
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 286
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round button yellow
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 285
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round button red
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 370
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Progress Bar Bg
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 360
+        width: 492
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 19, z: 32, w: 23}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Progress Bar Bar
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 419
+        width: 473
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 25, y: 13, z: 20, w: 16}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fbblue button
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 745
+        width: 337
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 70, y: 26, z: 46, w: 37}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,15 +8,24 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int DebugMessage = 0;
+    public const int GameRoot = 0;
+    public const int GraphicsPack = 1;
+    public const int View = 2;
+    public const int ViewPrefab = 3;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
-        "DebugMessage"
+        "GameRoot",
+        "GraphicsPack",
+        "View",
+        "ViewPrefab"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Assets.Sources.Data.DebugMessageComponent)
+        typeof(ChessKnight.Unity.GameRootComponent),
+        typeof(ChessKnight.Unity.GraphicsPackComponent),
+        typeof(ChessKnight.View.ViewComponent),
+        typeof(ChessKnight.View.ViewPrefabComponent)
     };
 }

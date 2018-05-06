@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe97ef3e49bd3bd4a90563d2eb22b68d, type: 3}
+  m_Name: Queen
+  m_EditorClassIdentifier: 
+  Figure: 4
+  Sprite: {fileID: 21300000, guid: c88f49d03726d074582a3fc4f85d6445, type: 3}

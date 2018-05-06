@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abf7d01db162cc4cbeb7387975b9716, type: 3}
+  m_Name: Default Graphics
+  m_EditorClassIdentifier: 
+  ChessFigures:
+  - {fileID: 11400000, guid: f6294d743de42794aa112ddda1ad2180, type: 2}
+  - {fileID: 11400000, guid: e8ca80afc63a9f9478254e5f8a6ad985, type: 2}
+  - {fileID: 11400000, guid: 129b6e3f7557e7743b56833866fc1af0, type: 2}
+  - {fileID: 11400000, guid: c77f7b92c64544944b551322a9e6e555, type: 2}
+  - {fileID: 11400000, guid: da24e83757843e44b81746698fd975d3, type: 2}
+  - {fileID: 11400000, guid: 79b758ee7492eec40be1f9f9f2a8995b, type: 2}
+  Backgrounds:
+  - {fileID: 4582926910355840, guid: 5386cc613913b5b40ba13af926d954fb, type: 2}
+  - {fileID: 4582926910355840, guid: 86114a5c6660a6242bff60a60137ef71, type: 2}
+  - {fileID: 4582926910355840, guid: 76acef65b06546843a7ec3d59dc9fe7c, type: 2}
+  - {fileID: 4582926910355840, guid: c6a5e695aea049645a205e5156c4f4de, type: 2}
+  - {fileID: 4582926910355840, guid: a9670689fedf89b46af7f5162c109f75, type: 2}
+  - {fileID: 4582926910355840, guid: 66203fc056d74934e8e084180c2e5d37, type: 2}
+  - {fileID: 4582926910355840, guid: d9a88a9478189c94f9673b2b7431c548, type: 2}
+  - {fileID: 4582926910355840, guid: 96137a0847c9685498088d5ddc6dcc2f, type: 2}
