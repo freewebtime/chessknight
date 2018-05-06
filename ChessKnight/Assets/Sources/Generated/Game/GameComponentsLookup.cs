@@ -10,22 +10,37 @@ public static class GameComponentsLookup {
 
     public const int GameRoot = 0;
     public const int GraphicsPack = 1;
-    public const int View = 2;
-    public const int ViewPrefab = 3;
+    public const int ParentTransform = 2;
+    public const int View = 3;
+    public const int ViewPosition = 4;
+    public const int ViewPrefab = 5;
+    public const int ViewRotation = 6;
+    public const int ViewScale = 7;
+    public const int Visisble = 8;
 
-    public const int TotalComponents = 4;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
         "GameRoot",
         "GraphicsPack",
+        "ParentTransform",
         "View",
-        "ViewPrefab"
+        "ViewPosition",
+        "ViewPrefab",
+        "ViewRotation",
+        "ViewScale",
+        "Visisble"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(ChessKnight.Unity.GameRootComponent),
         typeof(ChessKnight.Unity.GraphicsPackComponent),
+        typeof(ChessKnight.View.ParentTransformComponent),
         typeof(ChessKnight.View.ViewComponent),
-        typeof(ChessKnight.View.ViewPrefabComponent)
+        typeof(ChessKnight.View.ViewPositionComponent),
+        typeof(ChessKnight.View.ViewPrefabComponent),
+        typeof(ChessKnight.View.ViewRotationComponent),
+        typeof(ChessKnight.View.ViewScaleComponent),
+        typeof(ChessKnight.View.VisisbleComponent)
     };
 }
