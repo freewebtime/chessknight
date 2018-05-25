@@ -1,5 +1,4 @@
 ﻿using ChessKnight.Unity.AssetsManagament;
-using ChessKnight.View;
 using Entitas;
 using UnityEngine;
 
@@ -12,7 +11,7 @@ namespace ChessKnight.Unity
         public GameRootScript GameRoot;
 
         Systems systems;
-#if true
+#if false
         void Start()
         {
             // get a reference to the contexts

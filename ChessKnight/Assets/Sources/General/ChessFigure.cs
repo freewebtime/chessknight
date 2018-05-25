@@ -1,12 +1,9 @@
-﻿namespace ChessKnight
+﻿public enum ChessFigure
 {
-    public enum ChessFigure
-    {
-        Pawn,
-        Rook,
-        Knight,
-        Bishop,
-        Queen,
-        King
-    }
+    Pawn,
+    Rook,
+    Knight,
+    Bishop,
+    Queen,
+    King
 }

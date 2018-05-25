@@ -8,15 +8,18 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
+    public const int Coordinate = 0;
+    public const int Position2 = 1;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
-
+        "Coordinate",
+        "Position2"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(CoordinateComponent),
+        typeof(Position2Component)
     };
 }
