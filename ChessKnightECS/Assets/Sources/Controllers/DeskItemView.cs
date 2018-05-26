@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ChessKnight.Views
+namespace ChessKnight.Controllers
 {
     public class DeskItemView: MonoBehaviour
     {
