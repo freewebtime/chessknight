@@ -83,13 +83,15 @@ namespace ChessKnight
                 layers[i] = layerEntity;
             }
 
+            var bgOffset = 20;
+
             // create cells
-            for (int y = 0; y < gridHeight; y++)
+            for (int y = -bgOffset; y < gridHeight + bgOffset; y++)
             {
-                for (int x = 0; x < gridWidth; x++)
+                for (int x = -bgOffset; x < gridWidth + bgOffset; x++)
                 {
                     var layer = layers[0];
-                    var sprite = Config.MediaConfig.BackgroundSprites[(x * gridWidth + y) % Config.MediaConfig.BackgroundSprites.Length];
+                    var sprite = Config.MediaConfig.BackgroundSprites[math.abs(x * gridWidth + y) % Config.MediaConfig.BackgroundSprites.Length];
                     var texture = sprite.texture;
                     var pivot = new float2(0.5f, 0.5f);
                     var pixelsPerUnit = (int)sprite.pixelsPerUnit;
