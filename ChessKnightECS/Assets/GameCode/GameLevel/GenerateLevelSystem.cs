@@ -98,8 +98,8 @@ namespace ChessKnight.GameLevel
                 {
                     coordinate = playerCoordinate,
                     itemType = LevelItemType.PlayerUnit,
-                    version = RandomByCoordinate(playerCoordinate, roomSize.x)
-                };
+                    version = Random.Range(0, figuresCount)
+            };
                 levelItems.Add(playerUnit);
 
                 // 4. create figures, stars, locks, blocks and bombs
@@ -107,7 +107,7 @@ namespace ChessKnight.GameLevel
                 {
                     for (int x = 0; x < deskSize.x; x++)
                     {
-                        var coordinate = new int2(x, y);
+                        var coordinate = new int2(x, y) + deskOffset;
                         var isPlayerHere = coordinate.Equals(playerCoordinate);
 
                         // blocks
@@ -124,7 +124,7 @@ namespace ChessKnight.GameLevel
                         }
 
                         // figure
-                        var figure = RandomByCoordinate(coordinate, deskSize.x) % figuresCount;
+                        var figure = Random.Range(0, figuresCount);
                         if (!isBlock && !isPlayerHere)
                         {
                             var figureItem = new LevelItemBlueprint
@@ -182,14 +182,17 @@ namespace ChessKnight.GameLevel
                 // 5. create blueprint and put it to a new entity
                 var levelBlueprint = new LevelBlueprint
                 {
-                    levelId = request.levelId,
                     deskSize = deskSize,
                     roomSize = roomSize,
                     deskOffset = deskOffset,
                     levelItems = levelItems.ToArray(),
                 };
-                var blueprintEntity = EntityManager.CreateEntity(ComponentType.Create<LevelBlueprint>());
+                var blueprintEntity = EntityManager.CreateEntity(
+                    ComponentType.Create<LevelBlueprint>(),
+                    ComponentType.Create<LevelBlueprintId>()
+                    );
                 EntityManager.SetSharedComponentData(blueprintEntity, levelBlueprint);
+                EntityManager.SetSharedComponentData(blueprintEntity, new LevelBlueprintId { levelId = request.levelId });
             }
         }
 

@@ -26,6 +26,8 @@ namespace ChessKnight
             //    roomSize = new int2(30, 30)
             //});
 
+            var blueprintId = 1;
+
             var generateLevelRequest = new GenerateLevelRequest
             {
                 roomSize = new int2(30, 20),
@@ -41,10 +43,19 @@ namespace ChessKnight
                 bombChance = 0.2f,
                 starChance = 0.3f,
                 lockChance = 0.4f,
+
+                levelId = blueprintId,
             };
 
-            var requestEntity = entityManager.CreateEntity(ComponentType.Create<GenerateLevelRequest>());
-            entityManager.SetComponentData(requestEntity, generateLevelRequest);
+            var genLevelRequest = entityManager.CreateEntity(
+                ComponentType.Create<GenerateLevelRequest>()
+                );
+            entityManager.SetComponentData(genLevelRequest, generateLevelRequest);
+
+            var loadLevelRequest = entityManager.CreateEntity(
+                ComponentType.Create<LoadLevelRequest>()
+                );
+            entityManager.SetComponentData(loadLevelRequest, new LoadLevelRequest { levelBlueprintId = blueprintId });
         }
     }
 }

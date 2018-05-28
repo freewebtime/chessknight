@@ -1,7 +1,13 @@
 {
   "dependencies": {
-    "com.unity.incrementalcompiler": "0.0.38",
-    "com.unity.entities": "0.0.12-preview.1"
+    "com.unity.incrementalcompiler": "0.0.42-preview.1",
+    "com.unity.entities": "0.0.12-preview.4",
+    "com.unity.package-manager-ui": "1.9.3",
+    "com.unity.2d.animation": "1.0.15-preview",
+    "com.unity.probuilder": "4.0.0-preview.6",
+    "com.unity.progrids": "3.0.2-preview",
+    "com.unity.textmeshpro": "1.2.3",
+    "com.unity.2d.spriteshape": "1.0.10-preview.1"
   },
   "registry": "https://staging-packages.unity.com",
   "testables": [

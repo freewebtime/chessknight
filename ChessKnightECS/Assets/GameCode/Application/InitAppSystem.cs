@@ -1,4 +1,5 @@
-﻿using ChessKnight.GameMatch;
+﻿using ChessKnight.GameLevel;
+using ChessKnight.GameMatch;
 using toinfiniityandbeyond.Rendering2D;
 using Unity.Entities;
 using Unity.Transforms;
@@ -32,6 +33,17 @@ namespace ChessKnight.Application
                 ComponentType.Create<Position>()
                 );
 
+            var levelArchetype = entityManager.CreateArchetype(
+                ComponentType.Create<Level>()
+                );
+            var levelItemArchetype = entityManager.CreateArchetype(
+                ComponentType.Create<LevelItem>(),
+                ComponentType.Create<GridCoordinate>(),
+                ComponentType.Create<Position>(),
+                ComponentType.Create<TransformMatrix>(),
+                ComponentType.Create<SpriteInstanceRenderer>()
+                );
+
             // create appConfig
             var appConfig = new AppConfig
             {
@@ -40,6 +52,9 @@ namespace ChessKnight.Application
                 MatchDeskArchetype = deskArchetype,
                 MatchDeskItemArchetype = deskItemArchetype,
                 MatchPlayerArchetype = playerArchetype,
+
+                LevelArchetype = levelArchetype,
+                LevelItemArchetype = levelItemArchetype
             };
 
             // get media config

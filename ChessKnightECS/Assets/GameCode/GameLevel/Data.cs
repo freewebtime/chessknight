@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using System;
+using Unity.Entities;
 using Unity.Mathematics;
 
 namespace ChessKnight.GameLevel
@@ -13,16 +14,22 @@ namespace ChessKnight.GameLevel
 
     public enum LevelItemType
     {
-        Background,
-        DeskCell,
-        CellFigure,
-        PlayerUnit,
-        Star,
-        Lock,
-        Bomb,
-        Block
+        Background = 0,
+        DeskCell = 1,
+        CellFigure = 2,
+        Lock = 3,
+        Star = 4,
+        Bomb = 5,
+        Block = 6,
+        PlayerUnit = 7
     }
 
+    public struct GridCoordinate: ISharedComponentData
+    {
+        public int2 coordinate;
+    }
+
+    [Serializable]
     public struct LevelItemBlueprint
     {
         public int2 coordinate;
@@ -30,13 +37,46 @@ namespace ChessKnight.GameLevel
         public int version;
     }
 
-    public struct LevelBlueprint: ISharedComponentData
+    public struct LevelBlueprintId: ISharedComponentData
     {
         public int levelId;
+    }
+
+    public struct LevelBlueprint: ISharedComponentData
+    {
         public int2 roomSize;
         public int2 deskSize;
         public int2 deskOffset;
         public LevelItemBlueprint[] levelItems;
+    }
+
+    public struct BackgroundItem: IComponentData
+    {
+    }
+
+    public struct FigureItem: IComponentData
+    {
+        public ChessFigure Figure;
+    }
+
+    public struct StarItem: IComponentData
+    {
+    }
+
+    public struct BlockItem: IComponentData
+    {
+    }
+
+    public struct LockItem: IComponentData
+    {
+    }
+
+    public struct BombItem: IComponentData
+    {
+    }
+
+    public struct PlayerItem: IComponentData
+    {
     }
 
     public struct LevelItem: IComponentData
@@ -49,8 +89,8 @@ namespace ChessKnight.GameLevel
     {
         Pawn = 0,
         Rook = 1,
-        Bishop = 2,
-        Knight = 3,
+        Knight = 2,
+        Bishop = 3,
         Queen = 4,
         King = 5
     }
