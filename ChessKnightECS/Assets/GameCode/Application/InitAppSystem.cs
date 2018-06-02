@@ -1,5 +1,4 @@
 ﻿using ChessKnight.GameLevel;
-using ChessKnight.GameMatch;
 using toinfiniityandbeyond.Rendering2D;
 using Unity.Entities;
 using Unity.Transforms;
@@ -11,28 +10,6 @@ namespace ChessKnight.Application
     {
         public static void Init(EntityManager entityManager)
         {
-            // create archetypes
-            var matchArchetype = entityManager.CreateArchetype(
-                ComponentType.Create<Match>()
-                );
-            var playerArchetype = entityManager.CreateArchetype(
-                ComponentType.Create<MatchPlayer>()
-                );
-            var roomArchetype = entityManager.CreateArchetype(
-                ComponentType.Create<MatchRoom>()
-                );
-            var deskArchetype = entityManager.CreateArchetype(
-                ComponentType.Create<MatchDesk>()
-                );
-            var deskItemArchetype = entityManager.CreateArchetype(
-                ComponentType.Create<MatchDeskItem>(),
-                ComponentType.Create<MatchDeskCoordinate>(),
-                ComponentType.Create<MatchDeskPosition>(),
-                ComponentType.Create<SpriteInstanceRenderer>(),
-                ComponentType.Create<TransformMatrix>(),
-                ComponentType.Create<Position>()
-                );
-
             var levelArchetype = entityManager.CreateArchetype(
                 ComponentType.Create<Level>()
                 );
@@ -47,12 +24,6 @@ namespace ChessKnight.Application
             // create appConfig
             var appConfig = new AppConfig
             {
-                MatchArchetype = matchArchetype,
-                MatchRoomArchetype = roomArchetype,
-                MatchDeskArchetype = deskArchetype,
-                MatchDeskItemArchetype = deskItemArchetype,
-                MatchPlayerArchetype = playerArchetype,
-
                 LevelArchetype = levelArchetype,
                 LevelItemArchetype = levelItemArchetype
             };
