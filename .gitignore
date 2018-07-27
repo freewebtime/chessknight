@@ -39,3 +39,11 @@ ChessKnightECS/Library/
 ChessKnightECS/Temp/
 ChessKnightECS\.vs
 ChessKnightECS/.vs/
+ChessKnight3d/Library/AnnotationManager
+ChessKnight3d/Library/
+ChessKnight3d/obj/
+!ChessKnight3d/Packages/manifest.json
+ChessKnight3d/Packages/
+ChessKnight3d/Temp/bin/
+ChessKnight3d/Temp/
+ChessKnight3d/.vs/
