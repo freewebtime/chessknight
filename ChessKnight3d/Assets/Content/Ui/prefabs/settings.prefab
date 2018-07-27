@@ -39,10 +39,10 @@ GameObject:
   - component: {fileID: 223722633303359240}
   - component: {fileID: 114355735697579230}
   - component: {fileID: 114738694050387102}
-  - component: {fileID: 114420140006723364}
-  - component: {fileID: 114896926566391166}
-  - component: {fileID: 114043985449559228}
-  - component: {fileID: 114780188984778236}
+  - component: {fileID: 114373897450982452}
+  - component: {fileID: 114276093357677986}
+  - component: {fileID: 114913571804520220}
+  - component: {fileID: 114337269211239090}
   m_Layer: 5
   m_Name: settings
   m_TagString: Untagged
@@ -120,17 +120,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114043985449559228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1171146831340848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a481ee31227e1fe4895ce4dd28ce7a99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114121053607732378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,6 +174,30 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114276093357677986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171146831340848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d713f1de7f119b4d801baaa45aa9ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    type: 2
+--- !u!114 &114337269211239090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171146831340848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ab57669f2f8f149b966afef16e8487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114355735697579230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,6 +219,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114373897450982452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171146831340848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114403379798194122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,17 +243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 0.75
---- !u!114 &114420140006723364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1171146831340848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114477575505471904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,17 +373,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114780188984778236
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1171146831340848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518cc86f563e11547a70075ac0847b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114783941341376604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -524,7 +526,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114780188984778236}
+      - m_Target: {fileID: 0}
         m_MethodName: OnExitClicked
         m_Mode: 1
         m_Arguments:
@@ -564,7 +566,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114896926566391166
+--- !u!114 &114913571804520220
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,11 +574,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1171146831340848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89691f0ab22643d41a4ead717980c22f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f235b656bb692242a3f0bd9566248a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedData:
-    type: 2
 --- !u!222 &222047832995097532
 CanvasRenderer:
   m_ObjectHideFlags: 1

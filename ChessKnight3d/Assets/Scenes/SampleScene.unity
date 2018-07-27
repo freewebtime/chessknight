@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e6a93ee0f07a54fbf8e7d780e06611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiRootController: {fileID: 688316592}
 --- !u!4 &680884158
 Transform:
   m_ObjectHideFlags: 0
@@ -366,13 +367,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiScreenPrefabs:
-  - {fileID: 114088358010269860, guid: 554677a9f8e976f4391635b6977d626a, type: 2}
-  - {fileID: 114777817307202404, guid: 6b0ccba7ed461604ab7693b1e4a68cb7, type: 2}
-  - {fileID: 114758718327549170, guid: 2bf7a9d5a0b45ee4381f9b523d9d07b1, type: 2}
-  - {fileID: 114663956104764224, guid: 0412119c51a55df45afd7af501ea3266, type: 2}
-  - {fileID: 114476258144497438, guid: 1f520f6aee48d1f44892b21c4ffc749a, type: 2}
-  - {fileID: 114987369278288472, guid: 3dc4ff1bf01889143b0395fb6a9813e2, type: 2}
-  - {fileID: 114896926566391166, guid: 8b27dd25c27a0bd4cb4a707b052072b9, type: 2}
+  - {fileID: 114262017936089824, guid: 554677a9f8e976f4391635b6977d626a, type: 2}
+  - {fileID: 114397744324488494, guid: 6b0ccba7ed461604ab7693b1e4a68cb7, type: 2}
+  - {fileID: 114126686429048366, guid: 2bf7a9d5a0b45ee4381f9b523d9d07b1, type: 2}
+  - {fileID: 114129417005077782, guid: 0412119c51a55df45afd7af501ea3266, type: 2}
+  - {fileID: 114044254722399570, guid: 1f520f6aee48d1f44892b21c4ffc749a, type: 2}
+  - {fileID: 114865247402878236, guid: 3dc4ff1bf01889143b0395fb6a9813e2, type: 2}
+  - {fileID: 114276093357677986, guid: 8b27dd25c27a0bd4cb4a707b052072b9, type: 2}
   uiScreens: []
 --- !u!1 &1076090082
 GameObject:

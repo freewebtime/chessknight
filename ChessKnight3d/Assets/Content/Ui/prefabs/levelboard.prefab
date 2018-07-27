@@ -180,10 +180,10 @@ GameObject:
   - component: {fileID: 223666853489408490}
   - component: {fileID: 114419081853051014}
   - component: {fileID: 114503822712700960}
-  - component: {fileID: 114189308657869586}
-  - component: {fileID: 114476258144497438}
-  - component: {fileID: 114469056670678814}
-  - component: {fileID: 114259731677358390}
+  - component: {fileID: 114924604491462982}
+  - component: {fileID: 114044254722399570}
+  - component: {fileID: 114450035006436562}
+  - component: {fileID: 114279793581184874}
   m_Layer: 5
   m_Name: levelboard
   m_TagString: Untagged
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114259731677358390}
+      - m_Target: {fileID: 0}
         m_MethodName: EditorClicked
         m_Mode: 1
         m_Arguments:
@@ -243,6 +243,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114044254722399570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1889843245537380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d713f1de7f119b4d801baaa45aa9ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    type: 4
 --- !u!114 &114108049791960388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114259731677358390}
+      - m_Target: {fileID: 0}
         m_MethodName: GenerateLevelClicked
         m_Mode: 1
         m_Arguments:
@@ -361,7 +374,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114259731677358390}
+      - m_Target: {fileID: 0}
         m_MethodName: OnExitClicked
         m_Mode: 1
         m_Arguments:
@@ -488,17 +501,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114189308657869586
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889843245537380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114211277983402704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -653,7 +655,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114259731677358390
+--- !u!114 &114279793581184874
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -661,7 +663,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1889843245537380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84652c63322127f41b6b28bbecd39103, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b99e6b9a9dadf44da02a3bacdd9fd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114419081853051014
@@ -685,7 +687,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114469056670678814
+--- !u!114 &114450035006436562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -693,22 +695,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1889843245537380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d24dda2927f86c49a54be1c2f79848b, type: 3}
+  m_Script: {fileID: 11500000, guid: 21a541e4562899548b54477a4074551d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114476258144497438
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889843245537380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89691f0ab22643d41a4ead717980c22f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedData:
-    type: 4
 --- !u!114 &114503822712700960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1056,6 +1045,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114924604491462982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1889843245537380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222353139622740908
 CanvasRenderer:
   m_ObjectHideFlags: 1

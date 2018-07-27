@@ -2,5 +2,7 @@
 
 namespace Assets.GameCode.UiSystem.Data
 {
-    public struct UiRoot: IComponentData { }
+    public struct UiRoot: IComponentData
+    {
+    }
 }
