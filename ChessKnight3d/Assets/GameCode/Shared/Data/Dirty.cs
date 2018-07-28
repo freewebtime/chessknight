@@ -2,6 +2,5 @@
 
 namespace Assets.GameCode.Shared
 {
-    public struct Visible: IComponentData { }
-
+    public struct Dirty: IComponentData { }
 }
