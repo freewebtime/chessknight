@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8e0f49a2e123394689ebc306bdcc5be, type: 3}
-  m_Name: none
+  m_Name: tree 03
   m_EditorClassIdentifier: 
   id: 0
-  material: {fileID: 0}
-  mesh: {fileID: 0}
+  material: {fileID: 2100000, guid: e2407f981b65b3a47adafed11540beea, type: 2}
+  mesh: {fileID: 4300000, guid: f489e34b2943908409c3209c8eea7b3b, type: 3}
   position:
     x: 0
     y: 0
@@ -23,6 +23,6 @@ MonoBehaviour:
     y: 0
     z: 0
   scale:
-    x: 0
-    y: 0
-    z: 0
+    x: 1
+    y: 1
+    z: 1

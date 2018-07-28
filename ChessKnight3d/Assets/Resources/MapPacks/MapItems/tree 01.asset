@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: tree 01
   m_EditorClassIdentifier: 
   id: 0
-  material: {fileID: 0}
-  mesh: {fileID: 0}
+  material: {fileID: 2100000, guid: 63709b6c53880ef4cadd26605e94e19e, type: 2}
+  mesh: {fileID: 4300000, guid: 7c83d6d1434646e45b6188700d95c6e7, type: 3}
   position:
     x: 0
     y: 0
@@ -23,6 +23,6 @@ MonoBehaviour:
     y: 0
     z: 0
   scale:
-    x: 0
-    y: 0
-    z: 0
+    x: 1
+    y: 1
+    z: 1
