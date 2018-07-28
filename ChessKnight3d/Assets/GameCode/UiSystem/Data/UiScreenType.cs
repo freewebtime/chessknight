@@ -10,6 +10,8 @@
 
         Levelboard,
         Game,
+        Editor,
+        PausegameMenu,
         Cheatboard,
 
         Dialog,

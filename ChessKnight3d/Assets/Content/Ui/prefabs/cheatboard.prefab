@@ -329,7 +329,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.75
+  m_fontSize: 34
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    type: 6
+    type: 8
 --- !u!114 &114279827121729302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.9
+  m_fontSize: 35.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -659,7 +659,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114159355989121442}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114333330329126310}
+        m_MethodName: OnWinLevelClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114567306898118716
@@ -721,7 +732,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114147159040997862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114333330329126310}
+        m_MethodName: OnLoseLevelClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114781112198991348
@@ -771,7 +793,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.75
+  m_fontSize: 34
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -885,7 +907,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33.75
+  m_fontSize: 34
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -990,7 +1012,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114279827121729302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114333330329126310}
+        m_MethodName: OnCloseClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114993794083416504
@@ -1108,8 +1141,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128, y: -160.4375}
-  m_SizeDelta: {x: 236, y: 52.175003}
+  m_AnchoredPosition: {x: 128, y: -161.42043}
+  m_SizeDelta: {x: 236, y: 52.56817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224061247256617720
 RectTransform:
@@ -1164,8 +1197,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128, y: -98.262505}
-  m_SizeDelta: {x: 236, y: 52.175003}
+  m_AnchoredPosition: {x: 128, y: -98.85225}
+  m_SizeDelta: {x: 236, y: 52.56817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224174874478235138
 RectTransform:
@@ -1183,8 +1216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128, y: -36.0875}
-  m_SizeDelta: {x: 236, y: 52.175003}
+  m_AnchoredPosition: {x: 128, y: -36.284084}
+  m_SizeDelta: {x: 236, y: 52.56817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224417191454502604
 RectTransform:
@@ -1278,6 +1311,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128, y: -222.61252}
-  m_SizeDelta: {x: 236, y: 52.175003}
+  m_AnchoredPosition: {x: 128, y: -223.98859}
+  m_SizeDelta: {x: 236, y: 52.56817}
   m_Pivot: {x: 0.5, y: 0.5}

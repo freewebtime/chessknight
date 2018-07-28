@@ -1,7 +1,7 @@
-﻿using Assets.GameCode.UiSystem.Components.Controllers;
-using Assets.GameCode.UiSystem.Data.Requests;
+﻿using Assets.GameCode.Shared;
+using Assets.GameCode.UiSystem.Components.Controllers;
 using Assets.GameCode.UiSystem.Data.Screens;
-using Unity.Entities;
+using Assets.GameCode.UiSystem.Logic;
 using UnityEngine;
 
 namespace Assets.GameCode
@@ -15,18 +15,7 @@ namespace Assets.GameCode
         {
             uiRootController.Initialize();
 
-            ShowMainMenu();
-        }
-
-        private static void ShowMainMenu()
-        {
-            var entityManager = World.Active.GetOrCreateManager<EntityManager>();
-            var requestEntity = entityManager.CreateEntity();
-            entityManager.AddComponentData(requestEntity, new SetScreenVisibilityRequest
-            {
-                isVisible = 1,
-                screenType = UiScreenType.MainMenu
-            });
+            UiScreenApi.SetScreenVisibility(UiScreenType.MainMenu, Booleans.True);
         }
     }
 }

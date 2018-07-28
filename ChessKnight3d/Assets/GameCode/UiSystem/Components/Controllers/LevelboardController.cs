@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Assets.GameCode.Shared;
+using Assets.GameCode.UiSystem.Data.Screens;
+using Assets.GameCode.UiSystem.Logic;
+using UnityEngine;
 
 namespace Assets.GameCode.UiSystem.Components.Controllers
 {
@@ -7,17 +10,20 @@ namespace Assets.GameCode.UiSystem.Components.Controllers
     {
         public void GenerateLevelClicked()
         {
-
+            UiScreenApi.SetAllScreensVisibility(Booleans.False);
+            UiScreenApi.SetScreenVisibility(UiScreenType.Game, Booleans.True);
         }
 
         public void EditorClicked()
         {
-
+            UiScreenApi.SetAllScreensVisibility(Booleans.False);
+            UiScreenApi.SetScreenVisibility(UiScreenType.Editor, Booleans.True);
         }
 
-        public void OnExitClicked()
+        public void OnMainMenuClicked()
         {
-
+            UiScreenApi.SetAllScreensVisibility(Booleans.False);
+            UiScreenApi.SetScreenVisibility(UiScreenType.MainMenu, Booleans.True);
         }
     }
 }

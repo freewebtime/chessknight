@@ -18,13 +18,6 @@ namespace Assets.GameCode.UiSystem.Logic
             [ReadOnly] public EntityArray entity;
         }
 
-        struct SetAllRequests
-        {
-            public readonly int Length;
-            [ReadOnly] public ComponentDataArray<SetAllScreensVisibilityRequest> request;
-            [ReadOnly] public EntityArray entity;
-        }
-
         struct ScreenGroup
         {
             public readonly int Length;
@@ -34,7 +27,6 @@ namespace Assets.GameCode.UiSystem.Logic
         }
 
         [Inject] SetSingleRequests setSingleRequests;
-        [Inject] SetAllRequests setAllRequests;
         [Inject] ScreenGroup screenGroup;
 
         protected override void OnUpdate()
@@ -46,17 +38,7 @@ namespace Assets.GameCode.UiSystem.Logic
 
                 PostUpdateCommands.DestroyEntity(entity);
 
-                SetScreenVisibility(request.screenType, request.isVisible > 0);
-            }
-
-            for (int i = 0; i < setAllRequests.Length; i++)
-            {
-                var request = setAllRequests.request[i];
-                var entity = setAllRequests.entity[i];
-
-                PostUpdateCommands.DestroyEntity(entity);
-
-                SetAllScreensVisibility(request.isVisible > 0);
+                SetScreenVisibility(request.screenType, request.isVisible == Booleans.True);
             }
         }
 
@@ -80,27 +62,6 @@ namespace Assets.GameCode.UiSystem.Logic
                         {
                             PostUpdateCommands.RemoveComponent<Visible>(entity);
                         }
-                    }
-                }
-            }
-        }
-        public void SetAllScreensVisibility(bool isVisible)
-        {
-            for (int i = 0; i < screenGroup.Length; i++)
-            {
-                var entity = screenGroup.entity[i];
-                if (isVisible)
-                {
-                    if (!EntityManager.HasComponent<Visible>(entity))
-                    {
-                        PostUpdateCommands.AddComponent(entity, new Visible());
-                    }
-                }
-                else
-                {
-                    if (EntityManager.HasComponent<Visible>(entity))
-                    {
-                        PostUpdateCommands.RemoveComponent<Visible>(entity);
                     }
                 }
             }

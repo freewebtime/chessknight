@@ -5,5 +5,5 @@ using UnityEngine;
 namespace Assets.GameCode.UiSystem.Components
 {
     [RequireComponent(typeof(UiScreenComponent))]
-    public class UiScreenGameComponent : ComponentDataWrapper<UiScreenGame> { }
+    public class UiScreenPausegameComponent : ComponentDataWrapper<UiScreenPausegame> { }
 }

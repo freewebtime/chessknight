@@ -5,5 +5,5 @@ using UnityEngine;
 namespace Assets.GameCode.UiSystem.Components
 {
     [RequireComponent(typeof(UiScreenComponent))]
-    public class UiScreenLevelboardComponent: ComponentDataWrapper<UiScreenLevelboard> { }
+    public class UiScreenLevelboardComponent : ComponentDataWrapper<UiScreenLevelboard> { }
 }
