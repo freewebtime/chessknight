@@ -1,6 +1,5 @@
 ﻿using Assets.GameCode.Map.Data;
 using Assets.GameCode.Map.Data.Events;
-using Assets.GameCode.Map.Data.Resources;
 using Unity.Entities;
 
 namespace Assets.GameCode.Map
@@ -20,16 +19,6 @@ namespace Assets.GameCode.Map
 
         public static void Initialize(EntityManager entityManager)
         {
-            mapResourceLib = entityManager.CreateArchetype(
-                ComponentType.Create<MapResourcesLib>()
-            );
-            mapResourcePack = entityManager.CreateArchetype(
-                ComponentType.Create<MapResourcePack>()
-            );
-            mapItemResourcePack = entityManager.CreateArchetype(
-                ComponentType.Create<MapItemResourcePack>()
-            );
-
             worldMap = entityManager.CreateArchetype(
                 ComponentType.Create<WorldMap>(),
                 ComponentType.Create<Chunksmap>(),
@@ -43,8 +32,12 @@ namespace Assets.GameCode.Map
                 ComponentType.Create<Bordermap>(),
                 ComponentType.Create<Watermap>(),
                 ComponentType.Create<Itemsmap>(),
-                ComponentType.Create<ItemsTransforms>(),
-                ComponentType.Create<WorldMapRef>()
+                ComponentType.Create<ItemsTransformmap>(),
+                ComponentType.Create<WorldMapRef>(),
+
+                ComponentType.Create<Groundmesh>(),
+                ComponentType.Create<Watermesh>(),
+                ComponentType.Create<Bordermesh>()
             );
 
             createMapRequest = entityManager.CreateArchetype(
@@ -52,9 +45,6 @@ namespace Assets.GameCode.Map
             );
             destroyMapRequest = entityManager.CreateArchetype(
                 ComponentType.Create<DestroyMapRequest>()
-            );
-            initMapResourcesLibRequest = entityManager.CreateArchetype(
-                ComponentType.Create<InitMapResourcesLibRequest>()
             );
         }
     }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fca5e5051933d4094c151c07fb8561, type: 3}
+  m_Name: default map
+  m_EditorClassIdentifier: 
+  id: 0
+  groundMaterial: {fileID: 2100000, guid: c3c0145ca236f9c44b9b09d82aa7db59, type: 2}
+  waterMaterial: {fileID: 2100000, guid: b44f49eb157296045ad7c6f4104b615c, type: 2}
+  mapItems:
+  - {fileID: 11400000, guid: b0f470bdd835a524894a25c7e8eb24ec, type: 2}
+  - {fileID: 11400000, guid: c178bd9cdd353d341948acf043960353, type: 2}
+  - {fileID: 11400000, guid: 999811c1e8ae8cd4cb7585ad9e68e376, type: 2}
+  groundTypes:
+  - {fileID: 11400000, guid: 846663a9611da514195877b66a8dac00, type: 2}
+  - {fileID: 11400000, guid: 0527424ac80272842a772fadf2777d74, type: 2}
+  - {fileID: 11400000, guid: 54b53b9503394d947bee4d36600cdf8e, type: 2}
+  - {fileID: 11400000, guid: 5c9419fcf47c78b4491c0bc35862dff4, type: 2}

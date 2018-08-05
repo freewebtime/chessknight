@@ -2,7 +2,5 @@
 
 namespace Assets.GameCode.Map.Data.Events
 {
-    public struct DestroyMapRequest: IComponentData
-    {
-    }
+    public struct DestroyMapRequest: IComponentData { }
 }

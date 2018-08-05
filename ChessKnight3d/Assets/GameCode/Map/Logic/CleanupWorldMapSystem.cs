@@ -34,7 +34,7 @@ namespace Assets.GameCode.Map.Logic
         struct ItemsTransformsGroup
         {
             public readonly int Length;
-            [ReadOnly] public SharedComponentDataArray<ItemsTransforms> toClenup;
+            [ReadOnly] public SharedComponentDataArray<ItemsTransformmap> toClenup;
         }
         struct WatermapGroup
         {
@@ -59,14 +59,16 @@ namespace Assets.GameCode.Map.Logic
             }
             for (int i = 0; i < heightmapGroup.Length; i++)
             {
-                if (heightmapGroup.toClenup[i].east.IsCreated)
-                    heightmapGroup.toClenup[i].east.Dispose();
-                if (heightmapGroup.toClenup[i].west.IsCreated)
-                    heightmapGroup.toClenup[i].west.Dispose();
-                if (heightmapGroup.toClenup[i].north.IsCreated)
-                    heightmapGroup.toClenup[i].north.Dispose();
-                if (heightmapGroup.toClenup[i].south.IsCreated)
-                    heightmapGroup.toClenup[i].south.Dispose();
+                if (heightmapGroup.toClenup[i].height01.IsCreated)
+                    heightmapGroup.toClenup[i].height01.Dispose();
+                if (heightmapGroup.toClenup[i].height10.IsCreated)
+                    heightmapGroup.toClenup[i].height10.Dispose();
+                if (heightmapGroup.toClenup[i].height00.IsCreated)
+                    heightmapGroup.toClenup[i].height00.Dispose();
+                if (heightmapGroup.toClenup[i].height11.IsCreated)
+                    heightmapGroup.toClenup[i].height11.Dispose();
+                if (heightmapGroup.toClenup[i].center.IsCreated)
+                    heightmapGroup.toClenup[i].center.Dispose();
             }
             for (int i = 0; i < bordermapGroup.Length; i++)
             {
@@ -92,30 +94,32 @@ namespace Assets.GameCode.Map.Logic
             }
             for (int i = 0; i < itemsmapGroup.Length; i++)
             {
-                if (itemsmapGroup.toClenup[i].id.IsCreated)
-                    itemsmapGroup.toClenup[i].id.Dispose();
-                if (itemsmapGroup.toClenup[i].position.IsCreated)
-                    itemsmapGroup.toClenup[i].position.Dispose();
-                if (itemsmapGroup.toClenup[i].rotation.IsCreated)
-                    itemsmapGroup.toClenup[i].rotation.Dispose();
-                if (itemsmapGroup.toClenup[i].scale.IsCreated)
-                    itemsmapGroup.toClenup[i].scale.Dispose();
+                if (itemsmapGroup.toClenup[i].value.IsCreated)
+                    itemsmapGroup.toClenup[i].value.Dispose();
             }
             for (int i = 0; i < transformsGroup.Length; i++)
             {
-                if (transformsGroup.toClenup[i].value.IsCreated)
-                    transformsGroup.toClenup[i].value.Dispose();
+                if (transformsGroup.toClenup[i].matrix.IsCreated)
+                    transformsGroup.toClenup[i].matrix.Dispose();
+                if (transformsGroup.toClenup[i].position.IsCreated)
+                    transformsGroup.toClenup[i].position.Dispose();
+                if (transformsGroup.toClenup[i].rotation.IsCreated)
+                    transformsGroup.toClenup[i].rotation.Dispose();
+                if (transformsGroup.toClenup[i].scale.IsCreated)
+                    transformsGroup.toClenup[i].scale.Dispose();
             }
             for (int i = 0; i < watermapGroup.Length; i++)
             {
-                if (watermapGroup.toClenup[i].east.IsCreated)
-                    watermapGroup.toClenup[i].east.Dispose();
-                if (watermapGroup.toClenup[i].west.IsCreated)
-                    watermapGroup.toClenup[i].west.Dispose();
-                if (watermapGroup.toClenup[i].north.IsCreated)
-                    watermapGroup.toClenup[i].north.Dispose();
-                if (watermapGroup.toClenup[i].south.IsCreated)
-                    watermapGroup.toClenup[i].south.Dispose();
+                if (watermapGroup.toClenup[i].height11.IsCreated)
+                    watermapGroup.toClenup[i].height11.Dispose();
+                if (watermapGroup.toClenup[i].height00.IsCreated)
+                    watermapGroup.toClenup[i].height00.Dispose();
+                if (watermapGroup.toClenup[i].height01.IsCreated)
+                    watermapGroup.toClenup[i].height01.Dispose();
+                if (watermapGroup.toClenup[i].height10.IsCreated)
+                    watermapGroup.toClenup[i].height10.Dispose();
+                if (watermapGroup.toClenup[i].center.IsCreated)
+                    watermapGroup.toClenup[i].center.Dispose();
             }
 
             base.OnDestroyManager();

@@ -1,4 +1,4 @@
-﻿using Assets.GameCode.Configs.Map;
+﻿using Assets.GameCode.Configs;
 using Assets.GameCode.Map.Data.Events;
 using Assets.GameCode.Shared;
 using Unity.Entities;
@@ -12,23 +12,29 @@ namespace Assets.GameCode.Map.Logic
         public static void InitResources(EntityManager entityManager)
         {
             // load configs
-            var resourceLibConfig = Resources.Load<MapResourcesLibConfig>("mapResources");
-            if (resourceLibConfig)
+            var programConfig = Resources.Load<ProgramConfig>("config");
+            if (!programConfig)
             {
                 return;
             }
 
             // init configs
-            for (int i = 0; i < resourceLibConfig.mapResourcePacks.Length; i++)
+            var mapConfigs = programConfig.mapConfigs;
+            for (int i = 0; i < mapConfigs.Length; i++)
             {
-                var mapPack = resourceLibConfig.mapResourcePacks[i];
+                // id
+                var mapPack = mapConfigs[i];
                 mapPack.id = i;
-                mapPack.groundTypeConfigs = new GroundTypeConfig[mapPack.groundTypeSprites.Length];
 
-                for (int j = 0; j < mapPack.groundTypeSprites.Length; j++)
+                // ground types
+                var groundTypes = mapPack.groundTypes;
+                for (int j = 0; j < groundTypes.Length; j++)
                 {
-                    var sprite = mapPack.groundTypeSprites[j];
-                    var spriteUv = new SpriteUv
+                    var groundType = groundTypes[j];
+                    var sprite = groundType.sprite;
+
+                    groundType.id = j;
+                    groundType.uv = new SpriteUv
                     {
                         uv00 = sprite.uv[0],
                         uv01 = sprite.uv[1],
@@ -37,18 +43,16 @@ namespace Assets.GameCode.Map.Logic
                     };
                 }
 
-                for (int j = 0; j < mapPack.mapItems.Length; j++)
+                // map items
+                var mapItems = mapPack.mapItems;
+                for (int j = 0; j < mapItems.Length; j++)
                 {
-                    var mapItem = mapPack.mapItems[j];
+                    var mapItem = mapItems[j];
                     mapItem.id = j;
                 }
             }
 
-            // create map item packs
-            var requestEntity = entityManager.CreateEntity(WorldMapArchetypes.initMapResourcesLibRequest);
-            entityManager.SetSharedComponentData(requestEntity, new InitMapResourcesLibRequest {
-                config = resourceLibConfig
-            });
+            ProgramConfig.config = programConfig;
         }
 
         public static void Initialize(EntityManager entityManager)
@@ -56,9 +60,13 @@ namespace Assets.GameCode.Map.Logic
             // create world map
             var requestEntity = entityManager.CreateEntity(WorldMapArchetypes.createMapRequest);
             entityManager.SetComponentData(requestEntity, new CreateMapRequest {
-                chunkSize = new int2(10, 10),
-                sizeInChunks = new int2(40, 20),
-                mapResourcesIndex = 0,
+                chunkSize = new int2(2, 2),
+                sizeInChunks = new int2(1, 1),
+                mapResourcesIndex = 0
+            });
+            entityManager.AddComponentData(requestEntity, new GenerateMapRequest {
+                noiseScale = new float2(0.05f, 0.05f),
+                randomSeed = 100500
             });
         }
     }

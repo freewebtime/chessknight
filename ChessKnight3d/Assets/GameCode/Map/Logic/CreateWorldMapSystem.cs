@@ -19,6 +19,8 @@ namespace Assets.GameCode.Map.Logic
 
         [Inject] RequestGroup requestGroup;
 
+        [Inject] ComponentDataFromEntity<GenerateMapRequest> generateMapRequests;
+
         protected override void OnUpdate()
         {
             var mapArchetype = WorldMapArchetypes.worldMap;
@@ -26,7 +28,8 @@ namespace Assets.GameCode.Map.Logic
             
             for (int i = 0; i < requestGroup.Length; i++)
             {
-                PostUpdateCommands.DestroyEntity(requestGroup.entity[i]);
+                var requestEntity = requestGroup.entity[i];
+                PostUpdateCommands.DestroyEntity(requestEntity);
 
                 var request = requestGroup.request[i];
                 var chunkSize = request.chunkSize;
@@ -34,6 +37,13 @@ namespace Assets.GameCode.Map.Logic
                 var mapSize = new int2(chunkSize.x * sizeInChunks.x, chunkSize.y * sizeInChunks.y);
                 var chunksCount = sizeInChunks.x * sizeInChunks.y;
                 var chunkCellsCount = chunkSize.x * chunkSize.y;
+
+                var isGenerateMap = generateMapRequests.Exists(requestEntity);
+                var generateMapRequest = default(GenerateMapRequest);
+                if (isGenerateMap)
+                {
+                    generateMapRequest = generateMapRequests[requestEntity];
+                }
 
                 // create map
                 var mapEntity = EntityManager.CreateEntity(mapArchetype);
@@ -45,72 +55,47 @@ namespace Assets.GameCode.Map.Logic
                 {
                     for (int x = 0; x < sizeInChunks.x; x++)
                     {
-                        var eastHeightmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var westHeightmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var northHeightmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var southHeightmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-
-                        var eastWatermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var westWatermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var northWatermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var southWatermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-
-                        var eastGroundmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var westGroundmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var northGroundmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var southGroundmap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-
-                        var eastBordermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var westBordermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var northBordermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-                        var southBordermap = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent);
-
-                        var itemsId = new NativeArray<int>(chunkCellsCount, Allocator.Persistent);
-                        var itemsPosition = new NativeArray<float3>(chunkCellsCount, Allocator.Persistent);
-                        var itemsRotation = new NativeArray<float3>(chunkCellsCount, Allocator.Persistent);
-                        var itemsScale = new NativeArray<float3>(chunkCellsCount, Allocator.Persistent);
-
-                        var itemsTransforms = new NativeArray<Matrix4x4>(chunkCellsCount, Allocator.Persistent);
-
                         var chunkEntity = EntityManager.CreateEntity(mapChunkArchetype);
                         EntityManager.SetSharedComponentData(chunkEntity, new Heightmap
                         {
-                            east = eastHeightmap,
-                            west = westHeightmap,
-                            north = northHeightmap,
-                            south = southHeightmap
+                            height01 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            height10 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            height00 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            height11 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            center = new NativeArray<float>(chunkCellsCount, Allocator.Persistent)
                         });
                         EntityManager.SetSharedComponentData(chunkEntity, new Watermap
                         {
-                            east = eastWatermap,
-                            west = westWatermap,
-                            north = northWatermap,
-                            south = southWatermap
+                            height01 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            height10 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            height00 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            height11 = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            center = new NativeArray<float>(chunkCellsCount, Allocator.Persistent)
                         });
                         EntityManager.SetSharedComponentData(chunkEntity, new Groundmap
                         {
-                            east = eastGroundmap,
-                            west = westGroundmap,
-                            north = northGroundmap,
-                            south = southGroundmap
+                            east = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            west = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            north = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            south = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent)
                         });
                         EntityManager.SetSharedComponentData(chunkEntity, new Bordermap
                         {
-                            east = eastBordermap,
-                            west = westBordermap,
-                            north = northBordermap,
-                            south = southBordermap
+                            east = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            west = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            north = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent),
+                            south = new NativeArray<byte>(chunkCellsCount, Allocator.Persistent)
                         });
                         EntityManager.SetSharedComponentData(chunkEntity, new Itemsmap
                         {
-                            id = itemsId,
-                            position = itemsPosition,
-                            rotation = itemsRotation,
-                            scale = itemsScale
+                            value = new NativeArray<int>(chunkCellsCount, Allocator.Persistent),
                         });
-                        EntityManager.SetSharedComponentData(chunkEntity, new ItemsTransforms
+                        EntityManager.SetSharedComponentData(chunkEntity, new ItemsTransformmap
                         {
-                            value = itemsTransforms
+                            matrix = new NativeArray<Matrix4x4>(chunkCellsCount, Allocator.Persistent),
+                            position = new NativeArray<float3>(chunkCellsCount, Allocator.Persistent),
+                            rotation = new NativeArray<float3>(chunkCellsCount, Allocator.Persistent),
+                            scale = new NativeArray<float3>(chunkCellsCount, Allocator.Persistent)
                         });
 
                         EntityManager.SetComponentData(chunkEntity, new WorldMapRef
@@ -130,14 +115,21 @@ namespace Assets.GameCode.Map.Logic
                             size = chunkSize
                         });
 
+                        if (isGenerateMap)
+                        {
+                            EntityManager.AddComponentData(chunkEntity, generateMapRequest);
+                        }
+
                         chunksmap[chunkIndex] = chunkEntity;
                     }
                 }
 
-                EntityManager.SetSharedComponentData(mapEntity, new Chunksmap {
+                EntityManager.SetSharedComponentData(mapEntity, new Chunksmap
+                {
                     value = chunksmap
                 });
-                EntityManager.SetComponentData(mapEntity, new MapResourcesIndex {
+                EntityManager.SetComponentData(mapEntity, new MapResourcesIndex
+                {
                     value = request.mapResourcesIndex
                 });
             }
