@@ -1,0 +1,3 @@
+[submodule "ChessKnightECS/Assets/Lib/ToyTerrain"]
+	path = ChessKnightECS/Assets/Lib/ToyTerrain
+	url = https://freewebtime.visualstudio.com/DefaultCollection/Fwt%20Unity%20Lib/_git/Fwt.Unity.ToyTerrain
