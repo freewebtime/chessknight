@@ -1,3 +1,9 @@
-[submodule "ChessKnightECS/Assets/Lib/ToyTerrain"]
-	path = ChessKnightECS/Assets/Lib/ToyTerrain
+[submodule "ChessKnightECS/Assets/Lib/Fwt.Unity.Core"]
+	path = ChessKnightECS/Assets/Lib/Fwt.Unity.Core
+	url = https://freewebtime.visualstudio.com/DefaultCollection/Fwt%20Unity%20Lib/_git/Fwt.Unity.Core
+[submodule "ChessKnightECS/Assets/Lib/Fwt.Unity.Gui"]
+	path = ChessKnightECS/Assets/Lib/Fwt.Unity.Gui
+	url = https://freewebtime.visualstudio.com/DefaultCollection/Fwt%20Unity%20Lib/_git/Fwt.Unity.Gui
+[submodule "ChessKnightECS/Assets/Lib/Fwt.Unity.ToyTerrain"]
+	path = ChessKnightECS/Assets/Lib/Fwt.Unity.ToyTerrain
 	url = https://freewebtime.visualstudio.com/DefaultCollection/Fwt%20Unity%20Lib/_git/Fwt.Unity.ToyTerrain
