@@ -6,7 +6,7 @@ namespace Ck.Gui
   {
     public void OnMenuClicked()
     {
-
+      GameApi.PauseGame();
     }
   }
 

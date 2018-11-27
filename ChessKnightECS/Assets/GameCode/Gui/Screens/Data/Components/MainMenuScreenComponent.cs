@@ -7,12 +7,12 @@ namespace Ck.Gui
 
     public void OnPlayNowClicked()
     {
-
+      GameApi.PlayRandomLevelNow();
     }
 
     public void OnExitClicked()
     {
-      
+      GameApi.ExitGame();
     }
 
   }

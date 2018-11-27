@@ -6,12 +6,12 @@ namespace Ck.Gui
   {
     public void OnResumeClicked()
     {
-
+      GameApi.ResumeGame();
     }
 
     public void OnExitClicked() 
     {
-      
+      GameApi.ExitToMainMenu();
     }
   }
 }

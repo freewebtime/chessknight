@@ -3,7 +3,6 @@ using Unity.Entities;
 
 namespace Ck.Gui
 {
-  [UpdateInGroup(typeof(GuiLoop.CollectInputGroup))]
   public class GuiApi : ComponentSystem
   {
 
@@ -23,7 +22,7 @@ namespace Ck.Gui
       );
     }
 
-    public void HideAllGuiScreens<TScreen>() where TScreen: struct
+    public void HideAllScreens()
     {
       EntityManager.CreateEntity(
         ComponentType.Create<Command>(),
@@ -32,5 +31,6 @@ namespace Ck.Gui
     }
 
     protected override void OnUpdate() {}
+    
   }
 }
