@@ -2,7 +2,7 @@ using Unity.Entities;
 
 namespace Ck.Gui
 {
-  public class YouWinScreenComponent: GuiScreenComponent<YouWinScreen> 
+  public class YouWinScreenComponent: GuiScreenTypeComponent<YouWinScreen> 
   {
     public void OnContinueClicked()
     {

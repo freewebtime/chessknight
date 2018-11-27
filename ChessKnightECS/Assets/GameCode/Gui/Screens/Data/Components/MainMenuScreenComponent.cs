@@ -2,7 +2,7 @@ using Unity.Entities;
 
 namespace Ck.Gui
 {
-  public class MainMenuScreenComponent: GuiScreenComponent<MainMenuScreen> 
+  public class MainMenuScreenComponent: GuiScreenTypeComponent<MainMenuScreen> 
   {
 
     public void OnPlayNowClicked()

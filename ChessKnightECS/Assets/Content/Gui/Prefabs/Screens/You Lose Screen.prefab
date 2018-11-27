@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1032665862386207488}
   - component: {fileID: 1032665862386207491}
   - component: {fileID: 7564375332269889819}
+  - component: {fileID: 8780053023948632160}
   m_Layer: 0
   m_Name: You Lose Screen
   m_TagString: Untagged
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc62bde9af499784d936623b83c0efbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8780053023948632160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032665862386207501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49566164789708f4ca6ea2c053b6a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2143825032029696951

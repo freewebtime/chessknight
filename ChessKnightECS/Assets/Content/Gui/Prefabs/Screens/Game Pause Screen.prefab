@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2618515604212699488}
   - component: {fileID: 2618515604212699491}
   - component: {fileID: 1119709962842372559}
+  - component: {fileID: 6798950100577384119}
   m_Layer: 0
   m_Name: Game Pause Screen
   m_TagString: Untagged
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 971d02d60c1cc1f4098532f00bbc4062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6798950100577384119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618515604212699501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49566164789708f4ca6ea2c053b6a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3696869061361084662

@@ -2,7 +2,7 @@ using Unity.Entities;
 
 namespace Ck.Gui
 {
-  public class GamePauseScreenComponent: GuiScreenComponent<GamePauseScreen> 
+  public class GamePauseScreenComponent: GuiScreenTypeComponent<GamePauseScreen> 
   {
     public void OnResumeClicked()
     {
