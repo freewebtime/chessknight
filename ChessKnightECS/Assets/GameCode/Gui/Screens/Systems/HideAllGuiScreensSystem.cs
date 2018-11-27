@@ -1,11 +1,14 @@
+using Fwt.Core;
 using Fwt.Core.Data;
 using Unity.Collections;
 using Unity.Entities;
+using UnityEngine;
 
 namespace Ck.Gui
 {
   [UpdateInGroup(typeof(GuiLoop.UpdateGroup.HideGroup))]
-  public abstract class HideAllGuiScreensSystem: ComponentSystem
+  [UpdateBefore(typeof(CleanupCommandSystem))]
+  public class HideAllGuiScreensSystem: ComponentSystem
   {
     protected struct WidgetsGroup
     {

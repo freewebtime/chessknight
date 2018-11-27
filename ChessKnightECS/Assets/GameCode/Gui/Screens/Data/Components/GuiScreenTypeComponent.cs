@@ -11,19 +11,11 @@ namespace Ck.Gui
       }
     }
 
-    protected World World
-    {
-      get
-      {
-        return World.Active;
-      }
-    }
-
     protected GameApi GameApi
     {
       get
       {
-        return World.GetExistingManager<GameApi>();
+        return World.Active.GetExistingManager<GameApi>();
       }
     }
   }

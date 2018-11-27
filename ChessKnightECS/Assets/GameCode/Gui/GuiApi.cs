@@ -6,6 +6,8 @@ namespace Ck.Gui
   public class GuiApi : ComponentSystem
   {
 
+    [Inject] GuiLoop.GuiCollectInputBarrier collectInputBarrier;
+
     public void ShowGuiScreen<TScreen>() where TScreen: struct
     {
       EntityManager.CreateEntity(
