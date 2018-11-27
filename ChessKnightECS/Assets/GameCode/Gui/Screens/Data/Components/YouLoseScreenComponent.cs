@@ -2,10 +2,9 @@ using Unity.Entities;
 
 namespace Ck.Gui
 {
-  public class MainMenuScreenComponent: ComponentDataWrapper<MainMenuScreen> 
+  public class YouLoseScreenComponent: GuiScreenComponent<YouLoseScreen> 
   {
-
-    public void OnPlayNowClicked()
+    public void OnReplayClicked()
     {
 
     }
@@ -14,6 +13,6 @@ namespace Ck.Gui
     {
       
     }
-
   }
+
 }
