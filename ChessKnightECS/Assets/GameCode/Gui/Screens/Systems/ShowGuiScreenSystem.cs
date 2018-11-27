@@ -6,7 +6,7 @@ namespace Ck.Gui
 {
 
   // Main Menu
-  [UpdateInGroup(typeof(GuiLoop.UpdateGroup.HideGroup))]
+  [UpdateInGroup(typeof(GuiLoop.UpdateGroup.ShowGroup))]
   public class ShowGuiScreenSystemMainMenu: ShowGuiScreenSystem<MainMenuScreen> {}
 
   // Game Pause
