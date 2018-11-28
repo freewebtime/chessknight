@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using Unity.Entities;
 using UnityEngine;
 
 namespace Ck.Gameplay
 {
   [Serializable]
-  public struct ApplicationContent: ISharedComponentData
+  public struct ApplicationResources: ISharedComponentData
   {
     public GameObject ApplicationPrefab;
   }

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Fwt.Core;
 using Unity.Collections;
 using Unity.Entities;
@@ -6,7 +6,7 @@ using Unity.Entities;
 namespace Ck.Gameplay
 {
   [UpdateInGroup(typeof(GameLoop.InitializeGroup))]
-  public class InitDeskContentSystem : ComponentSystem
+  public class InitDeskResourcesSystem : ComponentSystem
   {
     struct InitDeskCache: ISystemStateComponentData {}
 
@@ -14,7 +14,7 @@ namespace Ck.Gameplay
     {
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<DeskContent> DeskContent;
+      [ReadOnly] public SharedComponentDataArray<DeskResources> DeskContent;
       public SubtractiveComponent<InitDeskCache> NoCache;
     }
 
@@ -22,8 +22,8 @@ namespace Ck.Gameplay
     {
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public ComponentDataWrapper<InitDeskCache> Cache;
-      public SubtractiveComponent<DeskContent> NoContent;
+      [ReadOnly] public ComponentDataArray<InitDeskCache> Cache;
+      public SubtractiveComponent<DeskResources> NoContent;
     }
 
     [Inject] Added added;
