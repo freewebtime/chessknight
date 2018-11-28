@@ -3,6 +3,6 @@ using Unity.Entities;
 namespace Ck.Gameplay
 {
 
-  public struct Background: IComponentData {}
+  public struct SceneBack: IComponentData {}
 
 }

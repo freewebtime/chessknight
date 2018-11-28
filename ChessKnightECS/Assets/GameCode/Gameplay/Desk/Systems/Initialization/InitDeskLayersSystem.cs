@@ -62,7 +62,9 @@ namespace Ck.Gameplay
         var layerData = added.Layer[i];
         layerData.Length = cellsCount;
 
-        PostUpdateCommands.SetSharedComponent(added.Entity[i], layerData);
+        var entity = added.Entity[i];
+        PostUpdateCommands.SetSharedComponent(entity, layerData);
+        PostUpdateCommands.AddComponent(entity, new InitDeskLayerCache());
       }
 
       for (int i = 0; i < removed.Length; i++)
