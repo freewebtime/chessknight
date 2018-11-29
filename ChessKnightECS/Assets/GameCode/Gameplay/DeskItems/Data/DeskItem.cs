@@ -2,6 +2,5 @@ using Unity.Entities;
 
 namespace Ck.Gameplay
 {
-  public struct Desk: IComponentData {}
-  
+  public struct DeskItem: IComponentData {}
 }
