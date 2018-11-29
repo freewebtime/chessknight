@@ -8,8 +8,4 @@ using UnityEngine;
 public struct DeskResources: ISharedComponentData
 {
   public GameObject DeskPrefab;
-
-  public DeskItemPrefab[] CellPrefabs;
-
-  public Dictionary<DeskItemTypes, DeskItemPrefab> CellPrefabsSorted;
 }

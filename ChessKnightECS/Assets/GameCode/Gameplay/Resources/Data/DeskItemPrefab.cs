@@ -6,6 +6,5 @@ using UnityEngine;
 public struct DeskItemPrefab
 {
   public string Name;
-  public DeskItemTypes DeskItemType;
   public GameObject Prefab;
 }
