@@ -3,7 +3,7 @@ using Unity.Entities;
 using UnityEngine;
 
 [Serializable]
-public struct SceneBackResources: ISharedComponentData
+public struct SceneResources: ISharedComponentData
 {
   public GameObject[] SceneBacks;
 }

@@ -63,31 +63,6 @@ MonoBehaviour:
   m_SerializedData:
     DeskPrefab: {fileID: 1356229832475707040, guid: dc1e8b81b5882f84281a97314bde6c8a,
       type: 3}
-    CellPrefabs:
-    - Name: Background
-      DeskItemType: 0
-      Prefab: {fileID: 8237666568004337860, guid: ff800ea78ed79ff48b21b46b2e5bedd7,
-        type: 3}
-    - Name: Bomb
-      DeskItemType: 2
-      Prefab: {fileID: 1901995508429680454, guid: 009c34e805093c041b8e9ac6da3edc18,
-        type: 3}
-    - Name: Figure
-      DeskItemType: 3
-      Prefab: {fileID: 1121136340810231175, guid: dc93a4b48364dbe45aba5477ab314107,
-        type: 3}
-    - Name: Goal
-      DeskItemType: 6
-      Prefab: {fileID: 3694530941486155384, guid: 305fc223a0a230c4e9b6b2b1c61fdbca,
-        type: 3}
-    - Name: Lock
-      DeskItemType: 4
-      Prefab: {fileID: 1901995508429680454, guid: 009c34e805093c041b8e9ac6da3edc18,
-        type: 3}
-    - Name: Move Target
-      DeskItemType: 5
-      Prefab: {fileID: 4239110997079572807, guid: a9c372400c389b64ca84ce9214744977,
-        type: 3}
 --- !u!114 &6997169824813102264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +72,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2453621803990170078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e921d514cbdb4404cad6c043960ae36f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c41c9ae61c20594a8c6004ba96131b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
