@@ -1,5 +1,7 @@
 using System;
+using Ck.Gameplay;
 using Ck.Gui;
+using Unity.Collections;
 using Unity.Entities;
 
 namespace Ck
@@ -7,7 +9,14 @@ namespace Ck
   public class GameApi : ComponentSystem
   {
     
+    struct GamestateGroup
+    {
+      public readonly int Length;
+      [ReadOnly] public ComponentDataArray<Gamestate> Gamestate;
+    }
+
     [Inject] GuiApi guiApi;
+    [Inject] GamestateGroup gamestateGroup;
 
     public void PlayRandomLevelNow()
     {

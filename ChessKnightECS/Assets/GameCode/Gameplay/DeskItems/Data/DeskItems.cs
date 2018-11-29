@@ -21,7 +21,7 @@ namespace Ck.Gameplay
     [Serializable]
     public struct Figure: IComponentData
     {
-      public int Id;
+      public ChessFigureTypes Id;
     } 
 
     [Serializable]
