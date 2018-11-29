@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6194606738287606081}
   - component: {fileID: 6194606738287606086}
   - component: {fileID: 8875940878378669429}
-  - component: {fileID: 7193922533579452684}
+  - component: {fileID: 2679338248952203450}
   m_Layer: 0
   m_Name: Main Menu Screen
   m_TagString: Untagged
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49566164789708f4ca6ea2c053b6a8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7193922533579452684
+--- !u!114 &2679338248952203450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6194606738287606095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d229565cfa61c834a82e504666f55473, type: 3}
+  m_Script: {fileID: 11500000, guid: 944c351504b923c43b7dff0a1d25455d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3239601663245337550

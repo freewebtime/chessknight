@@ -4,8 +4,11 @@ using Ck.Gameplay;
 using Unity.Entities;
 using UnityEngine;
 
-[Serializable]
-public struct DeskResources: ISharedComponentData
+namespace Ck.Gameplay
 {
-  public GameObject DeskPrefab;
+  [Serializable]
+  public struct DeskResources: ISharedComponentData
+  {
+    public GameObject DeskPrefab;
+  }
 }

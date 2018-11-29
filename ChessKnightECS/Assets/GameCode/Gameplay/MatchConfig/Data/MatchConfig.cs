@@ -1,12 +1,13 @@
 using System;
+using Fwt.Core;
 using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace Ck.Gameplay
 {
-  [CreateAssetMenu]
-  public class MatchConfig: ScriptableObject
+  [Serializable]
+  public struct MatchConfig: ISharedComponentData
   {
     public DeskConfig Desk;
   }

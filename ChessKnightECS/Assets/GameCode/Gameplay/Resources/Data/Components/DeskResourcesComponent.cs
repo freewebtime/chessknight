@@ -2,4 +2,7 @@ using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 
-public class DeskResourcesComponent: SharedComponentDataWrapper<DeskResources> {}
+namespace Ck.Gameplay
+{
+  public class DeskResourcesComponent: SharedComponentDataWrapper<DeskResources> {}
+}
