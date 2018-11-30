@@ -73,23 +73,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     BackgroundLight:
-    - {fileID: 522163742992580353, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e, type: 3}
+    - {fileID: 3278464114286255048, guid: 4b5fc2bf63e843f44927123270777c82, type: 3}
     BackgroundDark:
-    - {fileID: 1918266616972108419, guid: c3e8984e818a23648b4427feee00904e, type: 3}
+    - {fileID: 3891390976906463561, guid: ff1375424db18fd4bb239a7f75f37b6d, type: 3}
     Bomb:
     - {fileID: 2589229830463142986, guid: 32fadd7d904008c418fe265949b6a4fa, type: 3}
     Pawn:
-    - {fileID: 5595825080966509430, guid: 5df5681af5d105e45a0f303b26c19dc7, type: 3}
+    - {fileID: 3794029065431227477, guid: fa34b35a79b4e1e43950a6e8961225a0, type: 3}
     Rook:
-    - {fileID: 2919512837426607963, guid: 2f5cc21c8bba3d343954f037c5bcdae8, type: 3}
+    - {fileID: 207783736142117462, guid: eaaa1ecb83a34bd49a717b7195c5cb2d, type: 3}
     Bishop:
-    - {fileID: 5399969729865156706, guid: d5de1f20fa173b24c8ed8e48b80480b1, type: 3}
+    - {fileID: 5461131032118759975, guid: 2e7c608f7499f6e4a952aa4e495a2e70, type: 3}
     Knight:
-    - {fileID: 650798936024738714, guid: ba69192b91065a546a73eeaef403dfb9, type: 3}
+    - {fileID: 1134269166857230786, guid: 9a47d9880aab61144a210180f4e3c27b, type: 3}
     Queen:
-    - {fileID: 360959924487733209, guid: d993bf2da10b83f4e9f4113b082670cd, type: 3}
+    - {fileID: 4671070335680337794, guid: e8f4c0ccf05e7b64b8d9abc93d8a378d, type: 3}
     King:
-    - {fileID: 3771841069463832731, guid: f2259b5333328f3418b09b9bfdcd4105, type: 3}
+    - {fileID: 1328034634613779909, guid: 4dbedfce9c6869c47834ead7e59dfc2c, type: 3}
     Goal:
     - {fileID: 4310796411789204693, guid: 38ebce9485b0a5d4fa269bee5eceb100, type: 3}
     Armor:
