@@ -83,7 +83,10 @@ namespace Ck.Gameplay
           var coordinate = deskItemConfig.Coordinate;
 
           // create desk item
-          var deskItemEntity = EntityManager.Instantiate(deskItemPrefab);
+          var deskItemGo = UnityEngine.Object.Instantiate(deskItemPrefab);
+          var deskItemGoEntity = deskItemGo.GetComponent<GameObjectEntity>();
+          var deskItemEntity = deskItemGoEntity.Entity;
+          
           PostUpdateCommands.SetComponent(deskItemEntity, new Coordinate { 
             Value = coordinate 
           });
