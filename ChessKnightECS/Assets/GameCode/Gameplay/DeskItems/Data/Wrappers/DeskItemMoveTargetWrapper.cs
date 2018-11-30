@@ -1,4 +1,4 @@
 namespace Ck.Gameplay
 {
-  public class DeskItemMoveTargetWrapper: DeskItemTypeWrapper<DeskItems.MoveTarget> {} 
+  public class DeskItemMoveTargetWrapper: DeskItemWrapperBase<DeskItems.MoveTarget> {} 
 }

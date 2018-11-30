@@ -1,4 +1,4 @@
 namespace Ck.Gameplay
 {
-  public class DeskItemBackgroundWrapper: DeskItemTypeWrapper<DeskItems.Background> {} 
+  public class DeskItemBackgroundWrapper: DeskItemWrapperBase<DeskItems.Background> {} 
 }

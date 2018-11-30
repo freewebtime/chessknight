@@ -7,65 +7,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6059111064232622518}
+      propertyPath: m_Name
+      value: Desk Item Figure Queen Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622519}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208425751743808510}
+      propertyPath: m_SerializedData.Type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622514}
+      propertyPath: m_SerializedData.Id
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8687680427034329794, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
       propertyPath: m_Name
       value: Desk Item Figure Queen Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+    - target: {fileID: 1168144522, guid: 7af0a3c514230784283a46fb0f333d37, type: 3}
+      propertyPath: m_SerializedData.Type
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8687680427034329798, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
@@ -74,3 +79,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af0a3c514230784283a46fb0f333d37, type: 3}
+--- !u!1 &6059111064232622518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8687680427034329794, guid: 7af0a3c514230784283a46fb0f333d37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3208425750609247092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6059111064232622519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8687680427034329795, guid: 7af0a3c514230784283a46fb0f333d37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3208425750609247092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6059111064232622514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8687680427034329798, guid: 7af0a3c514230784283a46fb0f333d37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3208425750609247092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6059111064232622518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebd17d27488325498be3424ca1de6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3208425751743808510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1168144522, guid: 7af0a3c514230784283a46fb0f333d37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3208425750609247092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6059111064232622518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

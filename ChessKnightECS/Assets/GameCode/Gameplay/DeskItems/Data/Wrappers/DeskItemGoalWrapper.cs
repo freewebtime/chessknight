@@ -1,4 +1,4 @@
 namespace Ck.Gameplay
 {
-  public class DeskItemGoalWrapper: DeskItemTypeWrapper<DeskItems.Goal> {} 
+  public class DeskItemGoalWrapper: DeskItemWrapperBase<DeskItems.Goal> {} 
 }

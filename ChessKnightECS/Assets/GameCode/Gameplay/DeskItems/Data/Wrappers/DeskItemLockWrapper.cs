@@ -1,4 +1,4 @@
 namespace Ck.Gameplay
 {
-  public class DeskItemLockWrapper: DeskItemTypeWrapper<DeskItems.Lock> {} 
+  public class DeskItemLockWrapper: DeskItemWrapperBase<DeskItems.Lock> {} 
 }

@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1168144522, guid: 7af0a3c514230784283a46fb0f333d37, type: 3}
+      propertyPath: m_SerializedData.Type
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8687680427034329798, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
       propertyPath: m_SerializedData.Id
