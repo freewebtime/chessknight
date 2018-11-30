@@ -15,6 +15,33 @@ PrefabInstance:
       propertyPath: m_SerializedData.Type
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 950008678960251228}
+      propertyPath: m_LocalPosition.z
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 950008678960251231}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300018, guid: 979bc50b367913e44ad0e3b6ab40e6dc,
+        type: 3}
+    - target: {fileID: 950008678960251228}
+      propertyPath: m_LocalPosition.z
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 950008678960251228}
+      propertyPath: m_LocalPosition.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 950008678960251231}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300018, guid: 979bc50b367913e44ad0e3b6ab40e6dc,
+        type: 3}
+    - target: {fileID: 950008678960251231}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300018, guid: 979bc50b367913e44ad0e3b6ab40e6dc,
+        type: 3}
     - target: {fileID: 950008678960251231}
       propertyPath: m_Sprite
       value: 
@@ -77,6 +104,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Div Armor
       objectReference: {fileID: 0}
+    - target: {fileID: 6454765980102141807}
+      propertyPath: m_Name
+      value: Div Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454765980102141807}
+      propertyPath: m_Name
+      value: Div Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454765980102141807}
+      propertyPath: m_Name
+      value: Div Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178833244216788160}
+      propertyPath: m_SerializedData.Type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178833244216788160}
+      propertyPath: m_SerializedData.Type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178833244216788160}
+      propertyPath: m_SerializedData.Type
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8178833244216788160}
       propertyPath: m_SerializedData.Type
       value: 9
@@ -94,6 +145,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SerializedData.Type
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1677033442, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
       propertyPath: m_Sprite
@@ -126,6 +181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &950008678960251228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 950008679464419005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &950008678960251231 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1677033442, guid: 245b9f54efc1b3841ae33cb542c615a7,

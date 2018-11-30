@@ -86,10 +86,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 696970832507945441, guid: 067521bb7c2a6b0478af59c2456b91a7,
-        type: 3}
+    - target: {fileID: 6106024204065315282}
       propertyPath: m_Name
-      value: Desk Item View Sprite Variant
+      value: Desk Item View Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984142894393801341}
+      propertyPath: m_SerializedData.Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6106024204065315282}
       propertyPath: m_Name
@@ -139,10 +142,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2431593822640202318, guid: 067521bb7c2a6b0478af59c2456b91a7,
+    - target: {fileID: 696970832507945441, guid: 067521bb7c2a6b0478af59c2456b91a7,
         type: 3}
-      propertyPath: m_SerializedData.Type
-      value: 0
+      propertyPath: m_Name
+      value: Desk Item View Sprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 067521bb7c2a6b0478af59c2456b91a7, type: 3}
@@ -158,3 +161,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6706097262678890547}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8984142894393801341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2431593822640202318, guid: 067521bb7c2a6b0478af59c2456b91a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6706097262678890547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106024204065315282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

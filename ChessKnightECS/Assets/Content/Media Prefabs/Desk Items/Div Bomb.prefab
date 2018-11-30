@@ -15,11 +15,43 @@ PrefabInstance:
       propertyPath: m_SerializedData.Type
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8598003246481332858}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 163e90502165c2343b20b2cdb3474c8f,
         type: 3}
+    - target: {fileID: 863609460812718053}
+      propertyPath: m_SerializedData.Type
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 863609460812718053}
+      propertyPath: m_SerializedData.Type
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 863609460812718053}
+      propertyPath: m_SerializedData.Type
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 863609460812718053}
       propertyPath: m_SerializedData.Type
       value: 12
@@ -74,12 +106,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2589229830463142986}
       propertyPath: m_Name
+      value: Div Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589229830463142986}
+      propertyPath: m_Name
+      value: Div Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589229830463142986}
+      propertyPath: m_Name
+      value: Div Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589229830463142986}
+      propertyPath: m_Name
       value: Div Bomb Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2589229830463142986}
       propertyPath: m_Name
       value: Div Bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.x
+      value: 0.1092
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalPosition.y
+      value: -0.1092
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.x
+      value: 0.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.y
+      value: 0.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332857}
+      propertyPath: m_LocalScale.z
+      value: 0.454
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598003246481332858}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 163e90502165c2343b20b2cdb3474c8f,
+        type: 3}
+    - target: {fileID: 8598003246481332858}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 163e90502165c2343b20b2cdb3474c8f,
+        type: 3}
+    - target: {fileID: 8598003246481332858}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 163e90502165c2343b20b2cdb3474c8f,
+        type: 3}
     - target: {fileID: 6106024204065315282, guid: 245b9f54efc1b3841ae33cb542c615a7,
         type: 3}
       propertyPath: m_Name
@@ -89,6 +196,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SerializedData.Type
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1677033442, guid: 245b9f54efc1b3841ae33cb542c615a7, type: 3}
       propertyPath: m_Sprite
@@ -121,6 +248,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8598003246481332857 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1677033441, guid: 245b9f54efc1b3841ae33cb542c615a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8598003248153601432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &8598003246481332858 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1677033442, guid: 245b9f54efc1b3841ae33cb542c615a7,
