@@ -9,5 +9,4 @@ namespace Ck.Gameplay
   {
     public int2 Value;
   }
-  
 }

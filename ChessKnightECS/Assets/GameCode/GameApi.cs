@@ -47,8 +47,10 @@ namespace Ck
       guiApi.ShowGuiScreen<MatchScreen>();
     }
 
-    public void ExitToMainMenu()
+    public void StopGame()
     {
+      gameplayApi.StopMatch();
+
       guiApi.HideAllScreens();
       guiApi.ShowGuiScreen<MainMenuScreen>();
     }

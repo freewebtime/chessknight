@@ -11,7 +11,7 @@ namespace Ck.Gui
 
     public void OnExitClicked() 
     {
-      GameApi.ExitToMainMenu();
+      GameApi.StopGame();
     }
   }
 }
