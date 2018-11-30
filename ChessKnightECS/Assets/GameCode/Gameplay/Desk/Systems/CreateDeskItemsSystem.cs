@@ -14,7 +14,8 @@ namespace Ck.Gameplay
   {
     struct CreateDeskItemsCache: ISystemStateSharedComponentData
     {
-      public List<Entity> Entities;
+      public List<Entity> DeskItemEntities;
+      public List<GameObject> DeskItemGo;
     }
 
     struct Added
@@ -79,6 +80,7 @@ namespace Ck.Gameplay
         
         // create desk item entities
         var deskItemEntities = new List<Entity>(deskItemsCount);
+        var deskItemGameObjects = new List<GameObject>(deskItemsCount);
         var deskItemEntitiesByCoord = new Dictionary<int2, List<Entity>>();
   
         for (int k = 0; k < deskItemsCount; k++)
@@ -99,10 +101,11 @@ namespace Ck.Gameplay
           var deskItemEntity = deskItemGoEntity.Entity;
 
           // set desk item entity values
+          // add desk reference
           PostUpdateCommands.AddComponent(deskItemEntity, new DeskReference {
             Target = deskEntity
           });
-
+          // set coordinate and position
           PostUpdateCommands.SetComponent(deskItemEntity, new Coordinate { 
             Value = coordinate 
           });
@@ -112,6 +115,7 @@ namespace Ck.Gameplay
 
           // add desk item to all desk items registry
           deskItemEntities.Add(deskItemEntity);
+          deskItemGameObjects.Add(deskItemGo);
 
           List<Entity> coordList;
           if (!deskItemEntitiesByCoord.TryGetValue(coordinate, out coordList) || coordList == null) {
@@ -124,7 +128,8 @@ namespace Ck.Gameplay
 
         // add registers to desk
         PostUpdateCommands.AddSharedComponent(deskEntity, new DeskItemsList {
-          Value = deskItemEntities
+          DeskItemsEntity = deskItemEntities,
+          DeskItemGo = deskItemGameObjects
         });
         PostUpdateCommands.AddSharedComponent(deskEntity, new DeskItemsListByCoord {
           Value = deskItemEntitiesByCoord
@@ -132,7 +137,8 @@ namespace Ck.Gameplay
 
         // add cache mark to desk
         PostUpdateCommands.AddSharedComponent(deskEntity, new CreateDeskItemsCache {
-          Entities = deskItemEntities
+          DeskItemEntities = deskItemEntities,
+          DeskItemGo = deskItemGameObjects
         });
       }
 
@@ -152,16 +158,22 @@ namespace Ck.Gameplay
 
       for (int i = 0; i < removedEntities.Length; i++)
       {
-        var cacheList = cacheArray[i].Entities;
-        for (int k = 0; k < cacheList.Count; k++)
-        {
-          var deskItemEntity = cacheList[k];
-          if (EntityManager.Exists(deskItemEntity)) {
-            PostUpdateCommands.DestroyEntity(deskItemEntity);
+        // clear system cache
+        PostUpdateCommands.RemoveComponent<CreateDeskItemsCache>(entityArray[i]);
+
+        var deskCache = cacheArray[i];
+        var deskItemEntities = deskCache.DeskItemEntities;
+        var deskItemGo = deskCache.DeskItemGo;
+
+        if (deskItemGo != null) {
+          for (int j = 0; j < deskItemGo.Count; j++)
+          {
+            var diGameObject = deskItemGo[j];
+            if (diGameObject != null) {
+              UnityEngine.Object.Destroy(diGameObject);
+            }
           }
         }
-
-        PostUpdateCommands.RemoveComponent<CreateDeskItemsCache>(entityArray[i]);
       }
     }
   }

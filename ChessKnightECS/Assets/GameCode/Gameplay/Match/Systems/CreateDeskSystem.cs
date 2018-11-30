@@ -1,15 +1,17 @@
 using Fwt.Core;
 using Unity.Collections;
 using Unity.Entities;
+using UnityEngine;
 
 namespace Ck.Gameplay
 {
   [UpdateInGroup(typeof(GameLoop.InitializeGroup))]
   public class CreateMatchDeskSystem : ComponentSystem
   {
-    struct CreateMatchDeskCache: ISystemStateComponentData
+    struct CreateDeskCache: ISystemStateSharedComponentData
     {
       public Entity DeskEntity;
+      public GameObject DeskGameObject;
     }
 
     struct Added
@@ -18,7 +20,7 @@ namespace Ck.Gameplay
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public ComponentDataArray<Match> Match;
       [ReadOnly] public SharedComponentDataArray<MatchConfig> MatchConfig; 
-      public SubtractiveComponent<CreateMatchDeskCache> NoCache;
+      public SubtractiveComponent<CreateDeskCache> NoCache;
     }
 
     struct Removed
@@ -27,7 +29,7 @@ namespace Ck.Gameplay
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public SubtractiveComponent<Match> NoMatch;
       [ReadOnly] public SubtractiveComponent<MatchConfig> NoMatchConfig; 
-      [ReadOnly] public ComponentDataArray<CreateMatchDeskCache> Cache;
+      [ReadOnly] public SharedComponentDataArray<CreateDeskCache> Cache;
     }
 
     [Inject] Added added;
@@ -71,8 +73,9 @@ namespace Ck.Gameplay
 
         PostUpdateCommands.AddSharedComponent(deskEntity, matchConfig.DeskConfig);
 
-        PostUpdateCommands.AddComponent(matchEntity, new CreateMatchDeskCache {
-          DeskEntity = deskEntity
+        PostUpdateCommands.AddSharedComponent(matchEntity, new CreateDeskCache {
+          DeskEntity = deskEntity,
+          DeskGameObject = deskGo
         });
 
         PostUpdateCommands.AddComponent(matchEntity, new DeskReference {
@@ -89,22 +92,21 @@ namespace Ck.Gameplay
     private void UpdateRemoved() 
     {
       var removedGroup = GetComponentGroup(
-        ComponentType.Create<CreateMatchDeskCache>(),
+        ComponentType.Create<CreateDeskCache>(),
         ComponentType.Subtractive<Match>(),
         ComponentType.Subtractive<MatchConfig>()
       );
       var removedEntities = removedGroup.GetEntityArray();
-      var cacheArray = removedGroup.GetComponentDataArray<CreateMatchDeskCache>();
+      var cacheArray = removedGroup.GetSharedComponentDataArray<CreateDeskCache>();
       var entityArray = removedGroup.GetEntityArray();
 
       for (int i = 0; i < removedEntities.Length; i++)
       {
-        var deskEntity = cacheArray[i].DeskEntity;
-        if (EntityManager.Exists(deskEntity)) {
-          PostUpdateCommands.DestroyEntity(deskEntity);
-        }
+        PostUpdateCommands.RemoveComponent<CreateDeskCache>(entityArray[i]);
 
-        PostUpdateCommands.RemoveComponent<CreateMatchDeskCache>(entityArray[i]);
+        // destroy desk game object
+        var deskGo = cacheArray[i].DeskGameObject;
+        UnityEngine.Object.Destroy(deskGo);
       }
     }
   }
