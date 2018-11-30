@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2134728744012995970
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1918266616972108419}
+      propertyPath: m_Name
+      value: Div Background Dark
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642831172002496812}
+      propertyPath: m_SerializedData.Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630618814965712051}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 979bc50b367913e44ad0e3b6ab40e6dc,
+        type: 3}
+    - target: {fileID: 1918266616972108419}
+      propertyPath: m_Name
+      value: Div Background Dark
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918266616972108428}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642831172002496812}
+      propertyPath: m_SerializedData.Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 522163742992580353, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+        type: 3}
+      propertyPath: m_Name
+      value: Div Background Dark
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399650220363488430, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+        type: 3}
+      propertyPath: m_SerializedData.Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017914668173777201, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 979bc50b367913e44ad0e3b6ab40e6dc,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e, type: 3}
+--- !u!1 &1918266616972108419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 522163742992580353, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2134728744012995970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1918266616972108428 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 522163742992580366, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2134728744012995970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3642831172002496812 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3399650220363488430, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2134728744012995970}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918266616972108419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &5630618814965712051 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6017914668173777201, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2134728744012995970}
+  m_PrefabAsset: {fileID: 0}

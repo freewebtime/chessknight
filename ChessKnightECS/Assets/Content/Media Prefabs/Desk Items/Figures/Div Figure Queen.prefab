@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7823816838398237214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 360959924487733209}
+      propertyPath: m_Name
+      value: Div Figure Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247238091010677878}
+      propertyPath: m_SerializedData.Type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890311983614089705}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c88f49d03726d074582a3fc4f85d6445,
+        type: 3}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733206}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360959924487733209}
+      propertyPath: m_Name
+      value: Div Figure Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247238091010677878}
+      propertyPath: m_SerializedData.Type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607042484053239239, guid: e2c316e1d76f9064b95bb940f5c69511,
+        type: 3}
+      propertyPath: m_Name
+      value: Div Figure Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720693939877529192, guid: e2c316e1d76f9064b95bb940f5c69511,
+        type: 3}
+      propertyPath: m_SerializedData.Type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408268104442381303, guid: e2c316e1d76f9064b95bb940f5c69511,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c88f49d03726d074582a3fc4f85d6445,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2c316e1d76f9064b95bb940f5c69511, type: 3}
+--- !u!1 &360959924487733209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7607042484053239239, guid: e2c316e1d76f9064b95bb940f5c69511,
+    type: 3}
+  m_PrefabInstance: {fileID: 7823816838398237214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &360959924487733206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7607042484053239240, guid: e2c316e1d76f9064b95bb940f5c69511,
+    type: 3}
+  m_PrefabInstance: {fileID: 7823816838398237214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3247238091010677878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4720693939877529192, guid: e2c316e1d76f9064b95bb940f5c69511,
+    type: 3}
+  m_PrefabInstance: {fileID: 7823816838398237214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360959924487733209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &5890311983614089705 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4408268104442381303, guid: e2c316e1d76f9064b95bb940f5c69511,
+    type: 3}
+  m_PrefabInstance: {fileID: 7823816838398237214}
+  m_PrefabAsset: {fileID: 0}

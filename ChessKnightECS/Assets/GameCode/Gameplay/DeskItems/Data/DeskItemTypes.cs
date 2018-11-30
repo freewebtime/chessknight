@@ -18,8 +18,9 @@ namespace Ck.Gameplay
     Goal = 10,
     MoveTarget = 11,
 
-    PlayerUnit = 12,
-    Bomb = 13
+    Bomb = 12,
+
+    PlayerUnit = 13,
   }
 
 }
