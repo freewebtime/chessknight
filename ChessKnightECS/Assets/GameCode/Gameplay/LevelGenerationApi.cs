@@ -159,7 +159,7 @@ namespace Ck.Gameplay
         DeskItems = deskItems.ToArray()
       };
       var result = new MatchConfig {
-        Desk = deskConfig
+        DeskConfig = deskConfig
       };
 
       return result;

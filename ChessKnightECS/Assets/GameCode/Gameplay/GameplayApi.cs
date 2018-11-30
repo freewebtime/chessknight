@@ -33,6 +33,12 @@ namespace Ck.Gameplay
         return null;
       }
 
+      // get desk prefab
+      var deskResources = resourcesApi.GetDeskResources();
+      if (!deskResources.HasValue) {
+        return null;
+      }
+
       // stop current match if any
       StopMatch();
 
@@ -40,6 +46,44 @@ namespace Ck.Gameplay
       var matchEntity = EntityManager.Instantiate(matchResources.Value.MatchPrefab);
       EntityManager.AddSharedComponentData(matchEntity, matchConfig);
     
+      // instantiate game desk
+      var deskEntity = EntityManager.Instantiate(deskResources.Value.DeskPrefab);
+      
+      // add references from desk to match and from match to desk
+      EntityManager.AddComponentData(deskEntity, new MatchReference {
+        Target = matchEntity
+      });
+      EntityManager.AddComponentData(matchEntity, new DeskReference {
+        Target = deskEntity
+      });
+
+      // instantiate desk items
+      var deskItemsPrefabs = matchConfig.DeskConfig.DeskItems;
+      for (int k = 0; k < deskItemsPrefabs.Length; k++)
+      {
+        var deskItemConfig = deskItemsPrefabs[k];
+        if (deskItemConfig.Prefab == null) {
+          continue;
+        }
+
+        // create DeskItem entity
+        var deskItemEntity = EntityManager.Instantiate(deskItemConfig.Prefab);
+
+        // add references from desk item to match and to desk
+        EntityManager.AddComponentData(deskItemEntity, new DeskReference {
+          Target = deskEntity
+        });
+        EntityManager.AddComponentData(deskItemEntity, new MatchReference {
+          Target = matchEntity
+        });
+
+        // set coordinate
+        EntityManager.SetComponentData(deskItemEntity, new Coordinate {
+          Value = deskItemConfig.Coordinate
+        });
+
+      }
+
       return matchEntity;
     }
 

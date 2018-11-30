@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 497811895242890360}
   - component: {fileID: 4388305299169832901}
   - component: {fileID: 497811895242890363}
+  - component: {fileID: 6265206363093184312}
   m_Layer: 0
-  m_Name: Player Unit
+  m_Name: Desk Item Player Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,3 +72,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     Id: 0
+--- !u!114 &6265206363093184312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497811895242890362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7546fbc3009257d41982bbaf4660b26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Value:
+      x: 0
+      y: 0

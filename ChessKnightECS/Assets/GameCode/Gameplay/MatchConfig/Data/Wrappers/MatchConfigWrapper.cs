@@ -94,7 +94,7 @@ namespace Ck.Gameplay
       var gridSize = new int2(10, 10);
 
       var matchConfig = this.value;
-      var deskConfig = matchConfig.Desk;
+      var deskConfig = matchConfig.DeskConfig;
       var deskItems = new List<DeskItemConfig>();
 
       for (int y = 0; y < gridSize.y; y++)
@@ -124,7 +124,7 @@ namespace Ck.Gameplay
       }
 
       deskConfig.DeskItems = deskItems.ToArray();
-      matchConfig.Desk = deskConfig;
+      matchConfig.DeskConfig = deskConfig;
       this.value = matchConfig;
     }
   }
