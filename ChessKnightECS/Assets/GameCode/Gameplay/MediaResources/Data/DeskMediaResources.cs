@@ -21,5 +21,7 @@ namespace Ck.Gameplay
     public GameObject[] Goal;
     public GameObject[] Armor;
     public GameObject[] MoveTarget;
+
+    public GameObject[] PlayerUnit;
   }
 }

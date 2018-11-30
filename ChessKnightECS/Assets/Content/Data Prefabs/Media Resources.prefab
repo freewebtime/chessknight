@@ -72,15 +72,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    BackgroundLight: []
-    BackgroundDark: []
-    Bomb: []
-    Pawn: []
-    Rook: []
-    Bishop: []
-    Knight: []
-    Queen: []
-    King: []
-    Goal: []
-    Armor: []
-    MoveTarget: []
+    BackgroundLight:
+    - {fileID: 522163742992580353, guid: a39dbb3bdc2c0ed49b8cb3d8a4e36d5e, type: 3}
+    BackgroundDark:
+    - {fileID: 1918266616972108419, guid: c3e8984e818a23648b4427feee00904e, type: 3}
+    Bomb:
+    - {fileID: 2589229830463142986, guid: 32fadd7d904008c418fe265949b6a4fa, type: 3}
+    Pawn:
+    - {fileID: 5595825080966509430, guid: 5df5681af5d105e45a0f303b26c19dc7, type: 3}
+    Rook:
+    - {fileID: 2919512837426607963, guid: 2f5cc21c8bba3d343954f037c5bcdae8, type: 3}
+    Bishop:
+    - {fileID: 5399969729865156706, guid: d5de1f20fa173b24c8ed8e48b80480b1, type: 3}
+    Knight:
+    - {fileID: 650798936024738714, guid: ba69192b91065a546a73eeaef403dfb9, type: 3}
+    Queen:
+    - {fileID: 360959924487733209, guid: d993bf2da10b83f4e9f4113b082670cd, type: 3}
+    King:
+    - {fileID: 3771841069463832731, guid: f2259b5333328f3418b09b9bfdcd4105, type: 3}
+    Goal:
+    - {fileID: 4310796411789204693, guid: 38ebce9485b0a5d4fa269bee5eceb100, type: 3}
+    Armor:
+    - {fileID: 6454765980102141807, guid: af13ce4cdac70884a82ff5abbc823ac0, type: 3}
+    MoveTarget:
+    - {fileID: 2283068959376416868, guid: 157ce4b6b54ae324ba1bb11f2a7efa6a, type: 3}
+    PlayerUnit:
+    - {fileID: 7901667417937326111, guid: 18cb5cec59424f04285ed1919766b267, type: 3}

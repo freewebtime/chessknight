@@ -1,4 +1,5 @@
 using System;
+using Fwt.Core.Collections;
 using Unity.Collections;
 using Unity.Entities;
 using UnityEngine;
@@ -19,6 +20,7 @@ namespace Ck.Gameplay
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public ComponentArray<Transform> Transform;
       [ReadOnly] public ComponentDataArray<DeskItem> DeskItem;
+      [ReadOnly] public ComponentDataArray<DeskItemType> DeskItemType;
       public SubtractiveComponent<CreateDeskItemViewsCache> NoCache;
     }
 
@@ -43,48 +45,64 @@ namespace Ck.Gameplay
 
     private void UpdateAdded()
     {
-      // check media resources
-      var deskResources = mediaResourcesApi.GetDeskResources();
-      if (!deskResources.HasValue) {
+      if (added.Length == 0) {
         return;
       }
 
+      // check media resources
+      var deskResourcesSorted = mediaResourcesApi.GetDeskResourcesSorted();
+      if (!deskResourcesSorted.HasValue) {
+        return;
+      }
+      var sortedDeskItems = deskResourcesSorted.Value.DeskItems;
+
       // extract data from component group, 'cause we'll use EntityManager within loop
-      var deskItemTransforms = added.Transform;
+      var deskItemTransforms = added.Transform.ToArray();
       var deskItemEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(deskItemEntities);
+      var deskItemTypes = new NativeArray<DeskItemType>(added.Length, Allocator.Temp);
+      added.DeskItemType.CopyTo(deskItemTypes);
 
       for (int i = 0; i < deskItemEntities.Length; i++)
       {
+        var deskItemType = deskItemTypes[i].Type;
+
         // get view prefab
-        GameObject viewPrefab = null;
+        GameObject[] deskItemPrefabs;
+        if (sortedDeskItems.TryGetValue(deskItemType, out deskItemPrefabs) && deskItemPrefabs.Length > 0) {
 
-        // prepare to creation view
-        var deskItemEntity = deskItemEntities[i];
-        var deskItemTransform = deskItemTransforms[i];
+          var deskItemEntity = deskItemEntities[i];
+          var deskItemTransform = deskItemTransforms[i];
 
-        // create view
-        var viewGo = UnityEngine.Object.Instantiate(viewPrefab);
-        var viewGoEntity = viewGo.GetComponent<GameObjectEntity>();
-        var viewEntity = viewGoEntity.Entity;
+          GameObject viewPrefab = deskItemPrefabs.GetRandom();
 
-        // set view as child of deskItem
-        viewGo.transform.SetParent(deskItemTransform);
-        
-        // add references
-        PostUpdateCommands.AddComponent(deskItemEntity, new DeskItemViewReference {
-          Target = viewEntity
-        });
-        PostUpdateCommands.AddComponent(viewEntity, new DeskItemReference {
-          Target = deskItemEntity
-        });
+          // create view
+          var viewGo = UnityEngine.Object.Instantiate(viewPrefab);
+          var viewGoEntity = viewGo.GetComponent<GameObjectEntity>();
+          var viewEntity = viewGoEntity.Entity;
 
-        // add cache
-        PostUpdateCommands.AddSharedComponent(deskItemEntity, new CreateDeskItemViewsCache {
-          ViewEntity = viewEntity,
-          ViewGameObject = viewGo
-        });
+          // set view as child of deskItem
+          viewGo.transform.SetParent(deskItemTransform);
+          
+          // add references
+          PostUpdateCommands.AddComponent(deskItemEntity, new DeskItemViewReference {
+            Target = viewEntity
+          });
+          PostUpdateCommands.AddComponent(viewEntity, new DeskItemReference {
+            Target = deskItemEntity
+          });
+
+          // add cache
+          PostUpdateCommands.AddSharedComponent(deskItemEntity, new CreateDeskItemViewsCache {
+            ViewEntity = viewEntity,
+            ViewGameObject = viewGo
+          });
+        }
+
       }
+
+      deskItemEntities.Dispose();
+      deskItemTypes.Dispose();
     }
 
     private void UpdateRemoved()

@@ -35,6 +35,21 @@ namespace Ck.Gameplay
       return result;
     }
 
+    public DeskMediaResourcesSorted? GetDeskResourcesSorted()
+    {
+      var group = GetComponentGroup(
+        ComponentType.Create<DeskMediaResourcesSorted>()
+      );
+      var resources = group.GetSharedComponentDataArray<DeskMediaResourcesSorted>();
+      if (resources.Length == 0)
+      {
+        return null;
+      }
+
+      var result = resources[0];
+      return result;
+    }
+
     protected override void OnUpdate() {}
   }
 }

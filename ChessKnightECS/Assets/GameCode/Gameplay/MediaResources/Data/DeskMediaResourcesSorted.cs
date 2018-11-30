@@ -6,6 +6,6 @@ namespace Ck.Gameplay
 {
   public struct DeskMediaResourcesSorted: ISharedComponentData
   {
-    public Dictionary<ChessFigureTypes, GameObject[]> Figures;
+    public Dictionary<DeskItemTypes, GameObject[]> DeskItems;
   }
 }

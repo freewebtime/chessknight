@@ -33,12 +33,27 @@ namespace Ck.Gameplay
       for (int i = 0; i < added.Length; i++)
       {
         var resources = added.Resources[i];
-        var figures = new Dictionary<ChessFigureTypes, GameObject[]>();
-        figures[ChessFigureTypes.Bishop] = resources.Bishop;
+        
+        var sortedDeskItems = new Dictionary<DeskItemTypes, GameObject[]>();
+
+        sortedDeskItems.Add(DeskItemTypes.Armor, resources.Armor);
+        sortedDeskItems.Add(DeskItemTypes.BackgroundDark, resources.BackgroundDark); 
+        sortedDeskItems.Add(DeskItemTypes.BackgroundLight, resources.BackgroundLight); 
+        sortedDeskItems.Add(DeskItemTypes.FigureBishop, resources.Bishop); 
+        sortedDeskItems.Add(DeskItemTypes.Bomb, resources.Bomb); 
+        sortedDeskItems.Add(DeskItemTypes.Goal, resources.Goal); 
+        sortedDeskItems.Add(DeskItemTypes.FigureKing, resources.King); 
+        sortedDeskItems.Add(DeskItemTypes.FigureKnight, resources.Knight); 
+        sortedDeskItems.Add(DeskItemTypes.MoveTarget, resources.MoveTarget); 
+        sortedDeskItems.Add(DeskItemTypes.FigurePawn, resources.Pawn); 
+        sortedDeskItems.Add(DeskItemTypes.PlayerUnit, resources.PlayerUnit); 
+        sortedDeskItems.Add(DeskItemTypes.FigureQueen, resources.Queen); 
+        sortedDeskItems.Add(DeskItemTypes.FigureRook, resources.Rook); 
 
         var sorted = new DeskMediaResourcesSorted {
-          Figures = figures
+          DeskItems = sortedDeskItems
         };
+
         PostUpdateCommands.AddSharedComponent(added.Entity[i], sorted);
       }
 

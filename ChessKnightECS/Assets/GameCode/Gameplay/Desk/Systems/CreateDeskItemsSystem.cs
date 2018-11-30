@@ -89,7 +89,7 @@ namespace Ck.Gameplay
           // get desk item prefab
           var deskItemPrefab = deskItemConfig.Prefab;
           var coordinate = deskItemConfig.Coordinate;
-          var position = new float3(coordinate.x, 0, coordinate.y);
+          var position = new float3(coordinate.x, coordinate.y, 0);
 
           // create desk item
           var deskItemGo = UnityEngine.Object.Instantiate(deskItemPrefab);
