@@ -1,8 +1,10 @@
+using Fwt.Core;
 using Unity.Collections;
 using Unity.Entities;
 
 namespace Ck.Gameplay
 {
+  [UpdateInGroup(typeof(GameLoop.InitializeGroup))]
   public class CreateMatchDeskSystem : ComponentSystem
   {
     struct CreateMatchDeskCache: ISystemStateComponentData
@@ -107,6 +109,5 @@ namespace Ck.Gameplay
         PostUpdateCommands.RemoveComponent<CreateMatchDeskCache>(entityArray[i]);
       }
     }
-
   }
 }

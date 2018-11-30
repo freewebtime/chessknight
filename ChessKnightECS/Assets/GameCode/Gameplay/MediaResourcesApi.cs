@@ -5,46 +5,33 @@ namespace Ck.Gameplay
 {
   public class MediaResourcesApi: ComponentSystem
   {
-    struct SceneBackResourcesGroup
-    {
-      public readonly int Length;
-      [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<SceneBackMediaResources> Resources;
-    }
-
-    struct DeskResourcesGroup
-    {
-      public readonly int Length;
-      [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<DeskMediaResources> Resources;
-    }
-
-    [Inject] SceneBackResourcesGroup sceneBackResourcesGroup;
-    [Inject] DeskResourcesGroup deskResourcesGroup;
-
     public SceneBackMediaResources? GetSceneResources()
     {
-      var group = sceneBackResourcesGroup;
-      
-      if (group.Length == 0)
+      var group = GetComponentGroup(
+        ComponentType.Create<SceneBackMediaResources>()
+      );
+      var resources = group.GetSharedComponentDataArray<SceneBackMediaResources>();
+      if (resources.Length == 0)
       {
         return null;
       }
 
-      var result = group.Resources[0];
+      var result = resources[0];
       return result;
     }
 
     public DeskMediaResources? GetDeskResources()
     {
-      var group = deskResourcesGroup;
-      
-      if (group.Length == 0)
+      var group = GetComponentGroup(
+        ComponentType.Create<DeskMediaResources>()
+      );
+      var resources = group.GetSharedComponentDataArray<DeskMediaResources>();
+      if (resources.Length == 0)
       {
         return null;
       }
 
-      var result = group.Resources[0];
+      var result = resources[0];
       return result;
     }
 
