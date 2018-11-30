@@ -3,6 +3,8 @@ using Fwt.Core;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Transforms;
+using UnityEngine;
 
 namespace Ck.Gameplay
 {
@@ -20,7 +22,8 @@ namespace Ck.Gameplay
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public ComponentDataArray<Desk> Desk;
-      [ReadOnly] public SharedComponentDataArray<DeskConfig> Config; 
+      [ReadOnly] public SharedComponentDataArray<DeskConfig> Config;
+      [ReadOnly] public ComponentArray<Transform> Transform;
       public SubtractiveComponent<CreateDeskItemsCache> NoCache;
     }
 
@@ -57,10 +60,13 @@ namespace Ck.Gameplay
       var deskEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(deskEntities);
 
+      var deskTransforms = added.Transform;
+
       // for each added desk create desk items
       for (int i = 0; i < deskEntities.Length; i++)
       {
         var deskEntity = deskEntities[i];
+        var deskTransform = deskTransforms[i];
 
         // get desk config 
         var deskConfig = EntityManager.GetSharedComponentData<DeskConfig>(deskEntity);
@@ -81,17 +87,27 @@ namespace Ck.Gameplay
           // get desk item prefab
           var deskItemPrefab = deskItemConfig.Prefab;
           var coordinate = deskItemConfig.Coordinate;
+          var position = new float3(coordinate.x, 0, coordinate.y);
 
           // create desk item
           var deskItemGo = UnityEngine.Object.Instantiate(deskItemPrefab);
+          deskItemGo.name = string.Format("Desk item {0}", coordinate);
+          deskItemGo.transform.SetParent(deskTransform);
+
+          // get desk item entity from desk game object
           var deskItemGoEntity = deskItemGo.GetComponent<GameObjectEntity>();
           var deskItemEntity = deskItemGoEntity.Entity;
-          
+
+          // set desk item entity values
+          PostUpdateCommands.AddComponent(deskItemEntity, new DeskReference {
+            Target = deskEntity
+          });
+
           PostUpdateCommands.SetComponent(deskItemEntity, new Coordinate { 
             Value = coordinate 
           });
-          PostUpdateCommands.AddComponent(deskItemEntity, new DeskReference {
-            Target = deskEntity
+          PostUpdateCommands.SetComponent(deskItemEntity, new Position {
+            Value = position
           });
 
           // add desk item to all desk items registry

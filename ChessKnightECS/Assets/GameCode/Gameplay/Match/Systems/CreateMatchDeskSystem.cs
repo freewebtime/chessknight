@@ -59,13 +59,13 @@ namespace Ck.Gameplay
       var matchEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(matchEntities);
 
-      var deskEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
-      EntityManager.Instantiate(deskPrefab, deskEntities);
-
       for (int i = 0; i < matchEntities.Length; i++)
       {
         var matchEntity = matchEntities[i];
-        var deskEntity = deskEntities[i];
+        var deskGo = UnityEngine.Object.Instantiate(deskPrefab);
+        deskGo.name = string.Format("Match desk");
+        var deskGoEntity = deskGo.GetComponent<GameObjectEntity>();
+        var deskEntity = deskGoEntity.Entity;
 
         var matchConfig = EntityManager.GetSharedComponentData<MatchConfig>(matchEntity);
 
@@ -81,11 +81,9 @@ namespace Ck.Gameplay
         PostUpdateCommands.AddComponent(deskEntity, new MatchReference {
           Target = matchEntity
         });
-
       }
 
       matchEntities.Dispose();
-      deskEntities.Dispose();
     }
 
     private void UpdateRemoved() 
