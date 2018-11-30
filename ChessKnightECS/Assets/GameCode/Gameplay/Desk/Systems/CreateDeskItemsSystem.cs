@@ -57,7 +57,7 @@ namespace Ck.Gameplay
       var deskEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(deskEntities);
 
-      // for each added desk
+      // for each added desk create desk items
       for (int i = 0; i < deskEntities.Length; i++)
       {
         var deskEntity = deskEntities[i];
