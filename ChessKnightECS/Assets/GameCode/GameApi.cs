@@ -8,18 +8,13 @@ namespace Ck
 {
   public class GameApi : ComponentSystem
   {
-    
-    struct GamestateGroup
-    {
-      public readonly int Length;
-      [ReadOnly] public ComponentDataArray<Gamestate> Gamestate;
-    }
-
     [Inject] GuiApi guiApi;
-    [Inject] GamestateGroup gamestateGroup;
+    [Inject] GameplayApi gameplayApi;
 
     public void PlayRandomLevelNow()
     {
+      gameplayApi.StartMatchNow();
+
       guiApi.HideAllScreens();
       guiApi.ShowGuiScreen<MatchScreen>();
     }

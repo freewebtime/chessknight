@@ -5,41 +5,55 @@ namespace Ck.Gameplay
 {
   public class GameplayApi : ComponentSystem
   {
-    struct GamestateGroup
+    struct MatchGroup
     {
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public ComponentDataArray<Gamestate> Gamestate;
+      [ReadOnly] public ComponentDataArray<Match> Match;
     }
 
-    [Inject] GamestateGroup gamestateGroup;
     [Inject] ResourcesApi resourcesApi;
 
-    public Gamestate? GetGamestate()
+    [Inject] MatchGroup matchGroup;
+
+    public Match? GetCurrentMatch()
     {
-      if (gamestateGroup.Length == 0)
-      {
-        return null;
+      if (matchGroup.Length > 0) {
+        return matchGroup.Match[0];
       }
 
-      return gamestateGroup.Gamestate[0];
+      return null;
     }
 
-    public void DestroyGamestate()
+    public void StartMatch(MatchConfig matchConfig)
     {
-      for (int i = 0; i < gamestateGroup.Length; i++)
-      {
-        EntityManager.DestroyEntity(gamestateGroup.Entity[i]);
+      // get match prefab
+      var matchResources = resourcesApi.GetMatchResources();
+      if (!matchResources.HasValue) {
+        return;
       }
+
+      // instantiate match prefab
+      var matchEntity = EntityManager.Instantiate(matchResources.Value.MatchPrefab);
+      EntityManager.AddSharedComponentData(matchEntity, matchConfig);
     }
 
-    public void CreateGamestate()
+    public void StartMatchNow()
     {
-
+      var matchConfig = new MatchConfig {
+        Desk = new DeskConfig {
+          DeskItems = new DeskItemConfig[] {}
+        }
+      };
+      StartMatch(matchConfig);
     }
 
-    protected override void OnCreateManager()
+    public void StopMatch()
     {
+      for (int i = 0; i < matchGroup.Length; i++)
+      {
+        EntityManager.DestroyEntity(matchGroup.Entity[i]);
+      }
     }
 
     protected override void OnUpdate() {}

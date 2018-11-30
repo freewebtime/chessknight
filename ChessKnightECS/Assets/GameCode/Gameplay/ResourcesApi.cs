@@ -5,53 +5,32 @@ namespace Ck.Gameplay
 {
   public class ResourcesApi : ComponentSystem
   {
-    struct GamestateResourcesGroup
-    {
-      public readonly int Length;
-      [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<GamestateResources> Resources;
-    }
-
     struct MatchResourcesGroup
     {
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<MatchResources> Resources;
+      [ReadOnly] public SharedComponentDataArray<MatchDataResources> Resources;
     }
 
     struct DeskResourcesGroup
     {
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<DeskResources> Resources;
+      [ReadOnly] public SharedComponentDataArray<DeskDataResources> Resources;
     }
 
     struct SceneResourcesGroup
     {
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
-      [ReadOnly] public SharedComponentDataArray<SceneResources> Resources;
+      [ReadOnly] public SharedComponentDataArray<SceneBackDataResources> Resources;
     }
 
-    [Inject] GamestateResourcesGroup gamestateResourcesGroup;
     [Inject] MatchResourcesGroup matchResourcesGroup;
     [Inject] DeskResourcesGroup deskResourcesGroup;
     [Inject] SceneResourcesGroup sceneResourcesGroup;
 
-    public GamestateResources? GetGamestateResources()
-    {
-      var group = gamestateResourcesGroup;
-      
-      if (group.Length == 0)
-      {
-        return null;
-      }
-
-      var result = group.Resources[0];
-      return result;
-    }
-
-    public MatchResources? GetMatchResources()
+    public MatchDataResources? GetMatchResources()
     {
       var group = matchResourcesGroup;
       
@@ -64,7 +43,7 @@ namespace Ck.Gameplay
       return result;
     }
 
-    public DeskResources? GetDeskResources()
+    public DeskDataResources? GetDeskResources()
     {
       var group = deskResourcesGroup;
       
@@ -77,7 +56,7 @@ namespace Ck.Gameplay
       return result;
     }
 
-    public SceneResources? GetSceneResources()
+    public SceneBackDataResources? GetSceneResources()
     {
       var group = sceneResourcesGroup;
       
