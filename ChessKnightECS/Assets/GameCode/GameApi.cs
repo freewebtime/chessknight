@@ -3,6 +3,7 @@ using Ck.Gameplay;
 using Ck.Gui;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Mathematics;
 
 namespace Ck
 {
@@ -10,10 +11,20 @@ namespace Ck
   {
     [Inject] GuiApi guiApi;
     [Inject] GameplayApi gameplayApi;
+    [Inject] LevelGenerationApi levelGenerationApi;
 
     public void PlayRandomLevelNow()
     {
-      gameplayApi.StartMatchNow();
+      // generate match config
+      var levelSize = new int2(10, 10);
+      var randomSeed = 100500u;
+      var matchConfig = levelGenerationApi.GenerateRandomMatch(levelSize, randomSeed);
+
+      if (!matchConfig.HasValue) {
+        return;
+      }
+
+      var matchEntity = gameplayApi.StartMatch(matchConfig.Value);
 
       guiApi.HideAllScreens();
       guiApi.ShowGuiScreen<MatchScreen>();

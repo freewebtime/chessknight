@@ -58,8 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    Prefabs:
-    - {fileID: 6916947789136730371, guid: a07ac9b9aa6a6c04099e4bd9a34e84c3, type: 3}
+    Prefabs: []
 --- !u!114 &6417987131275196066
 MonoBehaviour:
   m_ObjectHideFlags: 0

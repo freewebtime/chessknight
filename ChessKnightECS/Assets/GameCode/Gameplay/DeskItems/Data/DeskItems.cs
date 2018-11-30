@@ -40,7 +40,13 @@ namespace Ck.Gameplay
     public struct MoveTarget: IComponentData
     {
       public int Id;
-    } 
+    }
+
+    [Serializable]
+    public struct PlayerUnit: IComponentData
+    {
+      public int Id;
+    }
 
   }
   

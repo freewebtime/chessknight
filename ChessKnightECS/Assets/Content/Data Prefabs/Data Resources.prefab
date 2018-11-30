@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6206556030922704094}
   - component: {fileID: 8250565535900149024}
   m_Layer: 0
-  m_Name: Resources
+  m_Name: Data Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,6 +78,8 @@ MonoBehaviour:
     Goal: {fileID: 7389354611947004524, guid: cae04b8113ca4504b9281101d1819b22, type: 3}
     Armor: {fileID: 154117324987122399, guid: 9bc51346e6a7f9c428252d79736b2cee, type: 3}
     MoveTarget: {fileID: 2719659330564412582, guid: db145aa5c9df50042afa3702a0a67394,
+      type: 3}
+    PlayerUnit: {fileID: 497811895242890362, guid: 73aa52cace0be544da8faaee2f083d4a,
       type: 3}
 --- !u!114 &6997169824813102264
 MonoBehaviour:

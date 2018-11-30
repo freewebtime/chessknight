@@ -12,7 +12,7 @@ namespace Ck.Gameplay
       [ReadOnly] public ComponentDataArray<Match> Match;
     }
 
-    [Inject] ResourcesApi resourcesApi;
+    [Inject] DataResourcesApi resourcesApi;
 
     [Inject] MatchGroup matchGroup;
 
@@ -25,27 +25,22 @@ namespace Ck.Gameplay
       return null;
     }
 
-    public void StartMatch(MatchConfig matchConfig)
+    public Entity? StartMatch(MatchConfig matchConfig)
     {
       // get match prefab
       var matchResources = resourcesApi.GetMatchResources();
       if (!matchResources.HasValue) {
-        return;
+        return null;
       }
+
+      // stop current match if any
+      StopMatch();
 
       // instantiate match prefab
       var matchEntity = EntityManager.Instantiate(matchResources.Value.MatchPrefab);
       EntityManager.AddSharedComponentData(matchEntity, matchConfig);
-    }
-
-    public void StartMatchNow()
-    {
-      var matchConfig = new MatchConfig {
-        Desk = new DeskConfig {
-          DeskItems = new DeskItemConfig[] {}
-        }
-      };
-      StartMatch(matchConfig);
+    
+      return matchEntity;
     }
 
     public void StopMatch()
