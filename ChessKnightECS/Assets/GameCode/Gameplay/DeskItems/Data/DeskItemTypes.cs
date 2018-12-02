@@ -21,6 +21,7 @@ namespace Ck.Gameplay
     Bomb = 12,
 
     PlayerUnit = 13,
-  }
 
+    Highlight = 14
+  }
 }

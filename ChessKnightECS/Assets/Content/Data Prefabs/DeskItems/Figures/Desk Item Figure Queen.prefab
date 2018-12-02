@@ -9,6 +9,34 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6059111064232622518}
       propertyPath: m_Name
+      value: Desk Item Figure Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208425751743808510}
+      propertyPath: m_SerializedData.Type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622514}
+      propertyPath: m_SerializedData.Id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671848179466535242}
+      propertyPath: m_SerializedData.Id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671848179466535242}
+      propertyPath: ViewType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208425751743808510}
+      propertyPath: m_SerializedData.Type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622514}
+      propertyPath: m_SerializedData.Id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059111064232622518}
+      propertyPath: m_Name
       value: Desk Item Figure Queen Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6059111064232622519}
@@ -55,26 +83,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3208425751743808510}
-      propertyPath: m_SerializedData.Type
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6059111064232622514}
-      propertyPath: m_SerializedData.Id
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8687680427034329794, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
       propertyPath: m_Name
-      value: Desk Item Figure Queen Variant
+      value: Desk Item Figure Queen
       objectReference: {fileID: 0}
     - target: {fileID: 1168144522, guid: 7af0a3c514230784283a46fb0f333d37, type: 3}
       propertyPath: m_SerializedData.Type
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329798, guid: 7af0a3c514230784283a46fb0f333d37,
+    - target: {fileID: 7805621139596589630, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
       propertyPath: m_SerializedData.Id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805621139596589630, guid: 7af0a3c514230784283a46fb0f333d37,
+        type: 3}
+      propertyPath: ViewType
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -113,5 +138,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4671848179466535242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7805621139596589630, guid: 7af0a3c514230784283a46fb0f333d37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3208425750609247092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6059111064232622518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0400f3c4cfb13428f9206ea653c2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 480291106}
   - component: {fileID: 4582925055581885426}
   - component: {fileID: 1435179715}
+  - component: {fileID: 1055415823}
   m_Layer: 0
   m_Name: Desk Item Bomb
   m_TagString: Untagged
@@ -75,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e3c58f01b6186946bc649b2a09d4042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedData:
-    Id: 0
 --- !u!114 &8700696748521069364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +171,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     Type: 12
+--- !u!114 &1055415823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16490403992381865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905d3ac3d1723224b840753ebf021ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

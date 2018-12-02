@@ -9,7 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 36851240287893651}
       propertyPath: m_Name
-      value: Desk Item Figure Knight Variant
+      value: Desk Item Figure Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652043049254961883}
+      propertyPath: m_SerializedData.Type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 36851240287893655}
+      propertyPath: m_SerializedData.Id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459474427559641199}
+      propertyPath: m_SerializedData.Id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459474427559641199}
+      propertyPath: ViewType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 36851240287893650}
       propertyPath: m_LocalPosition.x
@@ -55,26 +71,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8652043049254961883}
-      propertyPath: m_SerializedData.Type
-      value: 5
+    - target: {fileID: 36851240287893651}
+      propertyPath: m_Name
+      value: Desk Item Figure Knight Variant
       objectReference: {fileID: 0}
     - target: {fileID: 36851240287893655}
       propertyPath: m_SerializedData.Id
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8652043049254961883}
+      propertyPath: m_SerializedData.Type
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8687680427034329794, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
       propertyPath: m_Name
-      value: Desk Item Figure Knight Variant
+      value: Desk Item Figure Knight
       objectReference: {fileID: 0}
     - target: {fileID: 1168144522, guid: 7af0a3c514230784283a46fb0f333d37, type: 3}
       propertyPath: m_SerializedData.Type
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 8687680427034329798, guid: 7af0a3c514230784283a46fb0f333d37,
+    - target: {fileID: 7805621139596589630, guid: 7af0a3c514230784283a46fb0f333d37,
         type: 3}
       propertyPath: m_SerializedData.Id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805621139596589630, guid: 7af0a3c514230784283a46fb0f333d37,
+        type: 3}
+      propertyPath: ViewType
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -113,5 +138,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1459474427559641199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7805621139596589630, guid: 7af0a3c514230784283a46fb0f333d37,
+    type: 3}
+  m_PrefabInstance: {fileID: 8652043050284661329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36851240287893651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0400f3c4cfb13428f9206ea653c2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

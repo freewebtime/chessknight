@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2004626122}
   - component: {fileID: 7229822731049158379}
   - component: {fileID: 556922799}
+  - component: {fileID: 1109486788}
   m_Layer: 0
   m_Name: Desk Item MoveTarget
   m_TagString: Untagged
@@ -75,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7280a426cce9d4b95fd3433e22d2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedData:
-    Id: 0
 --- !u!114 &1193844908853969734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +171,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     Type: 11
+--- !u!114 &1109486788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719659330564412582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905d3ac3d1723224b840753ebf021ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

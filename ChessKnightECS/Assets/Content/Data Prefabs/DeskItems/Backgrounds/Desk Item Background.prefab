@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 400341652}
   - component: {fileID: 5100939067852884040}
   - component: {fileID: 2121889523}
+  - component: {fileID: 907093442}
   m_Layer: 0
   m_Name: Desk Item Background
   m_TagString: Untagged
@@ -75,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63359d30fe8cb4642b68bb1b243bc69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedData:
-    Id: 0
 --- !u!114 &8159344963411617164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +171,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     Type: 1
+--- !u!114 &907093442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547585056201840785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905d3ac3d1723224b840753ebf021ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
