@@ -20,11 +20,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4075a7b958463af47b467c768c4d44b1,
         type: 3}
+    - target: {fileID: 1560844462694662872}
+      propertyPath: m_SerializedData.Id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560844462694662872}
+      propertyPath: ViewType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2266754360253379607}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4075a7b958463af47b467c768c4d44b1,
         type: 3}
+    - target: {fileID: 2266754360253379607}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4075a7b958463af47b467c768c4d44b1,
+        type: 3}
+    - target: {fileID: 5461131032118759975}
+      propertyPath: m_Name
+      value: Div Figure Bishop
+      objectReference: {fileID: 0}
     - target: {fileID: 5461131032118759975}
       propertyPath: m_Name
       value: Div Figure Bishop
@@ -77,6 +94,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7195405612429881736}
+      propertyPath: m_SerializedData.Type
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7447515228582579642, guid: 64134b80c8f1cd84f8805ccdd913abae,
         type: 3}
       propertyPath: m_Name
@@ -93,6 +114,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4075a7b958463af47b467c768c4d44b1,
         type: 3}
+    - target: {fileID: 4123623655529389381, guid: 64134b80c8f1cd84f8805ccdd913abae,
+        type: 3}
+      propertyPath: m_SerializedData.Id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123623655529389381, guid: 64134b80c8f1cd84f8805ccdd913abae,
+        type: 3}
+      propertyPath: ViewType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64134b80c8f1cd84f8805ccdd913abae, type: 3}
 --- !u!1 &5461131032118759975 stripped
@@ -117,6 +148,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6c5589a60f964548882ac5c9010f90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1560844462694662872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4123623655529389381, guid: 64134b80c8f1cd84f8805ccdd913abae,
+    type: 3}
+  m_PrefabInstance: {fileID: 3211970440309710749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461131032118759975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0400f3c4cfb13428f9206ea653c2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &2266754360253379607 stripped
