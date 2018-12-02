@@ -53,7 +53,12 @@ namespace Ck.Gameplay
         return;        
       }
 
-      var deskPrefab = deskResources.Value.DeskPrefab;
+      var deskSkin = deskResources.Value.DefaultDesk;
+
+      if (deskSkin.Desk == null || deskSkin.Desk.Length == 0) {
+        return;
+      }
+      var deskPrefab = deskSkin.Desk[0];
       if (deskPrefab == null) {
         return;
       }

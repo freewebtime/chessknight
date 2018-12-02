@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820b776ef166c774687c0063ea075af6, type: 3}
+  m_Name: Default Desk Data Skin
+  m_EditorClassIdentifier: 
+  Value:
+    Desk:
+    - {fileID: 1356229832475707040, guid: dc1e8b81b5882f84281a97314bde6c8a, type: 3}
+    Armor:
+    - {fileID: 5591224865848708857, guid: 63e3e1158c78ceb41913635db1187ed7, type: 3}
+    Background:
+    - {fileID: 6832451561571055574, guid: 6922178c64d867949b9fb1ba4fab1ac6, type: 3}
+    - {fileID: 1362449398401822924, guid: cec63f4a007219a48bbfad6b40c76388, type: 3}
+    Bomb:
+    - {fileID: 6393977026545031830, guid: ad3733e7f10eb11479aa402eb7f69e95, type: 3}
+    Figure:
+    - {fileID: 8716772716009411450, guid: 5e2dc937076c9554ca8a73157e0de464, type: 3}
+    - {fileID: 8170892851559436740, guid: b7c1ba59748b61c409704759b564af56, type: 3}
+    - {fileID: 5166118431381893521, guid: beddaafd61809e3468c435fb9fb49082, type: 3}
+    - {fileID: 5584226366905897548, guid: d2a9a24d43f759d4f9e4667078504add, type: 3}
+    - {fileID: 2053177593142624756, guid: 41d4f22f3233b954c9da809f2e241fd9, type: 3}
+    - {fileID: 2224475905446528190, guid: f5fbd5856bfe60d4084a7a545bea7866, type: 3}
+    Goal:
+    - {fileID: 5267582522075460130, guid: e592cb7787da4dc46805b459a7283979, type: 3}
+    MoveTarget:
+    - {fileID: 6219210961310425986, guid: 9a92b30b90d282d479e709508b051277, type: 3}
+    PlayerUnit:
+    - {fileID: 7981964820495206495, guid: ce523f1a44511e44a9566db45152346d, type: 3}
+    - {fileID: 992805261769836461, guid: 98bfa608df58bb344b6dd213035085c0, type: 3}
+    - {fileID: 5055623135237413379, guid: 15d3feed7580b79429cd25de102271ac, type: 3}
+    - {fileID: 4829887636651868269, guid: 7fe9e2855ebf3ff46b7cb4916955199d, type: 3}
+    - {fileID: 2534288446623755421, guid: ee5dc0ab936604546875aa4ae023ebce, type: 3}
+    - {fileID: 8272511986924448842, guid: b2c3095d24aedd8489b410be75f7abe5, type: 3}
+    Highlight:
+    - {fileID: 5648520541762863883, guid: 1a4704eb42915a74796b8e98e101f750, type: 3}
+    - {fileID: 4356214989735018726, guid: 69bb1725d5b00d84198a2f69b8a41ff9, type: 3}
+    - {fileID: 8314083175884039509, guid: b859c713a121b5f448bd6d73f887a6c3, type: 3}
+    - {fileID: 4681048302350615631, guid: fbae36ac92e752141b5e8a069d5ac05e, type: 3}

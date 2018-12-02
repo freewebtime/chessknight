@@ -61,26 +61,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    DeskPrefab: {fileID: 1356229832475707040, guid: dc1e8b81b5882f84281a97314bde6c8a,
-      type: 3}
-    BackgroundLight: {fileID: 2038003340641567175, guid: 6922178c64d867949b9fb1ba4fab1ac6,
-      type: 3}
-    BackgroundDark: {fileID: 891828004055470016, guid: cec63f4a007219a48bbfad6b40c76388,
-      type: 3}
-    Bomb: {fileID: 16490403992381865, guid: 75436f4387f54b6458a4cadf7c1be1b0, type: 3}
-    Pawn: {fileID: 823534312945224880, guid: bd2e9976b635f9b49a62506db34f7b6f, type: 3}
-    Rook: {fileID: 1537267501559531537, guid: de72dff6d78c5d942b76594b33a16cf3, type: 3}
-    Bishop: {fileID: 4038431878062093704, guid: 9a9aee140bb6b0d4c9cbc6d23f8c6747,
-      type: 3}
-    Knight: {fileID: 36851240287893651, guid: 3f373f3afae4e1f47ba7a7f7385d7eb7, type: 3}
-    Queen: {fileID: 6059111064232622518, guid: 0709a1cddc40dbf4a87d08adc14f2081, type: 3}
-    King: {fileID: 4672876517059476749, guid: 6a50082020bdeef4ea28b740ddbf242b, type: 3}
-    Goal: {fileID: 7389354611947004524, guid: cae04b8113ca4504b9281101d1819b22, type: 3}
-    Armor: {fileID: 154117324987122399, guid: 9bc51346e6a7f9c428252d79736b2cee, type: 3}
-    MoveTarget: {fileID: 2719659330564412582, guid: db145aa5c9df50042afa3702a0a67394,
-      type: 3}
-    PlayerUnit: {fileID: 497811895242890362, guid: 73aa52cace0be544da8faaee2f083d4a,
-      type: 3}
+    DefaultDesk:
+      Desk:
+      - {fileID: 1356229832475707040, guid: dc1e8b81b5882f84281a97314bde6c8a, type: 3}
+      Armor:
+      - {fileID: 5591224865848708857, guid: 63e3e1158c78ceb41913635db1187ed7, type: 3}
+      Background:
+      - {fileID: 6832451561571055574, guid: 6922178c64d867949b9fb1ba4fab1ac6, type: 3}
+      - {fileID: 1362449398401822924, guid: cec63f4a007219a48bbfad6b40c76388, type: 3}
+      Bomb:
+      - {fileID: 6393977026545031830, guid: ad3733e7f10eb11479aa402eb7f69e95, type: 3}
+      Figure:
+      - {fileID: 8716772716009411450, guid: 5e2dc937076c9554ca8a73157e0de464, type: 3}
+      - {fileID: 8170892851559436740, guid: b7c1ba59748b61c409704759b564af56, type: 3}
+      - {fileID: 5166118431381893521, guid: beddaafd61809e3468c435fb9fb49082, type: 3}
+      - {fileID: 5584226366905897548, guid: d2a9a24d43f759d4f9e4667078504add, type: 3}
+      - {fileID: 2053177593142624756, guid: 41d4f22f3233b954c9da809f2e241fd9, type: 3}
+      - {fileID: 2224475905446528190, guid: f5fbd5856bfe60d4084a7a545bea7866, type: 3}
+      Goal:
+      - {fileID: 5267582522075460130, guid: e592cb7787da4dc46805b459a7283979, type: 3}
+      MoveTarget:
+      - {fileID: 6219210961310425986, guid: 9a92b30b90d282d479e709508b051277, type: 3}
+      PlayerUnit:
+      - {fileID: 7981964820495206495, guid: ce523f1a44511e44a9566db45152346d, type: 3}
+      - {fileID: 992805261769836461, guid: 98bfa608df58bb344b6dd213035085c0, type: 3}
+      - {fileID: 5055623135237413379, guid: 15d3feed7580b79429cd25de102271ac, type: 3}
+      - {fileID: 4829887636651868269, guid: 7fe9e2855ebf3ff46b7cb4916955199d, type: 3}
+      - {fileID: 2534288446623755421, guid: ee5dc0ab936604546875aa4ae023ebce, type: 3}
+      - {fileID: 8272511986924448842, guid: b2c3095d24aedd8489b410be75f7abe5, type: 3}
+      Highlight:
+      - {fileID: 5648520541762863883, guid: 1a4704eb42915a74796b8e98e101f750, type: 3}
+      - {fileID: 4356214989735018726, guid: 69bb1725d5b00d84198a2f69b8a41ff9, type: 3}
+      - {fileID: 8314083175884039509, guid: b859c713a121b5f448bd6d73f887a6c3, type: 3}
+      - {fileID: 4681048302350615631, guid: fbae36ac92e752141b5e8a069d5ac05e, type: 3}
+  DefaultDeskPrefab: {fileID: 11400000, guid: df3a7523a3e40844c8ca96b66c16839a, type: 2}
 --- !u!114 &6997169824813102264
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3939910772439193462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8082638699897982589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0400f3c4cfb13428f9206ea653c2b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Id: 0
+  ViewType: 0
 --- !u!114 &5626864391645092486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21,6 +36,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8466531250682829658, guid: ecf2a69a5b019d9468caad90bd6cd44f,
+        type: 3}
+      propertyPath: m_Name
+      value: Desk Item Figure
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466531250682829659, guid: ecf2a69a5b019d9468caad90bd6cd44f,
+        type: 3}
+      propertyPath: m_SerializedData.Type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8082638699897982589}
       propertyPath: m_Name
       value: Desk Item Figure
@@ -73,17 +98,8 @@ PrefabInstance:
       propertyPath: m_SerializedData.Type
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 8466531250682829658, guid: ecf2a69a5b019d9468caad90bd6cd44f,
-        type: 3}
-      propertyPath: m_Name
-      value: Desk Item Figure
-      objectReference: {fileID: 0}
-    - target: {fileID: 8466531250682829659, guid: ecf2a69a5b019d9468caad90bd6cd44f,
-        type: 3}
-      propertyPath: m_SerializedData.Type
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8466531250682829648, guid: ecf2a69a5b019d9468caad90bd6cd44f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecf2a69a5b019d9468caad90bd6cd44f, type: 3}
 --- !u!1 &8082638699897982589 stripped
 GameObject:

@@ -17,47 +17,75 @@ namespace Ck.Gameplay
         return null;
       }
 
-      // this is our prefabs
-      var deskItemsPrefabs = deskResources.Value;
+      var deskDataSkin = deskResources.Value.DefaultDesk;
 
-      // desk items
-      var armorPrefab = deskItemsPrefabs.Armor;
-      var bgLight = deskItemsPrefabs.BackgroundLight;
-      var bgDark = deskItemsPrefabs.BackgroundDark;
-      var bombPrefab = deskItemsPrefabs.Bomb;
-      var goalPrefab = deskItemsPrefabs.Goal;
-      var moveTargetPrefab = deskItemsPrefabs.MoveTarget;
-      var playerUnit = deskItemsPrefabs.PlayerUnit;
+      // prepare desk items prefabs
 
-      // chess figure desk items
-      var knight = deskItemsPrefabs.Knight;
-      var pawn = deskItemsPrefabs.Pawn;
-      var rook = deskItemsPrefabs.Rook;
-      var bishop = deskItemsPrefabs.Bishop;
-      var queen = deskItemsPrefabs.Queen;
-      var king = deskItemsPrefabs.King;
-
-      // validation
-      if (
-        bgLight == null 
-        || bgDark == null
-        || bombPrefab == null
-
-        || knight == null
-        || bishop == null
-        || pawn == null
-        || rook == null
-        || queen == null
-        || king == null
-
-        || playerUnit == null
-
-        || goalPrefab == null 
-        || armorPrefab == null
-        || moveTargetPrefab == null
-      ) {
-        return null;
+      // armor
+      GameObject armorPrefab = null;
+      if (deskDataSkin.Armor != null && deskDataSkin.Armor.Length > 0)
+      {
+        armorPrefab = deskDataSkin.Armor[0];
       }
+
+      // background
+      GameObject bgLight = null;
+      GameObject bgDark = null;
+
+      if (deskDataSkin.Background != null && deskDataSkin.Background.Length > 0)
+      {
+        bgLight = deskDataSkin.Background[0];
+        if (deskDataSkin.Background.Length > 1) {
+          bgDark = deskDataSkin.Background[1];
+        }
+        else
+        {
+          bgDark = bgLight;
+        }
+      }
+
+      // bomb
+      GameObject bombPrefab = null;
+      if (deskDataSkin.Bomb != null && deskDataSkin.Bomb.Length > 0)
+      {
+        bombPrefab = deskDataSkin.Bomb[0];
+      }
+
+      // figure
+      GameObject[] figurePrefabs = null;
+      if (deskDataSkin.Figure != null && deskDataSkin.Figure.Length > 0)
+      {
+        figurePrefabs = deskDataSkin.Figure;
+      }
+
+      // goal
+      GameObject goalPrefab = null;
+      if (deskDataSkin.Goal != null && deskDataSkin.Goal.Length > 0)
+      {
+        goalPrefab = deskDataSkin.Goal[0];
+      }
+
+      // move target
+      GameObject moveTargetPrefab = null;
+      if (deskDataSkin.MoveTarget != null && deskDataSkin.MoveTarget.Length > 0)
+      {
+        moveTargetPrefab = deskDataSkin.MoveTarget[0];
+      }
+
+      // player unit
+      GameObject[] playerUnitPrefabs = null;
+      if (deskDataSkin.PlayerUnit != null && deskDataSkin.PlayerUnit.Length > 0)
+      {
+        playerUnitPrefabs = deskDataSkin.PlayerUnit;
+      }
+
+      // highlight
+      GameObject[] highlightPrefabs = null;
+      if (deskDataSkin.Highlight != null && deskDataSkin.Highlight.Length > 0)
+      {
+        highlightPrefabs = deskDataSkin.Highlight;
+      }
+
 
       // create level
       var rnd = new Unity.Mathematics.Random(randomSeed);
@@ -66,15 +94,6 @@ namespace Ck.Gameplay
       var bombChance = 40;
       var armorChance = 30;
       var goalChance = 70;
-
-      // TODO: prefabs should be already sorted in some InitDataResources system or so
-      var sortedFigures = new GameObject[6];
-      sortedFigures[(int)ChessFigureTypes.Bishop] = bishop;
-      sortedFigures[(int)ChessFigureTypes.King] = king;
-      sortedFigures[(int)ChessFigureTypes.Knight] = knight;
-      sortedFigures[(int)ChessFigureTypes.Pawn] = pawn;
-      sortedFigures[(int)ChessFigureTypes.Queen] = queen;
-      sortedFigures[(int)ChessFigureTypes.Rook] = rook;
 
       var deskItems = new List<DeskItemConfig>();
 
@@ -86,12 +105,11 @@ namespace Ck.Gameplay
 
           var isHidden = rnd.NextInt(100) < isHiddenChance;
           var isOdd = (x + y) % 2f == 0;
-          var figureIndex = rnd.NextInt(sortedFigures.Length);
-          var figurePrefab = sortedFigures[figureIndex];
+          var chessFigure = rnd.NextInt(6);
           var isGoal = rnd.NextInt(100) < goalChance;
           var isBomb = rnd.NextInt(100) < bombChance;
           // bomb can't be placed on cell with figure that can move only to adjacent cell
-          isBomb = isBomb && figureIndex != (int)ChessFigureTypes.Pawn && figureIndex != (int)ChessFigureTypes.King;
+          isBomb = isBomb && chessFigure != (int)ChessFigureTypes.Pawn && chessFigure != (int)ChessFigureTypes.King;
           var isArmor = rnd.NextInt(100) < armorChance;
 
           // background
@@ -121,7 +139,8 @@ namespace Ck.Gameplay
           }
 
           // figure
-          if (!isHidden) {
+          if (!isHidden && figurePrefabs.Length > chessFigure) {
+            GameObject figurePrefab = figurePrefabs[chessFigure];
             deskItems.Add(new DeskItemConfig {
               Coordinate = coordinate,
               Prefab = figurePrefab
