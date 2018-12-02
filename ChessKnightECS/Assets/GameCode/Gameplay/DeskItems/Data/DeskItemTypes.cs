@@ -4,24 +4,14 @@ namespace Ck.Gameplay
   {
     Other = 0,
 
-    BackgroundLight = 1,
-    BackgroundDark = 2,
-    
-    FigurePawn = 3,
-    FigureRook = 4,
-    FigureKnight = 5,
-    FigureBishop = 6,
-    FigureQueen = 7,
-    FigureKing = 8,
+    Armor = 1,
+    Background = 2,
+    Bomb = 3,
+    Figure = 4,
+    Goal = 5,
+    MoveTarget = 6,
 
-    Armor = 9,
-    Goal = 10,
-    MoveTarget = 11,
-
-    Bomb = 12,
-
-    PlayerUnit = 13,
-
-    Highlight = 14
+    PlayerUnit = 7,
+    Highlight = 8
   }
 }
