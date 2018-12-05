@@ -1,3 +1,4 @@
+using System;
 using Fwt.Core;
 using UnityEngine;
 
@@ -15,17 +16,23 @@ namespace Ck.Resources
     public void Init()
     {
       var deskItemsGroups = new DeskItemsGroupResources[DeskItemsGroups.Length];
+      var deskItemTypes = new int[deskItemsGroups.Length];
       for (int i = 0; i < deskItemsGroups.Length; i++)
       {
+        var deskItemGroup = deskItemsGroups[i];
+
         var deskItemGroupWrapper = DeskItemsGroups[i];
-        if (deskItemGroupWrapper == null) {
-          continue;
+        if (deskItemGroupWrapper != null) {
+          deskItemGroupWrapper.Init();
+          deskItemGroup = deskItemGroupWrapper.Value;
+          deskItemGroup.Name = deskItemGroupWrapper.name;
+          deskItemGroup.ItemsType = deskItemGroupWrapper.ItemsType;
         }
 
-        deskItemGroupWrapper.Init();
-
-        deskItemsGroups[i] = deskItemGroupWrapper.Value;
+        deskItemsGroups[i] = deskItemGroup;
+        deskItemTypes[i] = (int)deskItemGroup.ItemsType;
       }
+      Array.Sort(deskItemTypes, deskItemsGroups);
 
       var value = Value;
       value.DeskItemsGroups = deskItemsGroups;

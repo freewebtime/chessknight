@@ -9,15 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 151c33df5c24dee41bc13eb5719e5651, type: 3}
-  m_Name: Match Classic
+  m_Script: {fileID: 11500000, guid: 8dbd2482c250d3d4e8ae3e336caf39f1, type: 3}
+  m_Name: Bomb Classic
   m_EditorClassIdentifier: 
   Value:
-    Id: 0
-    MatchPrefab: {fileID: 0}
-    ScenePrefab: {fileID: 0}
-    DeskResources:
-      DeskPrefab: {fileID: 0}
-      DeskItems:
-        DeskItemsGroups: []
-  Desk: {fileID: 0}
+    Name: 
+    ItemType: 3
+    VersionId: 0
+    DataPrefab: {fileID: 0}
+    ViewPrefab: {fileID: 0}

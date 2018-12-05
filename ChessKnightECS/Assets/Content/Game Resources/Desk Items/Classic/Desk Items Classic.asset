@@ -10,8 +10,90 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d4fd0e602be8eb418b785b6c0b17076, type: 3}
-  m_Name: Classic Desk Items
+  m_Name: Desk Items Classic
   m_EditorClassIdentifier: 
   Value:
-    DeskItemsGroups: []
-  DeskItemsGroups: []
+    DeskItemsGroups:
+    - Name: Backgrounds Classic
+      ItemsType: 2
+      DeskItems:
+      - Name: Background Light
+        ItemType: 2
+        VersionId: 0
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Background Dark
+        ItemType: 2
+        VersionId: 1
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+    - Name: Figures Classic
+      ItemsType: 4
+      DeskItems:
+      - Name: Pawn Classic
+        ItemType: 4
+        VersionId: 0
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Rook Classic
+        ItemType: 4
+        VersionId: 1
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Knight Classic
+        ItemType: 4
+        VersionId: 2
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Bishop Classic
+        ItemType: 4
+        VersionId: 3
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Queen Classic
+        ItemType: 4
+        VersionId: 4
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: King Classic
+        ItemType: 4
+        VersionId: 5
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+    - Name: Player Units Classic
+      ItemsType: 7
+      DeskItems:
+      - Name: Player Pawn Classic
+        ItemType: 7
+        VersionId: 0
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Player Rook Classic
+        ItemType: 7
+        VersionId: 1
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Player Knight Classic
+        ItemType: 7
+        VersionId: 2
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Player Bishop Classic
+        ItemType: 7
+        VersionId: 3
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Player Queen Classic
+        ItemType: 7
+        VersionId: 4
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Player King Classic
+        ItemType: 7
+        VersionId: 5
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+  DeskItemsGroups:
+  - {fileID: 11400000, guid: 6f1dcaf3a62d76144a7e10d3693d7422, type: 2}
+  - {fileID: 11400000, guid: d027cbff0bbd6f54cba37169c62d6310, type: 2}
+  - {fileID: 11400000, guid: cf613aa99d5c33342945a3384a01541c, type: 2}

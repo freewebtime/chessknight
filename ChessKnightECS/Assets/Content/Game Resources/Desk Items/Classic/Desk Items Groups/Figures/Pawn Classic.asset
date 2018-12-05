@@ -9,15 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 151c33df5c24dee41bc13eb5719e5651, type: 3}
-  m_Name: Match Classic
+  m_Script: {fileID: 11500000, guid: 24fb22fc761151a4f8ce74f97cac1094, type: 3}
+  m_Name: Pawn Classic
   m_EditorClassIdentifier: 
   Value:
-    Id: 0
-    MatchPrefab: {fileID: 0}
-    ScenePrefab: {fileID: 0}
-    DeskResources:
-      DeskPrefab: {fileID: 0}
-      DeskItems:
-        DeskItemsGroups: []
-  Desk: {fileID: 0}
+    Name: 
+    ItemType: 0
+    VersionId: 0
+    DataPrefab: {fileID: 0}
+    ViewPrefab: {fileID: 0}
+  FigureType: 0

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d90d93ba44e0b047ac826a81d73fa19, type: 3}
-  m_Name: Classic Desk
+  m_Name: Desk Classic
   m_EditorClassIdentifier: 
   Value:
     DeskPrefab: {fileID: 0}

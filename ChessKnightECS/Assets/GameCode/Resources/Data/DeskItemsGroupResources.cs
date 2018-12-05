@@ -1,4 +1,5 @@
 using System;
+using Ck.Gameplay;
 using Unity.Entities;
 
 namespace Ck.Resources
@@ -6,7 +7,8 @@ namespace Ck.Resources
   [Serializable]
   public struct DeskItemsGroupResources: ISharedComponentData
   {
-    public int GroupId;
+    public string Name;
+    public DeskItemTypes ItemsType;
     public DeskItemResources[] DeskItems;
   }
 }

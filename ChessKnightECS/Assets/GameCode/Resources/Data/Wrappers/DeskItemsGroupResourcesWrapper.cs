@@ -1,4 +1,5 @@
 using System;
+using Ck.Gameplay;
 using Fwt.Core;
 using UnityEngine;
 
@@ -7,8 +8,9 @@ namespace Ck.Resources
   [CreateAssetMenu]
   public class DeskItemsGroupResourcesWrapper: ScriptableObjectWrapper<DeskItemsGroupResources> 
   {
+    [Space]
     public bool IsAutoSetItemVersionId;
-    public int GroupId;
+    public DeskItemTypes ItemsType;
     public DeskItemResourcesWrapper[] DeskItems;
 
     private void OnValidate() {
@@ -31,7 +33,7 @@ namespace Ck.Resources
           deskItem.Name = deskItemWrapper.name;
         }
 
-        deskItem.GroupId = GroupId;
+        deskItem.ItemType = ItemsType;
 
         if (IsAutoSetItemVersionId) {
           deskItem.VersionId = i;
@@ -45,6 +47,7 @@ namespace Ck.Resources
 
       var value = Value;
       value.DeskItems = deskItems;
+      value.ItemsType = ItemsType;
       Value = value;
     }
   }

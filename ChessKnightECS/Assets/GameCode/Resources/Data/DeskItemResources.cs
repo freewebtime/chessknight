@@ -1,4 +1,5 @@
 using System;
+using Ck.Gameplay;
 using Unity.Entities;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace Ck.Resources
   public struct DeskItemResources: ISharedComponentData
   {
     public string Name;
-    public int GroupId;
+    public DeskItemTypes ItemType;
     public int VersionId;
 
     public GameObject DataPrefab;
