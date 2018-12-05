@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8466531250682829652}
   - component: {fileID: 8466531250682829655}
   - component: {fileID: 8466531250682829659}
+  - component: {fileID: 8175859315892910405}
+  - component: {fileID: 2295526051549502584}
   m_Layer: 0
   m_Name: Desk Item
   m_TagString: Untagged
@@ -88,3 +90,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     Type: 0
+--- !u!114 &8175859315892910405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466531250682829658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af0db853e732453799566a0e597993c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Value:
+      x: 0
+      y: 0
+      z: 0
+--- !u!114 &2295526051549502584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8466531250682829658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f922032aad1e4f109e892944af196e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

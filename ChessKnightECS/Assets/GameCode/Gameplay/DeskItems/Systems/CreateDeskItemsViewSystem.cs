@@ -43,6 +43,13 @@ namespace Ck.Gameplay
       UpdateAdded();
     }
 
+    struct DeskItemData
+    {
+      public Entity Entity;
+      public Transform Transform;
+      public DeskItemResources ItemResources;
+    }
+
     private void UpdateAdded()
     {
       if (added.Length == 0) {
@@ -50,24 +57,26 @@ namespace Ck.Gameplay
       }
 
       // extract data from component group, 'cause we'll use EntityManager within loop
-      var deskItemTransforms = added.Transform.ToArray();
-      var deskItemEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
-      added.Entity.CopyTo(deskItemEntities);
-      var deskItemResources = new NativeArray<DeskItemResources>(added.Length, Allocator.Temp);
-      added.DeskItemResources.CopyTo(deskItemResources);
-
-      for (int i = 0; i < deskItemEntities.Length; i++)
+      var itemsData = new DeskItemData[added.Length];
+      for (int i = 0; i < added.Length; i++)
       {
-        var deskItemType = deskItemResources[i].Type;
+        itemsData[i] = new DeskItemData {
+          Entity = added.Entity[i],
+          Transform = added.Transform[i],
+          ItemResources = added.DeskItemResources[i]
+        };
+      }
+
+      for (int i = 0; i < itemsData.Length; i++)
+      {
+        var itemData = itemsData[i];
+        var itemResources = itemData.ItemResources;
+        var itemTransform = itemData.Transform;
+        var deskItemEntity = itemData.Entity;
 
         // get view prefab
-        GameObject[] deskItemPrefabs;
-        if (sortedDeskItems.TryGetValue(deskItemType, out deskItemPrefabs) && deskItemPrefabs.Length > 0) {
-
-          var deskItemEntity = deskItemEntities[i];
-          var deskItemTransform = deskItemTransforms[i];
-
-          GameObject viewPrefab = deskItemPrefabs.GetRandom();
+        var viewPrefab = itemResources.ViewPrefab;
+        if (viewPrefab != null) {
 
           // create view
           var viewGo = UnityEngine.Object.Instantiate(viewPrefab);
@@ -75,8 +84,8 @@ namespace Ck.Gameplay
           var viewEntity = viewGoEntity.Entity;
 
           // set view as child of deskItem
-          viewGo.transform.SetParent(deskItemTransform);
-          
+          viewGo.transform.SetParent(itemTransform);
+
           // add references
           PostUpdateCommands.AddComponent(deskItemEntity, new DeskItemViewReference {
             Target = viewEntity
@@ -91,11 +100,7 @@ namespace Ck.Gameplay
             ViewGameObject = viewGo
           });
         }
-
       }
-
-      deskItemEntities.Dispose();
-      deskItemResources.Dispose();
     }
 
     private void UpdateRemoved()

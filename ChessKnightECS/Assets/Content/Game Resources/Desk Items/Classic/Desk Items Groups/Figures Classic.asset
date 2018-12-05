@@ -19,33 +19,45 @@ MonoBehaviour:
     - Name: Pawn Classic
       ItemType: 4
       VersionId: 0
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 8716772716009411450, guid: 5e2dc937076c9554ca8a73157e0de464,
+        type: 3}
+      ViewPrefab: {fileID: 3794029065431227477, guid: fa34b35a79b4e1e43950a6e8961225a0,
+        type: 3}
     - Name: Rook Classic
       ItemType: 4
       VersionId: 1
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 8170892851559436740, guid: b7c1ba59748b61c409704759b564af56,
+        type: 3}
+      ViewPrefab: {fileID: 207783736142117462, guid: eaaa1ecb83a34bd49a717b7195c5cb2d,
+        type: 3}
     - Name: Knight Classic
       ItemType: 4
       VersionId: 2
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 5166118431381893521, guid: beddaafd61809e3468c435fb9fb49082,
+        type: 3}
+      ViewPrefab: {fileID: 1134269166857230786, guid: 9a47d9880aab61144a210180f4e3c27b,
+        type: 3}
     - Name: Bishop Classic
       ItemType: 4
       VersionId: 3
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 5584226366905897548, guid: d2a9a24d43f759d4f9e4667078504add,
+        type: 3}
+      ViewPrefab: {fileID: 5461131032118759975, guid: 2e7c608f7499f6e4a952aa4e495a2e70,
+        type: 3}
     - Name: Queen Classic
       ItemType: 4
       VersionId: 4
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 2053177593142624756, guid: 41d4f22f3233b954c9da809f2e241fd9,
+        type: 3}
+      ViewPrefab: {fileID: 4671070335680337794, guid: e8f4c0ccf05e7b64b8d9abc93d8a378d,
+        type: 3}
     - Name: King Classic
       ItemType: 4
       VersionId: 5
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 2224475905446528190, guid: f5fbd5856bfe60d4084a7a545bea7866,
+        type: 3}
+      ViewPrefab: {fileID: 1328034634613779909, guid: 4dbedfce9c6869c47834ead7e59dfc2c,
+        type: 3}
   IsAutoSetItemVersionId: 0
   ItemsType: 4
   DeskItems:

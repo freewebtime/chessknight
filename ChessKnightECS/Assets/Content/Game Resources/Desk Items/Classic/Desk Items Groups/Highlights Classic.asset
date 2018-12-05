@@ -19,28 +19,38 @@ MonoBehaviour:
     - Name: Highlight White Classic
       ItemType: 8
       VersionId: 0
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 5648520541762863883, guid: 1a4704eb42915a74796b8e98e101f750,
+        type: 3}
+      ViewPrefab: {fileID: 7901667417937326111, guid: 7f6792b1c6f4447459dcad3dd7d3d0d7,
+        type: 3}
     - Name: Highlight Green Classic
       ItemType: 8
       VersionId: 1
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 4356214989735018726, guid: 69bb1725d5b00d84198a2f69b8a41ff9,
+        type: 3}
+      ViewPrefab: {fileID: 8379382852861698930, guid: bacf1b3851a75444e920aca5cebd6d5d,
+        type: 3}
     - Name: Highlight Red Classic
       ItemType: 8
       VersionId: 2
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 8314083175884039509, guid: b859c713a121b5f448bd6d73f887a6c3,
+        type: 3}
+      ViewPrefab: {fileID: 4252507293302181829, guid: 9e1ada8436861ce47925bd063e367cc3,
+        type: 3}
     - Name: Highlight Yellow Classic
       ItemType: 8
       VersionId: 3
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 4681048302350615631, guid: fbae36ac92e752141b5e8a069d5ac05e,
+        type: 3}
+      ViewPrefab: {fileID: 5317999528726767890, guid: 51d55b403d683ef4d999712b75950778,
+        type: 3}
     - Name: Highlight Blue Classic
       ItemType: 8
       VersionId: 4
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
+      DataPrefab: {fileID: 6746437014171978194, guid: 76e87618e3618d545a8e95697647a90a,
+        type: 3}
+      ViewPrefab: {fileID: 5414259521663888201, guid: e5dcc988da7654847a565fa95305538c,
+        type: 3}
   IsAutoSetItemVersionId: 0
   ItemsType: 8
   DeskItems:
