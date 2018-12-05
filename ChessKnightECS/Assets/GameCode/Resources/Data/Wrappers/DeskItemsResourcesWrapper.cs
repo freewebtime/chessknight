@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Fwt.Core;
 using UnityEngine;
 
@@ -16,7 +17,9 @@ namespace Ck.Resources
     public void Init()
     {
       var deskItemsGroups = new DeskItemsGroupResources[DeskItemsGroups.Length];
+      var deskItemsByItemType = new Dictionary<int, DeskItemsGroupResources>();
       var deskItemTypes = new int[deskItemsGroups.Length];
+
       for (int i = 0; i < deskItemsGroups.Length; i++)
       {
         var deskItemGroup = deskItemsGroups[i];
@@ -29,6 +32,8 @@ namespace Ck.Resources
           deskItemGroup.ItemsType = deskItemGroupWrapper.ItemsType;
         }
 
+        deskItemsByItemType[(int)deskItemGroup.ItemsType] = deskItemGroup;
+
         deskItemsGroups[i] = deskItemGroup;
         deskItemTypes[i] = (int)deskItemGroup.ItemsType;
       }
@@ -36,6 +41,7 @@ namespace Ck.Resources
 
       var value = Value;
       value.DeskItemsGroups = deskItemsGroups;
+      value.DeskItemsByItemType = deskItemsByItemType;
       Value = value;
     }
   }

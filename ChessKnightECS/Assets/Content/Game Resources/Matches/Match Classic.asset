@@ -24,9 +24,6 @@ MonoBehaviour:
         type: 3}
       DeskItems:
         DeskItemsGroups:
-        - Name: Others Classic
-          ItemsType: 0
-          DeskItems: []
         - Name: Armors Classic
           ItemsType: 1
           DeskItems:
@@ -108,6 +105,16 @@ MonoBehaviour:
             DataPrefab: {fileID: 2224475905446528190, guid: f5fbd5856bfe60d4084a7a545bea7866,
               type: 3}
             ViewPrefab: {fileID: 1328034634613779909, guid: 4dbedfce9c6869c47834ead7e59dfc2c,
+              type: 3}
+        - Name: Goals Classic
+          ItemsType: 5
+          DeskItems:
+          - Name: Goal Classic
+            ItemType: 5
+            VersionId: 0
+            DataPrefab: {fileID: 5267582522075460130, guid: e592cb7787da4dc46805b459a7283979,
+              type: 3}
+            ViewPrefab: {fileID: 4310796411789204693, guid: 38ebce9485b0a5d4fa269bee5eceb100,
               type: 3}
         - Name: Move Targets Classic
           ItemsType: 6

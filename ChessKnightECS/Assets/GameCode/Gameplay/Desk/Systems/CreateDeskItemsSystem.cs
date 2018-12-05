@@ -68,7 +68,7 @@ namespace Ck.Gameplay
         // get desk config and resources
         var deskConfig = added.DeskConfig[i];
         var deskResources = added.DeskResources[i];
-        var deskItemsGroups = deskResources.DeskItems.DeskItemsGroups;
+        var deskItemsGroups = deskResources.DeskItems.DeskItemsByItemType;
 
         // then get data about deskItems from that config
         var deskItemConfigs = deskConfig.DeskItems;
@@ -157,17 +157,17 @@ namespace Ck.Gameplay
       deskEntities.Dispose();
     }
 
-    private DeskItemResources? GetDeskItemResources(DeskItemsGroupResources[] deskItemsGroups, int itemType, int itemVersion)
+    private DeskItemResources? GetDeskItemResources(Dictionary<int, DeskItemsGroupResources> deskItemsGroups, int itemType, int itemVersion)
     {
-      if (deskItemsGroups == null || deskItemsGroups.Length == 0) {
+      if (deskItemsGroups == null || deskItemsGroups.Count == 0) {
         return null;
       }
 
-      if (itemType < 0 || itemType >= deskItemsGroups.Length) {
+      DeskItemsGroupResources itemsGroup;
+      if (!deskItemsGroups.TryGetValue(itemType, out itemsGroup)) {
         return null;
       }
 
-      var itemsGroup = deskItemsGroups[itemType];
       if (itemsGroup.DeskItems == null || itemsGroup.DeskItems.Length == 0) {
         return null;
       }

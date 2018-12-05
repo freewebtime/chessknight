@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.Entities;
 
 namespace Ck.Resources
@@ -7,5 +8,6 @@ namespace Ck.Resources
   public struct DeskItemsResources: ISharedComponentData
   {
     public DeskItemsGroupResources[] DeskItemsGroups;
+    public Dictionary<int, DeskItemsGroupResources> DeskItemsByItemType;
   }
 }

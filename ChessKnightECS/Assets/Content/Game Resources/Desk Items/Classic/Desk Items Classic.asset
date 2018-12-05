@@ -14,9 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     DeskItemsGroups:
-    - Name: Others Classic
-      ItemsType: 0
-      DeskItems: []
     - Name: Armors Classic
       ItemsType: 1
       DeskItems:
@@ -203,7 +200,6 @@ MonoBehaviour:
         ViewPrefab: {fileID: 5414259521663888201, guid: e5dcc988da7654847a565fa95305538c,
           type: 3}
   DeskItemsGroups:
-  - {fileID: 11400000, guid: dcb55b3265239f54c980d7417ea08415, type: 2}
   - {fileID: 11400000, guid: 92346ba45a6518b4496ba5287557077f, type: 2}
   - {fileID: 11400000, guid: cf613aa99d5c33342945a3384a01541c, type: 2}
   - {fileID: 11400000, guid: 957b39a6fde1fe24cadb33167ef7eb9f, type: 2}
