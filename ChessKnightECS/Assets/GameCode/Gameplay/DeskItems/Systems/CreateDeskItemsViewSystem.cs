@@ -1,4 +1,5 @@
 using System;
+using Ck.Resources;
 using Fwt.Core.Collections;
 using Unity.Collections;
 using Unity.Entities;
@@ -20,7 +21,7 @@ namespace Ck.Gameplay
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public ComponentArray<Transform> Transform;
       [ReadOnly] public ComponentDataArray<DeskItem> DeskItem;
-      [ReadOnly] public ComponentDataArray<DeskItemType> DeskItemType;
+      [ReadOnly] public SharedComponentDataArray<DeskItemResources> DeskItemResources;
       public SubtractiveComponent<CreateDeskItemViewsCache> NoCache;
     }
 
@@ -30,12 +31,11 @@ namespace Ck.Gameplay
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public SharedComponentDataArray<CreateDeskItemViewsCache> Cache;
       public SubtractiveComponent<DeskItem> NoDeskItem;
+      public SubtractiveComponent<DeskItemResources> NoDeskItemResources;
     }
 
     [Inject] Added added;
     [Inject] Removed removed;
-
-    [Inject] MediaResourcesApi mediaResourcesApi;
 
     protected override void OnUpdate()
     {
@@ -49,23 +49,16 @@ namespace Ck.Gameplay
         return;
       }
 
-      // check media resources
-      var deskResourcesSorted = mediaResourcesApi.GetDeskResourcesSorted();
-      if (!deskResourcesSorted.HasValue) {
-        return;
-      }
-      var sortedDeskItems = deskResourcesSorted.Value.DeskItems;
-
       // extract data from component group, 'cause we'll use EntityManager within loop
       var deskItemTransforms = added.Transform.ToArray();
       var deskItemEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(deskItemEntities);
-      var deskItemTypes = new NativeArray<DeskItemType>(added.Length, Allocator.Temp);
-      added.DeskItemType.CopyTo(deskItemTypes);
+      var deskItemResources = new NativeArray<DeskItemResources>(added.Length, Allocator.Temp);
+      added.DeskItemResources.CopyTo(deskItemResources);
 
       for (int i = 0; i < deskItemEntities.Length; i++)
       {
-        var deskItemType = deskItemTypes[i].Type;
+        var deskItemType = deskItemResources[i].Type;
 
         // get view prefab
         GameObject[] deskItemPrefabs;
@@ -102,7 +95,7 @@ namespace Ck.Gameplay
       }
 
       deskItemEntities.Dispose();
-      deskItemTypes.Dispose();
+      deskItemResources.Dispose();
     }
 
     private void UpdateRemoved()

@@ -7,7 +7,7 @@ namespace Ck.Gameplay
 {
   public class GameplayApi : ComponentSystem
   {
-    [Inject] DataResourcesApi resourcesApi;
+    [Inject] GameResourcesApi resourcesApi;
 
     public Entity? GetCurrentMatch()
     {
@@ -22,9 +22,23 @@ namespace Ck.Gameplay
 
     public Entity? StartMatch(MatchConfig matchConfig)
     {
+      var gameResources = resourcesApi.GetGameResources();
+      if (!gameResources.HasValue || gameResources.Value.Matches.Length == 0) {
+        return null;
+      }
+
+      var matchesResources = gameResources.Value.Matches;
+      
+      var matchResourcesId = matchConfig.MatchResourcesId;
+      if (matchResourcesId < 0 || matchesResources.Length <= matchResourcesId) {
+        return null;
+      }
+
       // get match prefab
-      var matchResources = resourcesApi.GetMatchResources();
-      if (!matchResources.HasValue) {
+      var matchResources = matchesResources[matchResourcesId];
+      var matchPrefab = matchResources.MatchPrefab;
+
+      if (matchPrefab == null) {
         return null;
       }
 
@@ -32,8 +46,9 @@ namespace Ck.Gameplay
       StopMatch();
 
       // instantiate match prefab
-      var matchEntity = EntityManager.Instantiate(matchResources.Value.MatchPrefab);
+      var matchEntity = EntityManager.Instantiate(matchPrefab);
       EntityManager.AddSharedComponentData(matchEntity, matchConfig);
+      EntityManager.AddSharedComponentData(matchEntity, matchResources);
     
       return matchEntity;
     }

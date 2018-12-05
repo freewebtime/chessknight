@@ -9,6 +9,7 @@ namespace Ck.Gameplay
   [Serializable]
   public struct MatchConfig: ISharedComponentData
   {
+    public int MatchResourcesId;
     public DeskConfig DeskConfig;
   }
 }

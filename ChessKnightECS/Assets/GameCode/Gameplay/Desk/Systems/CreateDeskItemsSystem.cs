@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Ck.Resources;
 using Fwt.Core;
 using Unity.Collections;
 using Unity.Entities;
@@ -23,7 +25,8 @@ namespace Ck.Gameplay
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public ComponentDataArray<Desk> Desk;
-      [ReadOnly] public SharedComponentDataArray<DeskConfig> Config;
+      [ReadOnly] public SharedComponentDataArray<DeskConfig> DeskConfig;
+      [ReadOnly] public SharedComponentDataArray<DeskResources> DeskResources;
       [ReadOnly] public ComponentArray<Transform> Transform;
       public SubtractiveComponent<CreateDeskItemsCache> NoCache;
     }
@@ -34,13 +37,12 @@ namespace Ck.Gameplay
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public SubtractiveComponent<Desk> NoDesk;
       [ReadOnly] public SubtractiveComponent<DeskConfig> NoConfig; 
+      [ReadOnly] public SubtractiveComponent<DeskResources> NoDeskResources;
       [ReadOnly] public SharedComponentDataArray<CreateDeskItemsCache> Cache;
     }
 
     [Inject] Added added;
     [Inject] Removed removed;
-
-    [Inject] DataResourcesApi dataResourcesApi;
 
     protected override void OnUpdate()
     {
@@ -48,29 +50,26 @@ namespace Ck.Gameplay
       UpdateRemoved();
     }
 
-    private void UpdateAdded() {
+    private void UpdateAdded() 
+    {
       if (added.Length == 0) {
         return;
-      }
-
-      var deskResources = dataResourcesApi.GetDeskResources();
-      if (!deskResources.HasValue) {
-        return;        
       }
 
       var deskEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(deskEntities);
 
-      var deskTransforms = added.Transform;
-
       // for each added desk create desk items
       for (int i = 0; i < deskEntities.Length; i++)
       {
         var deskEntity = deskEntities[i];
-        var deskTransform = deskTransforms[i];
+        var deskTransform = added.Transform[i];
 
-        // get desk config 
-        var deskConfig = EntityManager.GetSharedComponentData<DeskConfig>(deskEntity);
+        // get desk config and resources
+        var deskConfig = added.DeskConfig[i];
+        var deskResources = added.DeskResources[i];
+        var deskItemsGroups = deskResources.DeskItems.DeskItemsGroups;
+
         // then get data about deskItems from that config
         var deskItemConfigs = deskConfig.DeskItems;
         var deskItemsCount = 0;
@@ -86,44 +85,57 @@ namespace Ck.Gameplay
         for (int k = 0; k < deskItemsCount; k++)
         {
           var deskItemConfig = deskItemConfigs[k];
+
           // get desk item prefab
-          var deskItemPrefab = deskItemConfig.Prefab;
           var coordinate = deskItemConfig.Coordinate;
           var position = new float3(coordinate.x, coordinate.y, 0);
 
-          // create desk item
-          var deskItemGo = UnityEngine.Object.Instantiate(deskItemPrefab);
-          deskItemGo.name = string.Format("Desk item {0}", coordinate);
-          deskItemGo.transform.SetParent(deskTransform);
+          var itemType = deskItemConfig.DeskItemType;
+          var itemVersion = deskItemConfig.DeskItemVersion;
 
-          // get desk item entity from desk game object
-          var deskItemGoEntity = deskItemGo.GetComponent<GameObjectEntity>();
-          var deskItemEntity = deskItemGoEntity.Entity;
+          var deskItemResources = GetDeskItemResources(deskItemsGroups, itemType, itemVersion);
+          if (deskItemResources.HasValue) {
+            
+            var dataPrefab = deskItemResources.Value.DataPrefab;
+            if (dataPrefab != null) {
+              
+              // create desk item
+              var deskItemGo = UnityEngine.Object.Instantiate(dataPrefab);
+              deskItemGo.name = string.Format("Desk item {0}", coordinate);
+              deskItemGo.transform.SetParent(deskTransform);
 
-          // set desk item entity values
-          // add desk reference
-          PostUpdateCommands.AddComponent(deskItemEntity, new DeskReference {
-            Target = deskEntity
-          });
-          // set coordinate and position
-          PostUpdateCommands.SetComponent(deskItemEntity, new Coordinate { 
-            Value = coordinate 
-          });
-          PostUpdateCommands.SetComponent(deskItemEntity, new Position {
-            Value = position
-          });
+              // get desk item entity from desk game object
+              var deskItemGoEntity = deskItemGo.GetComponent<GameObjectEntity>();
+              var deskItemEntity = deskItemGoEntity.Entity;
 
-          // add desk item to all desk items registry
-          deskItemEntities.Add(deskItemEntity);
-          deskItemGameObjects.Add(deskItemGo);
+              // set desk item entity values
+              // add desk reference
+              PostUpdateCommands.AddComponent(deskItemEntity, new DeskReference {
+                Target = deskEntity
+              });
+              // set coordinate and position
+              PostUpdateCommands.SetComponent(deskItemEntity, new Coordinate { 
+                Value = coordinate 
+              });
+              PostUpdateCommands.SetComponent(deskItemEntity, new Position {
+                Value = position
+              });
+              PostUpdateCommands.AddSharedComponent(deskItemEntity, deskItemResources.Value);
 
-          List<Entity> coordList;
-          if (!deskItemEntitiesByCoord.TryGetValue(coordinate, out coordList) || coordList == null) {
-            coordList = new List<Entity>();
-            deskItemEntitiesByCoord[coordinate] = coordList;
+              // add desk item to all desk items registry
+              deskItemEntities.Add(deskItemEntity);
+              deskItemGameObjects.Add(deskItemGo);
+
+              List<Entity> coordList;
+              if (!deskItemEntitiesByCoord.TryGetValue(coordinate, out coordList) || coordList == null) {
+                coordList = new List<Entity>();
+                deskItemEntitiesByCoord[coordinate] = coordList;
+              }
+
+              coordList.Add(deskItemEntity);
+            }
           }
 
-          coordList.Add(deskItemEntity);
         }
 
         // add registers to desk
@@ -143,6 +155,28 @@ namespace Ck.Gameplay
       }
 
       deskEntities.Dispose();
+    }
+
+    private DeskItemResources? GetDeskItemResources(DeskItemsGroupResources[] deskItemsGroups, int itemType, int itemVersion)
+    {
+      if (deskItemsGroups == null || deskItemsGroups.Length == 0) {
+        return null;
+      }
+
+      if (itemType < 0 || itemType >= deskItemsGroups.Length) {
+        return null;
+      }
+
+      var itemsGroup = deskItemsGroups[itemType];
+      if (itemsGroup.DeskItems == null || itemsGroup.DeskItems.Length == 0) {
+        return null;
+      }
+
+      if (itemVersion < 0 || itemVersion >= itemsGroup.DeskItems.Length) {
+        return null;
+      }
+
+      return itemsGroup.DeskItems[itemVersion];
     }
 
     private void UpdateRemoved() 

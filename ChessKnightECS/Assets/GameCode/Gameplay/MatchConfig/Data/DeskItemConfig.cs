@@ -8,7 +8,8 @@ namespace Ck.Gameplay
   public struct DeskItemConfig
   {
     public int2 Coordinate;
-    public GameObject Prefab;
+    public int DeskItemType;
+    public int DeskItemVersion;
   }
 
 }

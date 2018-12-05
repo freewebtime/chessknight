@@ -1,3 +1,4 @@
+using Ck.Resources;
 using Fwt.Core;
 using Unity.Collections;
 using Unity.Entities;
@@ -19,7 +20,8 @@ namespace Ck.Gameplay
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public ComponentDataArray<Match> Match;
-      [ReadOnly] public SharedComponentDataArray<MatchConfig> MatchConfig; 
+      [ReadOnly] public SharedComponentDataArray<MatchConfig> MatchConfig;
+      [ReadOnly] public SharedComponentDataArray<MatchResources> MatchResources;
       public SubtractiveComponent<CreateDeskCache> NoCache;
     }
 
@@ -28,14 +30,13 @@ namespace Ck.Gameplay
       public readonly int Length;
       [ReadOnly] public EntityArray Entity;
       [ReadOnly] public SubtractiveComponent<Match> NoMatch;
-      [ReadOnly] public SubtractiveComponent<MatchConfig> NoMatchConfig; 
+      [ReadOnly] public SubtractiveComponent<MatchConfig> NoMatchConfig;
+      [ReadOnly] public SubtractiveComponent<MatchResources> NoMatchResources; 
       [ReadOnly] public SharedComponentDataArray<CreateDeskCache> Cache;
     }
 
     [Inject] Added added;
     [Inject] Removed removed;
-
-    [Inject] DataResourcesApi dataResourcesApi;
 
     protected override void OnUpdate()
     {
@@ -48,47 +49,40 @@ namespace Ck.Gameplay
         return;
       }
 
-      var deskResources = dataResourcesApi.GetDeskResources();
-      if (!deskResources.HasValue) {
-        return;        
-      }
-
-      var deskSkin = deskResources.Value.DefaultDesk;
-
-      if (deskSkin.Desk == null || deskSkin.Desk.Length == 0) {
-        return;
-      }
-      var deskPrefab = deskSkin.Desk[0];
-      if (deskPrefab == null) {
-        return;
-      }
-
       var matchEntities = new NativeArray<Entity>(added.Length, Allocator.Temp);
       added.Entity.CopyTo(matchEntities);
 
       for (int i = 0; i < matchEntities.Length; i++)
       {
         var matchEntity = matchEntities[i];
-        var deskGo = UnityEngine.Object.Instantiate(deskPrefab);
-        deskGo.name = string.Format("Match desk");
-        var deskGoEntity = deskGo.GetComponent<GameObjectEntity>();
-        var deskEntity = deskGoEntity.Entity;
+        var matchConfig = added.MatchConfig[i];
+        var deskConfig = matchConfig.DeskConfig;
+        var matchResources = added.MatchResources[i];
+        var deskResources = matchResources.DeskResources;
+        var deskPrefab = deskResources.DeskPrefab;
 
-        var matchConfig = EntityManager.GetSharedComponentData<MatchConfig>(matchEntity);
+        if (deskPrefab != null) {
+          var deskGo = UnityEngine.Object.Instantiate(deskPrefab);
+          deskGo.name = string.Format("Match desk");
+          var deskGoEntity = deskGo.GetComponent<GameObjectEntity>();
+          var deskEntity = deskGoEntity.Entity;
 
-        PostUpdateCommands.AddSharedComponent(deskEntity, matchConfig.DeskConfig);
+          PostUpdateCommands.AddSharedComponent(deskEntity, deskConfig);
+          PostUpdateCommands.AddSharedComponent(deskEntity, deskResources);
 
-        PostUpdateCommands.AddSharedComponent(matchEntity, new CreateDeskCache {
-          DeskEntity = deskEntity,
-          DeskGameObject = deskGo
-        });
+          PostUpdateCommands.AddSharedComponent(matchEntity, new CreateDeskCache {
+            DeskEntity = deskEntity,
+            DeskGameObject = deskGo
+          });
 
-        PostUpdateCommands.AddComponent(matchEntity, new DeskReference {
-          Target = deskEntity
-        });
-        PostUpdateCommands.AddComponent(deskEntity, new MatchReference {
-          Target = matchEntity
-        });
+          PostUpdateCommands.AddComponent(matchEntity, new DeskReference {
+            Target = deskEntity
+          });
+          PostUpdateCommands.AddComponent(deskEntity, new MatchReference {
+            Target = matchEntity
+          });
+        }
+
       }
 
       matchEntities.Dispose();
