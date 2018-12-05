@@ -14,6 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     DeskItemsGroups:
+    - Name: Armors Classic
+      ItemsType: 1
+      DeskItems:
+      - Name: Armor Classic
+        ItemType: 1
+        VersionId: 0
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
     - Name: Backgrounds Classic
       ItemsType: 2
       DeskItems:
@@ -25,6 +33,14 @@ MonoBehaviour:
       - Name: Background Dark
         ItemType: 2
         VersionId: 1
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+    - Name: Bombs Classic
+      ItemsType: 3
+      DeskItems:
+      - Name: Bomb Classic
+        ItemType: 3
+        VersionId: 0
         DataPrefab: {fileID: 0}
         ViewPrefab: {fileID: 0}
     - Name: Figures Classic
@@ -60,6 +76,14 @@ MonoBehaviour:
         VersionId: 5
         DataPrefab: {fileID: 0}
         ViewPrefab: {fileID: 0}
+    - Name: Move Targets Classic
+      ItemsType: 6
+      DeskItems:
+      - Name: Move Target Classic
+        ItemType: 6
+        VersionId: 0
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
     - Name: Player Units Classic
       ItemsType: 7
       DeskItems:
@@ -93,7 +117,39 @@ MonoBehaviour:
         VersionId: 5
         DataPrefab: {fileID: 0}
         ViewPrefab: {fileID: 0}
+    - Name: Highlights Classic
+      ItemsType: 8
+      DeskItems:
+      - Name: Highlight White Classic
+        ItemType: 8
+        VersionId: 0
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Highlight Green Classic
+        ItemType: 8
+        VersionId: 1
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Highlight Red Classic
+        ItemType: 8
+        VersionId: 2
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Highlight Yellow Classic
+        ItemType: 8
+        VersionId: 3
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
+      - Name: Highlight Blue Classic
+        ItemType: 8
+        VersionId: 4
+        DataPrefab: {fileID: 0}
+        ViewPrefab: {fileID: 0}
   DeskItemsGroups:
-  - {fileID: 11400000, guid: 6f1dcaf3a62d76144a7e10d3693d7422, type: 2}
-  - {fileID: 11400000, guid: d027cbff0bbd6f54cba37169c62d6310, type: 2}
+  - {fileID: 11400000, guid: 92346ba45a6518b4496ba5287557077f, type: 2}
   - {fileID: 11400000, guid: cf613aa99d5c33342945a3384a01541c, type: 2}
+  - {fileID: 11400000, guid: 957b39a6fde1fe24cadb33167ef7eb9f, type: 2}
+  - {fileID: 11400000, guid: 6f1dcaf3a62d76144a7e10d3693d7422, type: 2}
+  - {fileID: 11400000, guid: 820dd7e65ceda504cbf4d27fee5c627b, type: 2}
+  - {fileID: 11400000, guid: 9d81f7ab38eed044a81ae685fae35b25, type: 2}
+  - {fileID: 11400000, guid: d027cbff0bbd6f54cba37169c62d6310, type: 2}

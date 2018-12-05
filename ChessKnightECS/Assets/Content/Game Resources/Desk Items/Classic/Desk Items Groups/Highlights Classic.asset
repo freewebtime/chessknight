@@ -14,8 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     Name: 
-    ItemsType: 3
-    DeskItems: []
+    ItemsType: 8
+    DeskItems:
+    - Name: Highlight White Classic
+      ItemType: 8
+      VersionId: 0
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Highlight Green Classic
+      ItemType: 8
+      VersionId: 1
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Highlight Red Classic
+      ItemType: 8
+      VersionId: 2
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Highlight Yellow Classic
+      ItemType: 8
+      VersionId: 3
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Highlight Blue Classic
+      ItemType: 8
+      VersionId: 4
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
   IsAutoSetItemVersionId: 0
-  ItemsType: 3
-  DeskItems: []
+  ItemsType: 8
+  DeskItems:
+  - {fileID: 11400000, guid: 99e4bea8d2465614bbadf6b1a4e4b953, type: 2}
+  - {fileID: 11400000, guid: 9bfb60c67ec46a94da2376d766411518, type: 2}
+  - {fileID: 11400000, guid: ae88b39d3e8f30f4fbff8e3f321651e3, type: 2}
+  - {fileID: 11400000, guid: 81ea4fd420d28d74b8dd65977ee03c2a, type: 2}
+  - {fileID: 11400000, guid: ff957d112d413f649ad6c131a0a993e0, type: 2}

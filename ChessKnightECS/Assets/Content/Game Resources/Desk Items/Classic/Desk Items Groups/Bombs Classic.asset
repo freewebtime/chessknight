@@ -14,44 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     Name: 
-    ItemsType: 7
+    ItemsType: 3
     DeskItems:
-    - Name: Player Pawn Classic
-      ItemType: 7
+    - Name: Bomb Classic
+      ItemType: 3
       VersionId: 0
       DataPrefab: {fileID: 0}
       ViewPrefab: {fileID: 0}
-    - Name: Player Rook Classic
-      ItemType: 7
-      VersionId: 1
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
-    - Name: Player Knight Classic
-      ItemType: 7
-      VersionId: 2
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
-    - Name: Player Bishop Classic
-      ItemType: 7
-      VersionId: 3
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
-    - Name: Player Queen Classic
-      ItemType: 7
-      VersionId: 4
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
-    - Name: Player King Classic
-      ItemType: 7
-      VersionId: 5
-      DataPrefab: {fileID: 0}
-      ViewPrefab: {fileID: 0}
-  IsAutoSetItemVersionId: 0
-  ItemsType: 7
+  IsAutoSetItemVersionId: 1
+  ItemsType: 3
   DeskItems:
-  - {fileID: 11400000, guid: 5d77ebb2e0f1d674bb478e7018294205, type: 2}
-  - {fileID: 11400000, guid: 8e45db41447b35149ae0ef20b6ca75bb, type: 2}
-  - {fileID: 11400000, guid: fe487b1199ca73249826846cc3b96f26, type: 2}
-  - {fileID: 11400000, guid: b20b3940bd99e1a41a68e4271626ac9c, type: 2}
-  - {fileID: 11400000, guid: 630d652a46950ce45bf5945ea60de0b4, type: 2}
-  - {fileID: 11400000, guid: 707e50819d060df46ab841d06895a3f8, type: 2}
+  - {fileID: 11400000, guid: 910540df3e2d96c46ad88c9a504ae90b, type: 2}

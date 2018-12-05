@@ -13,7 +13,139 @@ MonoBehaviour:
   m_Name: Desk Classic
   m_EditorClassIdentifier: 
   Value:
-    DeskPrefab: {fileID: 0}
+    DeskPrefab: {fileID: 1356229832475707040, guid: dc1e8b81b5882f84281a97314bde6c8a,
+      type: 3}
     DeskItems:
-      DeskItemsGroups: []
-  DeskItems: {fileID: 0}
+      DeskItemsGroups:
+      - Name: Armors Classic
+        ItemsType: 1
+        DeskItems:
+        - Name: Armor Classic
+          ItemType: 1
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+      - Name: Backgrounds Classic
+        ItemsType: 2
+        DeskItems:
+        - Name: Background Light
+          ItemType: 2
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Background Dark
+          ItemType: 2
+          VersionId: 1
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+      - Name: Bombs Classic
+        ItemsType: 3
+        DeskItems:
+        - Name: Bomb Classic
+          ItemType: 3
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+      - Name: Figures Classic
+        ItemsType: 4
+        DeskItems:
+        - Name: Pawn Classic
+          ItemType: 4
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Rook Classic
+          ItemType: 4
+          VersionId: 1
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Knight Classic
+          ItemType: 4
+          VersionId: 2
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Bishop Classic
+          ItemType: 4
+          VersionId: 3
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Queen Classic
+          ItemType: 4
+          VersionId: 4
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: King Classic
+          ItemType: 4
+          VersionId: 5
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+      - Name: Move Targets Classic
+        ItemsType: 6
+        DeskItems:
+        - Name: Move Target Classic
+          ItemType: 6
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+      - Name: Player Units Classic
+        ItemsType: 7
+        DeskItems:
+        - Name: Player Pawn Classic
+          ItemType: 7
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Player Rook Classic
+          ItemType: 7
+          VersionId: 1
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Player Knight Classic
+          ItemType: 7
+          VersionId: 2
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Player Bishop Classic
+          ItemType: 7
+          VersionId: 3
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Player Queen Classic
+          ItemType: 7
+          VersionId: 4
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Player King Classic
+          ItemType: 7
+          VersionId: 5
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+      - Name: Highlights Classic
+        ItemsType: 8
+        DeskItems:
+        - Name: Highlight White Classic
+          ItemType: 8
+          VersionId: 0
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Highlight Green Classic
+          ItemType: 8
+          VersionId: 1
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Highlight Red Classic
+          ItemType: 8
+          VersionId: 2
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Highlight Yellow Classic
+          ItemType: 8
+          VersionId: 3
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+        - Name: Highlight Blue Classic
+          ItemType: 8
+          VersionId: 4
+          DataPrefab: {fileID: 0}
+          ViewPrefab: {fileID: 0}
+  DeskItems: {fileID: 11400000, guid: 37e2e3b1514bf8548ba9e0abec2f6a85, type: 2}
