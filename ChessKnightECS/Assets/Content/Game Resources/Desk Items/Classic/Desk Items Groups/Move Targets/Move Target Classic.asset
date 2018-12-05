@@ -16,5 +16,7 @@ MonoBehaviour:
     Name: 
     ItemType: 6
     VersionId: 0
-    DataPrefab: {fileID: 0}
-    ViewPrefab: {fileID: 0}
+    DataPrefab: {fileID: 6219210961310425986, guid: 9a92b30b90d282d479e709508b051277,
+      type: 3}
+    ViewPrefab: {fileID: 2283068959376416868, guid: 157ce4b6b54ae324ba1bb11f2a7efa6a,
+      type: 3}

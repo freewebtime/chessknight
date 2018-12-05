@@ -20,13 +20,14 @@ namespace Ck.Resources
       var matchesResources = new MatchResources[Matches.Length];
       for (int i = 0; i < matchesResources.Length; i++)
       {
+        var matchResource = matchesResources[i];
         var matchWrapper = Matches[i];
-        if (matchWrapper == null)
+        if (matchWrapper != null)
         {
-          continue;
+          matchResource = matchWrapper.Value;
+          matchResource.Name = matchWrapper.name;
         }
 
-        var matchResource = matchWrapper.Value;
         matchResource.Id = i;
         matchesResources[i] = matchResource;
       }

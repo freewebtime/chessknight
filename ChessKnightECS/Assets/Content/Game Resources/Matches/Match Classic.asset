@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Match Classic
   m_EditorClassIdentifier: 
   Value:
+    Name: 
     Id: 0
-    MatchPrefab: {fileID: 0}
-    ScenePrefab: {fileID: 0}
+    MatchPrefab: {fileID: 8157163203301034756, guid: 36c380116ade10e4ba1d883d101ef58d,
+      type: 3}
+    ScenePrefab: {fileID: 3715440469111678723, guid: 144e8a782c1c83f44af28379eb32c0e7,
+      type: 3}
     DeskResources:
       DeskPrefab: {fileID: 1356229832475707040, guid: dc1e8b81b5882f84281a97314bde6c8a,
         type: 3}
