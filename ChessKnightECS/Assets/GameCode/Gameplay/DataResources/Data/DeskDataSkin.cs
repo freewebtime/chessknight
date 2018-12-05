@@ -10,6 +10,9 @@ namespace Ck.Gameplay
     public GameObject[] Desk;
 
     [Space]
+    public DeskItemsSkin DeskItems;
+
+    [Space]
     public GameObject[] Armor;
     public GameObject[] Background;
     public GameObject[] Bomb;

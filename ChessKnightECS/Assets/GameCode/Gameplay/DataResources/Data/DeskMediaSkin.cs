@@ -18,5 +18,9 @@ namespace Ck.Gameplay
     [Space]
     public GameObject[] PlayerUnit;
     public GameObject[] Highlight;
+
+    [Space]
+    public DeskItemsGroupSkin[] DeskItems;
   }
+
 }

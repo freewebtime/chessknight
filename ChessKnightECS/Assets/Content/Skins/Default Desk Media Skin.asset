@@ -43,3 +43,28 @@ MonoBehaviour:
     - {fileID: 8379382852861698930, guid: bacf1b3851a75444e920aca5cebd6d5d, type: 3}
     - {fileID: 4252507293302181829, guid: 9e1ada8436861ce47925bd063e367cc3, type: 3}
     - {fileID: 5317999528726767890, guid: 51d55b403d683ef4d999712b75950778, type: 3}
+    DeskItems:
+    - Name: Armor
+      GroupId: 0
+      Prefabs: []
+    - Name: Background
+      GroupId: 0
+      Prefabs: []
+    - Name: Bomb
+      GroupId: 0
+      Prefabs: []
+    - Name: Figure
+      GroupId: 0
+      Prefabs: []
+    - Name: Goal
+      GroupId: 0
+      Prefabs: []
+    - Name: MoveTarget
+      GroupId: 0
+      Prefabs: []
+    - Name: Player Unit
+      GroupId: 0
+      Prefabs: []
+    - Name: Highlight
+      GroupId: 0
+      Prefabs: []

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959471d0da0b671478d89a68ab2585bb, type: 3}
+  m_Name: Classic Player Units
+  m_EditorClassIdentifier: 
+  Value:
+    GroupId: 0
+    DeskItems:
+    - Name: Player Pawn
+      GroupId: 0
+      VersionId: 0
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Player Rook
+      GroupId: 0
+      VersionId: 1
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Player Knight
+      GroupId: 0
+      VersionId: 2
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Player Bishop
+      GroupId: 0
+      VersionId: 3
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Player Queen
+      GroupId: 0
+      VersionId: 4
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+    - Name: Player King
+      GroupId: 0
+      VersionId: 5
+      DataPrefab: {fileID: 0}
+      ViewPrefab: {fileID: 0}
+  IsAutoSetItemVersionId: 0
+  GroupId: 0
+  DeskItems:
+  - {fileID: 11400000, guid: 5d77ebb2e0f1d674bb478e7018294205, type: 2}
+  - {fileID: 11400000, guid: 8e45db41447b35149ae0ef20b6ca75bb, type: 2}
+  - {fileID: 11400000, guid: fe487b1199ca73249826846cc3b96f26, type: 2}
+  - {fileID: 11400000, guid: b20b3940bd99e1a41a68e4271626ac9c, type: 2}
+  - {fileID: 11400000, guid: 630d652a46950ce45bf5945ea60de0b4, type: 2}
+  - {fileID: 11400000, guid: 707e50819d060df46ab841d06895a3f8, type: 2}
