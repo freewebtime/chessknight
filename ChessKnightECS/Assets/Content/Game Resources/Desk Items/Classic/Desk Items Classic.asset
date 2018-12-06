@@ -200,8 +200,8 @@ MonoBehaviour:
         ViewPrefab: {fileID: 5414259521663888201, guid: e5dcc988da7654847a565fa95305538c,
           type: 3}
   DeskItemsGroups:
-  - {fileID: 11400000, guid: 92346ba45a6518b4496ba5287557077f, type: 2}
   - {fileID: 11400000, guid: cf613aa99d5c33342945a3384a01541c, type: 2}
+  - {fileID: 11400000, guid: 92346ba45a6518b4496ba5287557077f, type: 2}
   - {fileID: 11400000, guid: 957b39a6fde1fe24cadb33167ef7eb9f, type: 2}
   - {fileID: 11400000, guid: 6f1dcaf3a62d76144a7e10d3693d7422, type: 2}
   - {fileID: 11400000, guid: 115d326c278aee04eafe44e60f5f1835, type: 2}
