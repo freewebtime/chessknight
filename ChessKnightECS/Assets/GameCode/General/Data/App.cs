@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 
-namespace CK.Data
+namespace Ck.Data
 {
   public struct App: IComponentData { }
 }
