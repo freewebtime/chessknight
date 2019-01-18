@@ -1,12 +1,14 @@
 using System;
 using Ck.Data;
 using Ck.Logic;
+using Fwt.Core;
 using Fwt.Core.Gui;
 using Unity.Entities;
 using UnityEngine;
 
 namespace Ck
 {
+  [UpdateInGroup(typeof(GameLoop.ProcessInputGroup))]
   public class GameApi : ComponentSystem
   {
     [Inject] GuiWidgetsApi guiWidgetsApi;
@@ -28,15 +30,13 @@ namespace Ck
 
     public void Play_RandomLevel()
     {
-      Debug.Log("Play random level");
-
       guiScreenApi.HideAllScreens();
       guiWidgetsApi.ShowWidget<GuiScreenRound>(); 
     }
 
     public void ExitGame()
     {
-      Debug.Log("Application quit");
+      guiScreenApi.HideAllScreens();
       Application.Quit();
     }
 

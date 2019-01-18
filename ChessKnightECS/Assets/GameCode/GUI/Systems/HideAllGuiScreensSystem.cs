@@ -3,12 +3,14 @@ using Fwt.Core.Data;
 using Fwt.Core.Gui;
 using Unity.Collections;
 using Unity.Entities;
+using UnityEngine;
 
 namespace Ck.Logic
 {
   [UpdateBefore(typeof(ShowHideWidgetSystem))]
+  [UpdateBefore(typeof(GuiWidgetsApi))]
   [UpdateBefore(typeof(ShowAllGuiScreensSystem))]
-  [UpdateAfter(typeof(GuiWidgetsApi))]
+  [UpdateAfter(typeof(GuiScreenBarrier))]
   public class HideAllGuiScreensSystem : ComponentSystem
   {
     struct RequestGroup
@@ -21,6 +23,10 @@ namespace Ck.Logic
 
     protected override void OnUpdate()
     {
+      if (requestGroup.Length == 0) {
+        return;
+      }
+
       var screensGroup = GetComponentGroup(
         ComponentType.Create<GuiScreen>(),
         ComponentType.Create<Visible>()

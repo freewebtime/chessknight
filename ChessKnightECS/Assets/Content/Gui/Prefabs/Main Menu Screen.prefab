@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5090555074088458881}
   - component: {fileID: 5431912123933072712}
   - component: {fileID: 5778966359349675124}
+  - component: {fileID: 1512778662}
   m_Layer: 5
   m_Name: Main Menu Screen
   m_TagString: Untagged
@@ -50,7 +51,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90255727076599430}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -139,6 +140,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6244c2b0389f83944b90048c4800f2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1512778662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90255727076599430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944c351504b923c43b7dff0a1d25455d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7071264161279659789

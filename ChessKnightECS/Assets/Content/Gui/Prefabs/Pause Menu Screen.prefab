@@ -522,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 2366838421472174011, guid: 881c605ea0e6f5a48a56a602d5e8083c,
         type: 3}
       propertyPath: m_Name
-      value: Exit to Main Menu Button
+      value: Exit Button
       objectReference: {fileID: 0}
     - target: {fileID: 8675588257332591903, guid: 881c605ea0e6f5a48a56a602d5e8083c,
         type: 3}
@@ -667,7 +667,7 @@ PrefabInstance:
     - target: {fileID: 4645325379767518730, guid: 881c605ea0e6f5a48a56a602d5e8083c,
         type: 3}
       propertyPath: m_text
-      value: Main Menu
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 4645325379767518730, guid: 881c605ea0e6f5a48a56a602d5e8083c,
         type: 3}
@@ -677,17 +677,7 @@ PrefabInstance:
     - target: {fileID: 4645325379767518730, guid: 881c605ea0e6f5a48a56a602d5e8083c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4645325379767518730, guid: 881c605ea0e6f5a48a56a602d5e8083c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4645325379767518730, guid: 881c605ea0e6f5a48a56a602d5e8083c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881c605ea0e6f5a48a56a602d5e8083c, type: 3}

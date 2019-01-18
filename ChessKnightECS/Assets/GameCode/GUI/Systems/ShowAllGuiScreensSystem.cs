@@ -3,11 +3,13 @@ using Fwt.Core.Data;
 using Fwt.Core.Gui;
 using Unity.Collections;
 using Unity.Entities;
+using UnityEngine;
 
 namespace Ck.Logic
 {
   [UpdateBefore(typeof(ShowHideWidgetSystem))]
-  [UpdateAfter(typeof(GuiWidgetsApi))]
+  [UpdateBefore(typeof(GuiWidgetsApi))]
+  [UpdateAfter(typeof(GuiScreenBarrier))]
   public class ShowAllGuiScreensSystem : ComponentSystem
   {
     struct RequestGroup

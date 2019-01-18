@@ -51,7 +51,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294063699706380781}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -838,12 +838,12 @@ PrefabInstance:
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}
@@ -863,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}
@@ -873,7 +873,7 @@ PrefabInstance:
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2862411498765109690, guid: 69be2e705c5385b48bf420a95821cbab,
         type: 3}

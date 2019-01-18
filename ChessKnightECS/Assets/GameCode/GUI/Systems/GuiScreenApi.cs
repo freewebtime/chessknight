@@ -6,11 +6,11 @@ using Unity.Entities;
 
 namespace Ck.Logic
 {
-  [UpdateAfter(typeof(GuiWidgetsApi))]
-  [UpdateBefore(typeof(HideAllGuiScreensSystem))]
+  [UpdateInGroup(typeof(GameLoop.PreRenderGroup))]
+  [UpdateBefore(typeof(GuiScreenBarrier))]
   public class GuiScreenApi : ComponentSystem
   {
-    [Inject] EndFrameBarrier endFrameBarrier;
+    [Inject] GuiScreenBarrier guiScreenBarrier;
 
     EntityArchetype showAllScreensArchetype;
     EntityArchetype hideAllScreensArchetype;
@@ -42,7 +42,8 @@ namespace Ck.Logic
 
     public void HideAllScreens()
     {
-      PostUpdateCommands.CreateEntity(hideAllScreensArchetype);
+      var commandBuffer = guiScreenBarrier.CreateCommandBuffer();
+      commandBuffer.CreateEntity(hideAllScreensArchetype);
     }
     public void HideAllScreensNow()
     {
