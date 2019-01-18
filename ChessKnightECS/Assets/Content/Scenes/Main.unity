@@ -544,6 +544,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 90255727076599432, guid: bfdce0a8c575aa141ba0f7bf1e29eb66,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3887577635848828076, guid: bfdce0a8c575aa141ba0f7bf1e29eb66,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -773,6 +778,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1294063699706380771, guid: d48dfc791cc774c40a9167dbb0a8f9a5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5873523797060433496, guid: d48dfc791cc774c40a9167dbb0a8f9a5,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -806,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 3912541773794487087, guid: d48dfc791cc774c40a9167dbb0a8f9a5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3912541773794487087, guid: d48dfc791cc774c40a9167dbb0a8f9a5,
         type: 3}
@@ -867,11 +877,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840839064037698066, guid: d48dfc791cc774c40a9167dbb0a8f9a5,
-        type: 3}
-      propertyPath: m_fontMaterial
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1840839064037698066, guid: d48dfc791cc774c40a9167dbb0a8f9a5,
         type: 3}
@@ -1001,6 +1006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265003123069334344, guid: 0636c9f902cbbb04b8f1da8ad50177d0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4715133594061870348, guid: 0636c9f902cbbb04b8f1da8ad50177d0,
         type: 3}
@@ -1394,6 +1404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415430844503521425, guid: 81b3e272e9017224b97ff6889b5f9c2a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6012527414464038031, guid: 81b3e272e9017224b97ff6889b5f9c2a,
         type: 3}

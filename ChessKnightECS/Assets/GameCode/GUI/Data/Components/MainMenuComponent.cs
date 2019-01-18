@@ -1,14 +1,15 @@
-using UnityEngine;
-
 namespace Ck.Data
 {
   public class MainMenuComponent: GuiComponentBase
   {
-      
-  }
+    public void ShowLevelboard()
+    {
+      GameApi.Navigate_Levelboard();
+    }
 
-  public class GuiComponentBase: MonoBehaviour
-  {
-    
+    public void ExitGame()
+    {
+      GameApi.ExitGame();
+    }
   }
 }
